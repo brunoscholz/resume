@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { themes } from '../../helper'
 import './Toggle.css'
 /**
  * Three state Toggle

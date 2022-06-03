@@ -1,14 +1,18 @@
+@import url("https://themes.googleusercontent.com/fonts/css?kit=eKO97WyTO7HYidizp9G_uA59VW073gJp-eEjw6jegM3L2r0odUe3P77aMV0DhyY_vebuibkKApD8K2VWTBgdc-u7gFSBSIMkuz8XGGcTtAL-SYK_Ln3uQOimoUBe-l5o");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto Condensed';
+    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* font-family: "Source Code Pro";
+  font-family: "Roboto Condensed";
+  font-family: "PT Mono";
+  font-family: "Oswald"; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: "Source Code Pro", source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
