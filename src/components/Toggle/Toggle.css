@@ -1,0 +1,66 @@
+.wrapper {
+  margin: 27px auto 0;
+	position: relative;
+	width: 320px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+}
+.wrapper .toggle {
+  position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+.wrapper label {
+  line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+.wrapper input {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.wrapper label:nth-child(2) {
+	width: 110px;
+}
+.wrapper label:nth-child(4) {
+	width: 110px;
+}
+.wrapper label:nth-child(6) {
+	width: 100px;
+}
+
+/* .wrapper label:nth-child(1):hover~.toggle */
+.wrapper .start-corporate {
+	width: 110px;
+	left: 0;
+  background-color: #e74c3c;
+}
+/* .wrapper label:nth-child(2):hover~.toggle */
+.wrapper .start-blockchain {
+  width: 110px;
+	left: 110px;
+  background-color: #1abc9c;
+}
+/* .wrapper label:nth-child(3):hover~.toggle */
+.wrapper .start-gaming {
+	width: 100px;
+	left: 220px;
+	background-color: #3498db;
+}
