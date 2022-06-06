@@ -2,10 +2,11 @@ import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail, AiFillTwitterCirc
 
 const ProfileBlock = ({ morphs, ...props }) => {
   return (
-    <section className='section about-section blockchain' id='about' {...props} {...morphs.container}>
+    <section className='section about-section blockchain' {...props} {...morphs.container}>
       <div className='container'>
         <div className='row'>
           <div className='col-lg-10 col-xs-10 offset-md-1'>
+
             <div className='row mb-5'>
               <div className='col-lg-12 col-xs-12'>
                 <em className='logo'>
@@ -15,6 +16,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
             </div>
 
             <div className='row'>
+
               <div className='col-md-12 col-xs-12'>
                 <ol className='breadcrumb' {...morphs.birth}>
                   <li>
@@ -23,7 +25,9 @@ const ProfileBlock = ({ morphs, ...props }) => {
                   <li className='active'>Mar 02, 1983</li>
                 </ol>
               </div>
+
             </div>
+
             <div
               className='row about-info'
               style={{ marginLeft: '0px', marginRight: '0px', backgroundColor: '#638596' }}

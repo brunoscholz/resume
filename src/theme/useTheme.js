@@ -26,7 +26,7 @@ export const useTheme = () => {
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem('theme')
-    localTheme ? setTheme(localTheme) : setMode('corporate')
+    localTheme ? setTheme(localTheme) : setMode('gaming')
     setComponentMounted(true)
   }, [])
 

@@ -4,8 +4,8 @@
   grid-template-rows: repeat(100, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 1px;
-  height: 50vh;
-  width: 80vw;
+  height: 450px;
+  width: 100%;
   padding: 5px 10px;
 }
 

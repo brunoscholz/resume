@@ -5,7 +5,7 @@ import './Chart.css'
 
 const ProfileGaming = ({ morphs, ...props }) => {
   return (
-    <section className='section about-section gaming' id='about' {...props} {...morphs.container}>
+    <section className='section about-section gaming' {...props} {...morphs.container}>
       <div className='container'>
         <div className='row flex-row-reverse dashed-border--bottom g-0 mb-4'>
           <div className='col-lg-6'>
@@ -65,7 +65,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
         </div>
 
         <div className='row flex g-0 mb-4'>
-          <div className='col-lg-12'>
+          <div className='col-md-12 col-xs-12'>
             <div className='about-description game-card secondary dashed-border' {...morphs.about}>
               <span className='badge'>
                 + <em>About Me</em>
@@ -81,9 +81,9 @@ const ProfileGaming = ({ morphs, ...props }) => {
           </div>
         </div>
 
-        <div className='row flex g-0 mb-4' {...morphs.skills}>
-          <div className='col-lg-12'>
-            <div className='about-skills game-card terciary dashed-border h-100'>
+        <div className='row flex g-0 mb-4'>
+          <div className='col-md-12 col-xs-12'>
+            <div className='about-skills game-card terciary dashed-border h-100' {...morphs.skills}>
               <span className='badge'>
                 + <em>Skills</em>
               </span>
@@ -208,10 +208,10 @@ const ProfileGaming = ({ morphs, ...props }) => {
         </div>
 
         <div className='row flex g-0 mb-4'>
-          <div className='col-lg-12'>
+          <div className='col-md-12 col-xs-12'>
             <div className='about-gallery' {...morphs.gallery}></div>
           </div>
-          <div className='col-lg-12'>
+          <div className='col-md-12 col-xs-12'>
             <div className='about-interests' {...morphs.interests}></div>
           </div>
         </div>

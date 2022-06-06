@@ -1,5 +1,6 @@
 import React from 'react'
 import { useMorphKeys, presets } from 'react-morph'
+import { linear } from '@popmotion/easing'
 
 import './Profile.css'
 
@@ -11,11 +12,12 @@ const Profile = ({theme}) => {
   // const [ theme ] = useTheme()
   const morphs = useMorphKeys(['container', 'image', 'name', 'birth', 'about', 'contact', 'skills', 'interests', 'education', 'experience', 'gallery'], {
     keepFrom: false,
+    type: 'morph',
     spring: {
-      ...presets.wobbly,
-      damping: 20,
+      ...presets.noWobble,
       restDisplacementThreshold: 0.0005
-    }
+    },
+    easing: linear
   })
 
   return (

@@ -6,7 +6,7 @@ import { Container, ContactEmail, Contact, H1, H2, Col, NormalText, List, XPComp
 
 const ProfileCorporate = ({ morphs, ...props }) => {
   return (
-    <section className='section about-section corporate' id='about' {...props} {...morphs.container}>
+    <section className='section about-section corporate' {...props} {...morphs.container}>
       <Container>
         <div className='row g-0 m-2'>
           <div className='col-lg-6' style={{display: 'flex'}}>
@@ -42,7 +42,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           <div className='col-lg-6 text-end'>
             <div className="about-info">
               <div className='about-avatar'>
-                <img src='assets/photo.png' title='me' alt='me' {...morphs.image} />
+                <img src='assets/photo.jpeg' width='234' height='312' title='me' alt='me' {...morphs.image} />
               </div>
             </div>
           </div>

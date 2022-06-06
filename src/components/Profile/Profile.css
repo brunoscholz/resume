@@ -50,8 +50,8 @@
 
 .badge {
   position: absolute;
-  left: -9px;
-  top: -11px;
+  left: -6px;
+  top: -13px;
   text-align: center;
   border-radius: 0;
   color: #d0ff01;
@@ -79,7 +79,7 @@
   color: #686868;
   background-color: #303030;
   padding: 0 1.2rem 0 0;
-  left: -11px;
+  left: -10px;
   top: -15px;
 }
 
@@ -265,7 +265,7 @@ em.gray { color: #686868 !important; }
   align-items: center;
 }
 
-.section.blockchain .about-info .about-avatar img {
+.section.blockchain .about-info .about-avatar img, .section.corporate .about-info .about-avatar img {
   max-height: 312px;
   max-width: 312px;
 }
