@@ -1,8 +1,8 @@
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
 import { BiCake } from 'react-icons/bi'
-
-import styled from "styled-components"
 import { EDItems, XPItems } from '../../data'
+
+import { Container, ContactEmail, Contact, H1, H2, Col, NormalText, List, XPCompany, XPDates, XPSkills, XPTitle } from '../../theme/theme'
 
 const ProfileCorporate = ({ morphs, ...props }) => {
   return (
@@ -42,14 +42,16 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           <div className='col-lg-6 text-end'>
             <div className="about-info">
               <div className='about-avatar'>
-                <img src='assets/photo.jpg' title='me' alt='me' {...morphs.image} />
+                <img src='assets/photo.png' title='me' alt='me' {...morphs.image} />
               </div>
             </div>
           </div>
           <div className="col-lg-12">
-            <div className="about-name" {...morphs.name}>
-              <H1>Bruno Ribeiro Scholz</H1>
-            </div>
+            <H1 className="about-name" {...morphs.name}>
+              <div><p>Bruno</p></div>
+              <div><p>Ribeiro</p></div>
+              <div><p>Scholz</p></div>
+            </H1>
           </div>
         </div>
 
@@ -104,147 +106,11 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           </Col>
         </div>
       </Container>
+      <div className='row footer'>
+        based on Google Drive resume template
+      </div>
     </section>
   )
 }
 
 export default ProfileCorporate
-
-// const Page = styled.div`
-//   position: relative;
-//   min-height: 100vh;
-//   width: 100vw;
-//   display: grid;
-//   place-items: center;
-//   transition: 0.5s;
-//   background: ${props => {
-//     switch (props.theme) {
-//       case 'corporate':
-//         return '#eee'
-//       case 'gaming':
-//         return '#303030'
-//       default:
-//         return '#9b9b9b'
-//     }
-//   }};
-// `
-
-const Contact = styled.p`
-  padding-top: 6pt;
-  color: #999999;
-  font-size: 9pt;
-  padding-bottom: 0pt;
-  font-family: 'Roboto Condensed';
-  line-height: 1.2;
-  page-break-after: avoid;
-  orphans: 2;
-  widows: 2;
-  text-align: left;
-`
-
-// const ContactPhone = styled(Contact)`
-//   color: #e91d63;
-// `
-
-const ContactEmail = styled(Contact)`
-  color: #e91d63;
-`
-
-const List = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const ListItem = styled.span`
-  padding-top: 2pt;
-  color: #999999;
-  font-size: 9pt;
-  padding-bottom: 0pt;
-  font-family: 'Roboto Condensed';
-  line-height: 1.2;
-  text-align: left;
-`
-
-const XPCompany = styled(ListItem)`
-  color: #e91d63;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: "Source Code Pro";
-`
-
-const XPTitle = styled(ListItem)`
-  font-weight: 800;
-  font-size: 16px;
-`
-
-const XPDates = styled.span`
-  margin: 0.5rem 0;
-  font-size: 11px;
-  font-family: "Source Code Pro";
-  color: #666666;
-  font-weight: 400;
-`
-
-const XPSkills = styled(ListItem)`
-  color: #2e4440;
-  font-weight: 400;
-  text-decoration: none;
-  vertical-align: baseline;
-  font-size: 14px;
-  font-family: "Source Code Pro";
-  font-style: italic;
-`
-
-const Container = styled.div`
-  max-width: 740px;
-  margin: 0 auto;
-`
-
-const Col = styled.div`
-
-`
-
-// const Heading = styled.div`
-//   max-width: 960px;
-//   margin: 0 auto;
-// `
-
-const H1 = styled.h1`
-  margin-left: -0.8pt;
-  padding-top: 12pt;
-  padding-bottom: 0pt;
-  line-height: 1;
-  orphans: 2;
-  widows: 2;
-  text-align: left;
-
-  padding-top: 16pt;
-  color: #424242;
-  font-size: 24pt;
-  padding-bottom: 0pt;
-  font-family: 'Oswald';
-  line-height: 1;
-  page-break-after: avoid;
-  orphans: 2;
-  widows: 2;
-  text-align: left;
-`
-
-const H2 = styled.h2`
-  margin-left: -0.8pt;
-  padding-top: 16pt;
-  line-height: 1.2;
-  font-family: 'Oswald';
-  text-align: left;
-  font-size: 18pt;
-  color: #424242;
-`
-
-// const P = styled.p``
-
-const NormalText = styled.p`
-  font-size: 9pt;
-  font-family: 'Source Code Pro';
-  color: #666666;
-  font-weight: 400;
-`

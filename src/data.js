@@ -1,6 +1,7 @@
 export const XPItems = [
   {
-    company: 'POSSIBLE - WUNDERMAN THOMPSON TECH, Pelotas',
+    company: 'POSSIBLE / WUNDERMAN THOMPSON TECH',
+    local: 'Pelotas',
     title: 'Frontend Engineer',
     date: 'January 2021 - Current',
     description:
@@ -9,7 +10,8 @@ export const XPItems = [
     image: ''
   },
   {
-    company: 'OCTION, Curitiba',
+    company: 'OCTION',
+    local: 'Curitiba',
     title: 'Co-Founder & Game Developer',
     date: 'February 2014 - August 2016',
     description:
@@ -18,7 +20,8 @@ export const XPItems = [
     image: ''
   },
   {
-    company: 'Banco do Brasil, Curitiba / Manaus',
+    company: 'Banco do Brasil',
+    local: 'Curitiba / Manaus',
     title: '',
     date: 'May 2006 - Fevereiro 2014',
     description:
@@ -27,7 +30,8 @@ export const XPItems = [
     image: ''
   },
   {
-    company: 'ABBRA, Curitiba',
+    company: 'ABBRA',
+    local: 'Curitiba',
     title: 'Developer',
     date: 'April 2004 - May 2006',
     description:
