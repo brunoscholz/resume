@@ -1,14 +1,23 @@
 @import url("https://themes.googleusercontent.com/fonts/css?kit=eKO97WyTO7HYidizp9G_uA59VW073gJp-eEjw6jegM3L2r0odUe3P77aMV0DhyY_vebuibkKApD8K2VWTBgdc-u7gFSBSIMkuz8XGGcTtAL-SYK_Ln3uQOimoUBe-l5o");
+/*
+  font-family: "Source Code Pro";
+  font-family: "Roboto Condensed";
+  font-family: "PT Mono";
+  font-family: "Oswald";
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Carter+One&family=Press+Start+2P&display=swap');
+/*
+  // Amaranth 400 and 700
+  font-family: 'Amaranth', sans-serif;
+  font-family: 'Carter One', cursive;
+  font-family: 'Press Start 2P', cursive;
+*/
 
 body {
   margin: 0;
   font-family: 'Roboto Condensed';
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-family: "Source Code Pro";
-  font-family: "Roboto Condensed";
-  font-family: "PT Mono";
-  font-family: "Oswald"; */
 }
 
 code {

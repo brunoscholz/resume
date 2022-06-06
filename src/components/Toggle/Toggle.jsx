@@ -1,32 +1,32 @@
-import { useState } from 'react'
-import { themes } from '../../helper'
+// import { useState } from 'react'
 import './Toggle.css'
+
 /**
  * Three state Toggle
  *
  *
  */
-const Toggle = ({onChange}) => {
-  const [themeValue, themeInputProps] = useRadioButtons('choice_theme', onChange)
+const Toggle = ({theme, onChange}) => {
+  const [ inputProps ] = useRadioButtons('choose_theme', onChange)
 
   return (
     <div className='wrapper'>
-      <input id='corporate' value='corporate' checked={themeValue === 'corporate'} {...themeInputProps} />
+      <input id='corporate' value='corporate' checked={theme === 'corporate'} {...inputProps} />
       <label htmlFor='corporate' id='corporate-lbl'>
         Corporate
       </label>
 
-      <input id='blockchain' value='blockchain' checked={themeValue === 'blockchain'} {...themeInputProps} />
+      <input id='blockchain' value='blockchain' checked={theme === 'blockchain'} {...inputProps} />
       <label htmlFor='blockchain' id='blockchain-lbl'>
         Blockchain
       </label>
 
-      <input id='gaming' value='gaming' checked={themeValue === 'gaming'} {...themeInputProps} />
+      <input id='gaming' value='gaming' checked={theme === 'gaming'} {...inputProps} />
       <label htmlFor='gaming' id='gaming-lbl'>
         Gaming
       </label>
 
-      <div className={`toggle start-${themeValue}`}></div>
+      <div className={`toggle start-${theme}`}></div>
     </div>
   )
 }
@@ -34,12 +34,11 @@ const Toggle = ({onChange}) => {
 export default Toggle
 
 function useRadioButtons(name, callback) {
-  const [value, setState] = useState('corporate')
+  // const [value, setState] = useState('corporate')
 
   const handleChange = e => {
-    let val = e.target.value
-    callback(val)
-    setState(val)
+    // setState(e.target.value)
+    callback(e.target.value)
   }
 
   const inputProps = {
@@ -48,5 +47,5 @@ function useRadioButtons(name, callback) {
     onChange: handleChange
   }
 
-  return [value, inputProps]
+  return [inputProps]
 }

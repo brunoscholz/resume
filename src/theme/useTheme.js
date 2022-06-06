@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState('corporate')
+  const [theme, setTheme] = useState('blockchain')
   const [componentMounted, setComponentMounted] = useState(false)
 
   const setMode = mode => {

@@ -33,8 +33,9 @@ export const gamingTheme = {
   name: 'Gaming',
   colors: {
     body: '#303030',
-    text: '#9b9b9b',
-    grayText: '#9b9b9b',
+    text: '#cbc8c8',
+    grayText1: '#686868',
+    grayText2: '#9b9b9b',
     toggleBorder: '#6B8096',
     gradient: 'linear-gradient(#091236, #1E215D)',
     primary: '#d0ff01',

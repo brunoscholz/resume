@@ -1,5 +1,4 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useState } from 'react'
 
 import { useMorphKeys } from 'react-morph'
 
@@ -7,17 +6,18 @@ import PlayerMini from './PlayerMini'
 import PlayerFull from './PlayerFull'
 
 const Player = () => {
+  const [ isMini, setSize ] = useState(true)
   const morphs = useMorphKeys(['container', 'image', 'title', 'subtitle'])
 
+  const toggleSize = () => {
+    setSize(!isMini)
+  }
+
   return (
-    <Router>
-      <div>
-        <Routes>
-          <Route exact path='/' render={() => <PlayerMini morphs={morphs} /> } />
-          <Route path='/full' render={() => <PlayerFull morphs={morphs} /> } />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <button onClick={toggleSize}>Toggle</button>
+      { isMini ? <PlayerMini morphs={morphs} /> : <PlayerFull morphs={morphs} /> }
+    </div>
   )
 }
 
