@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -10,7 +10,48 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({theme}) => theme.colors.body};
     color: ${({theme}) => theme.colors.text};
-    font-family: ${({ theme }) => theme.font};
+    font-family: ${({ theme }) => theme.typography[0]};
     transition: all 0.50s linear;
   }
+  max-width: '100%';
+  // @media (min-width: 400px) {
+  //   [class*=col] {
+  //     width: 100%;
+  //   }
+  // }
 `
+
+const makeResponsiveComponent = (rulesets, tagName = 'div') =>
+  styled(tagName)`
+    ${buildStyles(rulesets)}
+  `
+
+const buildStyles = rulesets =>
+  rulesets.reduce(
+    (cssString, { constraint, width, rules }) =>
+      `${cssString} @media (${constraint}-width: ${width}) { ${rules} }`,
+    '',
+  )
+
+export const hideAt = breakpoints => {
+  const rulesets = Object.entries(breakpoints).reduce(
+    (rulesets, [constraint, width]) => [
+      ...rulesets,
+      {
+        constraint,
+        width,
+        rules: `display: none;`,
+      },
+    ],
+    [],
+  )
+
+  return makeResponsiveComponent(rulesets)
+}
+
+export const Breakpoint = ({ min, max, children }) => {
+  const Component = hideAt({ min, max })
+  return <Component>{children}</Component>
+}
+
+export default makeResponsiveComponent

@@ -1,9 +1,24 @@
 .ps-2-5 {
   padding-left: 0.75rem !important;
+
 }
 
 .pe-2-5 {
   padding-right: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+  .ps-md-2-5 {
+    padding-left: 0.75rem !important;
+  }
+
+  .pe-md-2-5 {
+    padding-right: 0.75rem !important;
+  }
+
+  .no-stretch {
+    width: 100%;
+  }
 }
 
 .primary { color: #d0ff01; }
@@ -13,12 +28,14 @@
 .color-5 { color: #00ffa7; }
 .gray { color: #686868; }
 
+/*
 .dashed-border {
   border: dashed 4px #000;
   border-image-source: url("../../../public/assets/border-gray-5.png");
   border-image-slice: 2;
   border-image-repeat: round;
 }
+*/
 
 .dashed-border--top {
   border-top: dashed 4px #000;
@@ -48,10 +65,10 @@
   border-image-repeat: round;
 }
 
-.badge {
-  position: absolute;
+/* .badge {
   left: -6px;
   top: -13px;
+  position: absolute;
   text-align: center;
   border-radius: 0;
   color: #d0ff01;
@@ -64,37 +81,7 @@
   font-style: normal;
   color: #686868;
   font-size: 18px;
-}
-
-.game-card {
-  position: relative;
-  padding: 2rem 1.4rem 1.4rem;
-  font-family: 'Amaranth', sans-serif;
-  font-size: 24px;
-  color: #cbc8c8
-  /* letter-spacing: 0.2rem; */
-}
-
-.game-card .badge {
-  color: #686868;
-  background-color: #303030;
-  padding: 0 1.2rem 0 0;
-  left: -10px;
-  top: -15px;
-}
-
-.game-card .badge--bottom-left {
-  left: -12px;
-  bottom: 0px;
-  top: unset;
-}
-
-.game-card.primary .badge { color: #d0ff01; }
-.game-card.secondary .badge { color: #0095f7; }
-.game-card.terciary .badge { color: #fec017; }
-.game-card.color-4 .badge { color: #fe2c2c; }
-.game-card.color-5 .badge { color: #00ffa7; }
-.game-card.gray .badge { color: #686868; }
+} */
 
 .badge.primary { color: #d0ff01 !important; }
 .badge.secondary { color: #0095f7 !important; }
@@ -103,12 +90,6 @@
 .badge.color-5 { color: #00ffa7 !important; }
 .badge.gray { color: #686868 !important; }
 
-.game-card article em, .game-card div em, .game-card.primary article em, .game-card.painary div em { color: #d0ff01; font-style: normal; font-weight: 800; }
-.game-card.secondary article em, .game-card.secondary div em { color: #0095f7; font-style: normal; font-weight: 800; }
-.game-card.terciary article em, .game-card.terciary div em { color: #fec017; font-style: normal; font-weight: 800; }
-.game-card.color-4 article em, .game-card.color-4 div em { color: #fe2c2c; font-style: normal; font-weight: 800; }
-.game-card.color-5 article em, .game-card.color-5 div em { color: #00ffa7; font-style: normal; font-weight: 800; }
-
 em.primary { color: #d0ff01 !important; }
 em.secondary { color: #0095f7 !important; }
 em.terciary { color: #fec017 !important; }
@@ -116,112 +97,7 @@ em.color-4 { color: #fe2c2c !important; }
 em.color-5 { color: #00ffa7 !important; }
 em.gray { color: #686868 !important; }
 
-.section.gaming .about-text.game-card {
-  border-bottom: unset;
-  min-height: 300px;
-}
 
-.section.gaming .about-icons a {
-  display: flex;
-  text-decoration: none;
-  color: #cbc8c8;
-  align-items: center;
-}
-
-.section.gaming .about-icons span {
-  font-size: 35px;
-  font-family: 'Carter One', cursive;
-}
-
-.section.gaming .about-info {
-  display: flex;
-  flex-direction: row;
-}
-
-.section.gaming .about-info .about-avatar {
-  position:relative;
-  display:inline-block;
-}
-
-.section.gaming .about-info .about-avatar img {
-  width: 111%;
-  /* height: 60%; */
-}
-
-.section.gaming .about-info .about-avatar .about-birthday {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.section.gaming .about-info .about-avatar .about-birthday span {
-  font-family: 'Press Start 2P', cursive;
-  color: #686868;
-}
-
-.section.gaming .about-info .about-avatar .about-birthday p {
-  color: #d0ff01;
-}
-
-.section.gaming .about-info .about-name {
-  width: 1%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 2rem;
-  padding-top: 0.3rem;
-}
-
-.section.gaming .about-info .about-name div {
-  position: relative;
-  width: 100%;
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 0.9;
-  text-align: center;
-}
-
-.section.gaming .about-info .about-name div p {
-  font-family: 'Press Start 2P', cursive;
-}
-
-.section.gaming .about-info .about-name div:first-of-type p {
-  transform: scaleX(92%);
-  color: #d0ff01;
-}
-
-.section.gaming .about-info .about-name div:nth-of-type(2) p {
-  transform: scaleX(65%);
-}
-
-.section.gaming .about-info .about-name div:nth-of-type(3) p {
-  transform: scaleX(76%);
-}
-
-.section.gaming .game-card article.item-list .title {
-  color: #9b9b9b;
-  font-size: 18px;
-  line-height: 1;
-  margin-top: 1.5rem;
-}
-.section.gaming .game-card article.item-list .position {
-  font-size: 16px;
-}
-.section.gaming .game-card article.item-list .skills {
-  font-size: 14px;
-}
-.section.gaming .game-card article.item-list .dates {
-  color: #9b9b9b;
-  font-size: 14px;
-  margin: 0.5rem 0;
-}
-.section.gaming .game-card article.item-list .description {
-  font-size: 14px;
-}
-
-.section.gaming .game-card article.item-list:first-of-type .title {
-  margin-top: 0;
-}
 
 .section.corporate .about-icons a {
   display: flex;
@@ -235,40 +111,7 @@ em.gray { color: #686868 !important; }
   font-family: 'Roboto Condensed';
 }
 
-.section.corporate .about-name, .section.blockchain .about-name {
-  display: flex;
-  flex-direction: row;
-}
 
-.section.blockchain {
-  font-size: 16px;
-}
-
-.section.corporate .about-name div {
-  margin-right: 0.3rem;
-}
-
-.section.blockchain .breadcrumb {
-  padding: 8px 15px;
-  background-color: #f5f5f5;
-  margin: 0;
-}
-
-.section.blockchain .about-info {
-  min-height: 300px;
-}
-
-.section.blockchain .about-info .about-avatar {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-}
-
-.section.blockchain .about-info .about-avatar img, .section.corporate .about-info .about-avatar img {
-  max-height: 312px;
-  max-width: 312px;
-}
 
 .section.blockchain a, .section.blockchain em {
   color: #ff04b4;
@@ -276,10 +119,6 @@ em.gray { color: #686868 !important; }
   font-weight: 700;
   text-decoration: none;
   font-style: normal;
-}
-
-.section.blockchain .breadcrumb li {
-  margin-right: 0.5rem;
 }
 
 .section.blockchain .detail-row {
@@ -306,10 +145,6 @@ em.gray { color: #686868 !important; }
   font-weight: 700;
   line-height: 1.2em;
   margin: 0 0 0.8em;
-}
-
-.section.blockchain .about-name div {
-  margin-right: 0.75rem;
 }
 
 .section.blockchain table tr td {
@@ -344,4 +179,20 @@ em.gray { color: #686868 !important; }
   margin-top: 40px;
   font-size: 12px;
   color: #272727;
+}
+
+.section.corporate .footer {
+  margin: 20px;
+  font-size: 12px;
+  color: #272727;
+}
+
+.no-stretch {
+  width: 50%;
+}
+
+@media (max-width: 720px) {
+  .no-stretch {
+    width: 100%;
+  }
 }

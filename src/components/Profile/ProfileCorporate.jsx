@@ -2,16 +2,16 @@ import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHo
 import { BiCake } from 'react-icons/bi'
 import { EDItems, XPItems } from '../../data'
 
-import { Container, ContactEmail, Contact, H1, H2, Col, NormalText, List, XPCompany, XPDates, XPSkills, XPTitle } from '../../theme/theme'
+import { Container, ContactEmail, Contact, NormalText, List, XPCompany, XPDates, XPSkills, XPTitle, AboutSection, Heading, Name, ContactIcons, AboutInfo, Avatar, Card } from '../../theme/theme'
 
 const ProfileCorporate = ({ morphs, ...props }) => {
   return (
-    <section className='section about-section corporate' {...props} {...morphs.container}>
+    <AboutSection className='section corporate' {...props} {...morphs.container}>
       <Container>
-        <div className='row g-0 m-2'>
-          <div className='col-lg-6' style={{display: 'flex'}}>
-            <div className='about-text' style={{display: 'flex', alignItems: 'end', paddingBottom: '1rem'}}>
-              <div className='row about-icons' {...morphs.contact}>
+        <Heading className='g-0 m-2'>
+          <div className='col-lg-6 col-sm-12 col-xs-12'>
+            <Card style={{display: 'flex', alignItems: 'end', paddingBottom: '1rem'}}>
+              <ContactIcons {...morphs.contact}>
                 <a href='mailto:brunoscholz@yahoo.de'>
                   <AiFillMail color='#e91d63' size={30} />
                   <ContactEmail className='ps-2'>brunoscholz@yahoo.de</ContactEmail>
@@ -34,82 +34,92 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                 </a>
                 <a href='/' {...morphs.birth}>
                   <BiCake color='#e91d63' size={30} />
-                  <p className='ps-2'>March 2, 1983</p>
+                  <Contact className='ps-2'>March 2, 1983</Contact>
                 </a>
-              </div>
-            </div>
+              </ContactIcons>
+            </Card>
           </div>
-          <div className='col-lg-6 text-end'>
-            <div className="about-info">
-              <div className='about-avatar'>
+          <div className='col-lg-6 col-sm-12 col-xs-12'>
+            <AboutInfo>
+              <Avatar>
                 <img src='assets/photo.jpeg' width='234' height='312' title='me' alt='me' {...morphs.image} />
-              </div>
-            </div>
+              </Avatar>
+            </AboutInfo>
           </div>
-          <div className="col-lg-12">
-            <H1 className="about-name" {...morphs.name}>
-              <div><p>Bruno</p></div>
-              <div><p>Ribeiro</p></div>
-              <div><p>Scholz</p></div>
-            </H1>
-          </div>
-        </div>
+          <Name className="col-lg-12" {...morphs.name}>
+            <p>Bruno</p>
+            <p>Ribeiro</p>
+            <p>Scholz</p>
+          </Name>
+        </Heading>
 
         <div {...morphs.skills}></div>
         <div {...morphs.interests}></div>
         <div {...morphs.gallery}></div>
 
         <div className='row g-0 m-2'>
-          <H2>GOALS AND SKILLS</H2>
-          <Col>
-            <NormalText {...morphs.about}>
-              <span>
-                My goal is always to create value by generating intelligent solutions that fulfill the client's needs. I
-                like challenging situations that force me to use multiple skills and critical thinking. Bitcoin
-                enthusiast.
-              </span>
-              <br />
-              <span>Advanced English (native Portuguese), reading as a routine, weekend cook!</span>
-            </NormalText>
-          </Col>
+          <div className='col-lg-12 col-xs-12'>
+            <Card {...morphs.about}>
+              <h3>GOALS AND SKILLS</h3>
+              <article>
+                My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
+                client's needs. I like <em>challenging</em> situations that force me to use multiple skills and critical
+                thinking. <b>Bitcoin</b> enthusiast.
+                <br />
+                Advanced English (native Portuguese), reading as a routine, weekend cook!
+              </article>
+            </Card>
+          </div>
         </div>
 
         <div className='row g-0 m-2'>
-          <H2>EXPERIENCE</H2>
-          <Col {...morphs.experience}>
-            {XPItems.map((item, idx) => {
-              return (
-                <List key={idx}>
-                  <XPCompany>{item.company}</XPCompany>
-                  <span><XPTitle>{item.title}</XPTitle><XPSkills> - {item.skills.join(', ')}</XPSkills></span>
-                  <XPDates>{item.date}</XPDates>
-                  <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
-                </List>
-              )
-            })}
-          </Col>
+          <div className='col-lg-12 col-xs-12'>
+            <Card {...morphs.experience}>
+              <h3>EXPERIENCE</h3>
+              <article>
+                {XPItems.map((item, idx) => {
+                  return (
+                    <List key={idx}>
+                      <XPCompany>{item.company}</XPCompany>
+                      <span><XPTitle>{item.title}</XPTitle><XPSkills> - {item.skills.join(', ')}</XPSkills></span>
+                      <XPDates>{item.date}</XPDates>
+                      <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
+                    </List>
+                  )
+                })}
+              </article>
+            </Card>
+          </div>
         </div>
 
         <div className='row g-0 m-2'>
-          <H2>EDUCATION</H2>
-          <Col {...morphs.education}>
-            {EDItems.map((item, idx) => {
-              return (
-                <List key={idx}>
-                  <XPCompany>{item.university}</XPCompany>
-                  <span><XPTitle>{item.major}</XPTitle><XPSkills> - {item.skills.join(', ')}</XPSkills></span>
-                  <XPDates>{item.date}</XPDates>
-                  <NormalText dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
-                </List>
-              )
-            })}
-          </Col>
+          <div className='col-lg-12 col-xs-12'>
+            <Card {...morphs.education}>
+              <h3>EDUCATION</h3>
+              <article>
+                {EDItems.map((item, idx) => {
+                  return (
+                    <List key={idx}>
+                      <XPCompany>{item.university}</XPCompany>
+                      <span><XPTitle>{item.major}</XPTitle><XPSkills> - {item.skills.join(', ')}</XPSkills></span>
+                      <XPDates>{item.date}</XPDates>
+                      <NormalText dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
+                    </List>
+                  )
+                })}
+              </article>
+            </Card>
+          </div>
         </div>
+
       </Container>
+
       <div className='row footer'>
-        based on Google Drive resume template
+        <div className='col-md-12 text-center'>
+          based on Google Drive resume template
+        </div>
       </div>
-    </section>
+    </AboutSection>
   )
 }
 
