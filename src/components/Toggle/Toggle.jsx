@@ -12,23 +12,26 @@ const Toggle = ({theme, onChange}) => {
   // todo: better visuals for theme selector
 
   return (
-    <div className='wrapper'>
-      <input id='corporate' value='corporate' checked={theme === 'corporate'} {...inputProps} />
-      <label htmlFor='corporate' id='corporate-lbl'>
-        Corporate
-      </label>
+    <div className='menu'>
+      <h2 className="menu-header-title">Theme</h2>
+      <div className='theme-switcher'>
+        <input id='corporate' value='corporate' checked={theme === 'corporate'} {...inputProps} />
+        <label htmlFor='corporate' id='corporate-lbl'>
+          Corporate
+        </label>
 
-      <input id='blockchain' value='blockchain' checked={theme === 'blockchain'} {...inputProps} />
-      <label htmlFor='blockchain' id='blockchain-lbl'>
-        Blockchain
-      </label>
+        <input id='blockchain' value='blockchain' checked={theme === 'blockchain'} {...inputProps} />
+        <label htmlFor='blockchain' id='blockchain-lbl'>
+          Blockchain
+        </label>
 
-      <input id='gaming' value='gaming' checked={theme === 'gaming'} {...inputProps} />
-      <label htmlFor='gaming' id='gaming-lbl'>
-        Gaming
-      </label>
+        <input id='gaming' value='gaming' checked={theme === 'gaming'} {...inputProps} />
+        <label htmlFor='gaming' id='gaming-lbl'>
+          Gaming
+        </label>
 
-      <div className={`toggle start-${theme}`}></div>
+        <div className={`toggle start-${theme}`}></div>
+      </div>
     </div>
   )
 }

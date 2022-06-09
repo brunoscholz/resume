@@ -1,6 +1,6 @@
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
 import { BiCake } from 'react-icons/bi'
-import { EDItems, XPItems } from '../../data'
+import { EducationData, ExperienceData, AboutData } from '../../data'
 
 import {
   Container,
@@ -78,13 +78,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           <div className='col-lg-12 col-xs-12'>
             <Card>
               <h3>GOALS AND SKILLS</h3>
-              <article>
-                My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
-                client's needs. I like <em>challenging</em> situations that force me to use multiple skills and critical
-                thinking. <b>Bitcoin</b> enthusiast.
-                <br />
-                Advanced English (native Portuguese), reading as a routine, weekend cook!
-              </article>
+              <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
             </Card>
           </div>
         </div>
@@ -105,7 +99,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>EXPERIENCE</h3>
               <article>
-                {XPItems.map((item, idx) => {
+                {ExperienceData.map((item, idx) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.company}</XPCompany>
@@ -128,7 +122,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>EDUCATION</h3>
               <article>
-                {EDItems.map((item, idx) => {
+                {EducationData.map((item, idx) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.university}</XPCompany>

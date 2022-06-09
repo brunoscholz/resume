@@ -1,12 +1,12 @@
 import Carousel from 'better-react-carousel'
 import { AiFillGithub } from 'react-icons/ai'
-import { MyProjects } from '../../data'
+import { ProjectData } from '../../data'
 import { Wrapper, Item, Image, Details, Button } from '../../theme/theme'
 
 const Projects = () => {
   return (
     <Carousel cols={2} rows={1} gap={25} loop scrollSnap={true}>
-      {MyProjects.map((item, idx) => {
+      {ProjectData.map((item, idx) => {
         return (
           <Carousel.Item key={idx}>
             <Wrapper>

@@ -1,5 +1,5 @@
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
-import { EDItems, XPItems } from '../../data'
+import { EducationData, ExperienceData, AboutData } from '../../data'
 
 import {
   AboutSection,
@@ -78,13 +78,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
               <span className='badge'>
                 + <em>About Me</em>
               </span>
-              <article>
-                My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
-                client's needs. I like <em>challenging</em> situations that force me to use multiple skills and critical
-                thinking. <b className='terciary'>Bitcoin</b> enthusiast.
-                <br />
-                Advanced English (native Portuguese), reading as a routine, weekend cook!
-              </article>
+              <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
             </GameCard>
           </div>
         </div>
@@ -258,7 +252,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 + <em>Employment</em>
               </span>
               <article className='content'>
-                {XPItems.map((item, idx) => {
+                {ExperienceData.map((item, idx) => {
                   return (
                     <div className='d-flex flex-column item-list' key={idx}>
                       <span className='title'>{item.company}</span>
@@ -280,7 +274,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 + <em>Education</em>
               </span>
               <article className='content'>
-                {EDItems.map((item, idx) => {
+                {EducationData.map((item, idx) => {
                   return (
                     <div className='d-flex flex-column item-list' key={idx}>
                       <span className='title'>{item.university}</span>

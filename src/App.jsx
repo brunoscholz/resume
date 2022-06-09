@@ -20,7 +20,7 @@ const App = () => {
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        <div style={{padding: '1rem', margin: '0 auto'}}>
+        <div style={{marginBottom: '2rem'}}>
           <Header>
             <Toggle theme={theme} onChange={switchTheme} />
           </Header>

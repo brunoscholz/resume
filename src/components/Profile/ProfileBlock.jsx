@@ -1,4 +1,5 @@
 import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai'
+import { AboutData } from '../../data'
 import {
   Heading,
   Card,
@@ -99,13 +100,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
               <div className='col-md-12 col-xs-12'>
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>Goals</h3>
-                  <article>
-                    My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill
-                    the client's needs. I like <em>challenging</em> situations that force me to use multiple skills and
-                    critical thinking. <b className='terciary'>Bitcoin</b> enthusiast.
-                    <br />
-                    Advanced English (native Portuguese), reading as a routine, weekend cook!
-                  </article>
+                  <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
                 </Card>
               </div>
             </div>

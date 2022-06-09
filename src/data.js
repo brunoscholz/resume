@@ -1,4 +1,12 @@
-export const XPItems = [
+export const AboutData = `
+My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
+client's needs. I like <em>challenging</em> situations that force me to use multiple skills and critical
+thinking. <b className='terciary'>Bitcoin</b> enthusiast.
+<br />
+Advanced English (native Portuguese), reading as a routine, weekend cook!
+`
+
+export const ExperienceData = [
   {
     company: 'POSSIBLE / WUNDERMAN THOMPSON TECH',
     local: 'Pelotas',
@@ -41,7 +49,7 @@ export const XPItems = [
   }
 ]
 
-export const EDItems = [
+export const EducationData = [
   {
     id: 1,
     university: 'UNIVERSIDADE POSITIVO, Curitiba',
@@ -71,7 +79,7 @@ export const EDItems = [
   }
 ]
 
-export const IItems = [
+export const InterestData = [
   {
     trait_type: '',
     trait: 'coffee',
@@ -94,7 +102,7 @@ export const IItems = [
   }
 ]
 
-export const MyProjects = [
+export const ProjectData = [
   {
     name: 'Descentralized Exchange',
     description: 'Solidity Smart Contracts deployed on Goerli (Ethereum Test Network)',

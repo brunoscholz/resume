@@ -14,6 +14,13 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.typography[0]};
     transition: all 0.50s linear;
   }
+
+  .menu {
+    background: ${({theme}) => theme.colors.menu};
+    h2 {
+      color: ${({theme}) => theme.colors.primary};
+    }
+  }
 `
 
 const grid = {
@@ -47,8 +54,8 @@ export const corporateTheme = {
     text: '#363537',
     grayText1: '#666666',
     grayText2: '#424242',
-    toggleBorder: '#6B8096',
-    gradient: 'linear-gradient(#091236, #1E215D)',
+    menu: '#303440',
+    gradient: 'linear-gradient(#272727, #181818)',
     primary: '#e91d63',
     secondary: '#2e4440',
     terciary: '#adc9d6',
@@ -84,8 +91,8 @@ export const blockchainTheme = {
     text: '#272727',
     grayText1: '#181818',
     grayText2: '#777777',
-    toggleBorder: '#6B8096',
-    gradient: 'linear-gradient(#091236, #1E215D)',
+    menu: '#303440',
+    gradient: 'linear-gradient(#272727, #181818)',
     primary: '#fc00b1',
     secondary: '#638596',
     terciary: '#adc9d6',
@@ -108,8 +115,8 @@ export const gamingTheme = {
     text: '#cbc8c8',
     grayText1: '#686868',
     grayText2: '#9b9b9b',
-    toggleBorder: '#6B8096',
-    gradient: 'linear-gradient(#091236, #1E215D)',
+    menu: '#303440',
+    gradient: 'linear-gradient(#272727, #181818)',
     primary: '#d0ff01',
     secondary: '#0095f7',
     terciary: '#fec017',
