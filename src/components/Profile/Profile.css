@@ -103,7 +103,7 @@ em.gray { color: #686868 !important; }
   display: flex;
   text-decoration: none;
   color: #666666;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .section.corporate .about-icons span {
