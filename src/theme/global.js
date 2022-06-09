@@ -13,12 +13,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.typography[0]};
     transition: all 0.50s linear;
   }
-  max-width: '100%';
-  // @media (min-width: 400px) {
-  //   [class*=col] {
-  //     width: 100%;
-  //   }
-  // }
 `
 
 const makeResponsiveComponent = (rulesets, tagName = 'div') =>

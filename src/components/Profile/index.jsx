@@ -7,7 +7,6 @@ import './Profile.css'
 import ProfileGaming from './ProfileGaming'
 import ProfileBlock from './ProfileBlock'
 import ProfileCorporate from './ProfileCorporate'
-import { corporateTheme } from '../../theme/theme'
 
 const Profile = ({theme}) => {
   // const [ theme ] = useTheme()
@@ -20,8 +19,6 @@ const Profile = ({theme}) => {
     },
     easing: linear
   })
-
-  console.log(corporateTheme)
 
   return (
     <>

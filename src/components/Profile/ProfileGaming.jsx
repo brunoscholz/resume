@@ -1,7 +1,18 @@
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
 import { EDItems, XPItems } from '../../data'
 
-import { AboutSection, Container, Heading, GameCard, AboutInfo, ContactIcons, Avatar, Name, Birthday } from '../../theme/theme'
+import {
+  AboutSection,
+  Container,
+  Heading,
+  GameCard,
+  AboutInfo,
+  ContactIcons,
+  Avatar,
+  Name,
+  Birthday
+} from '../../theme/theme'
+import Projects from '../Projects/Projects'
 
 import './Chart.css'
 
@@ -10,7 +21,6 @@ const ProfileGaming = ({ morphs, ...props }) => {
     <AboutSection className='section gaming' {...props} {...morphs.container}>
       <Container>
         <Heading className='mb-4 dashed-border--bottom'>
-
           <div className='col-md-6 col no-stretch'>
             <AboutInfo>
               <Avatar border={true} className='col-md-3 col'>
@@ -224,38 +234,25 @@ const ProfileGaming = ({ morphs, ...props }) => {
 
         <div className='row flex g-0'>
           <div className='col-md-12 col'>
-            <div className='about-gallery' {...morphs.gallery}></div>
-          </div>
-          <div className='col-md-12 col'>
             <div className='about-interests' {...morphs.interests}></div>
           </div>
         </div>
 
         <div className='row flex g-0'>
-
-          <div className='col-lg-6 col-md-6 col pe-md-2-5 mb-4'>
-            <GameCard color={'color4'} border={true} className='about-education h-100' {...morphs.education}>
+          <div className='col-md-12 col mb-4'>
+            <GameCard color={'primary'} border={true} className='about-gallery h-100' {...morphs.gallery}>
               <span className='badge'>
-                + <em>Education</em>
+                + <em>Recent Projects</em>
               </span>
               <article className='content'>
-                {EDItems.map((item, idx) => {
-                  return (
-                    <div className='d-flex flex-column item-list' key={idx}>
-                      <span className='title'>{item.university}</span>
-                      <span>
-                        <b className='position'>{item.major}</b> - <em className='skills'>{item.skills.join(', ')}</em>
-                      </span>
-                      <span className='dates'>{item.date}</span>
-                      <span className='description' dangerouslySetInnerHTML={{ __html: item.description }}></span>
-                    </div>
-                  )
-                })}
+                <Projects />
               </article>
             </GameCard>
           </div>
+        </div>
 
-          <div className='col-lg-6 col-md-6 col-sm-12 ps-md-2-5 mb-4'>
+        <div className='row flex g-0'>
+          <div className='col-lg-6 col-md-6 col pe-md-2-5 mb-4'>
             <GameCard color={'color5'} border={true} className='about-experience h-100' {...morphs.experience}>
               <span className='badge'>
                 + <em>Employment</em>
@@ -277,6 +274,27 @@ const ProfileGaming = ({ morphs, ...props }) => {
             </GameCard>
           </div>
 
+          <div className='col-lg-6 col-md-6 col-sm-12 ps-md-2-5 mb-4'>
+            <GameCard color={'color4'} border={true} className='about-education h-100' {...morphs.education}>
+              <span className='badge'>
+                + <em>Education</em>
+              </span>
+              <article className='content'>
+                {EDItems.map((item, idx) => {
+                  return (
+                    <div className='d-flex flex-column item-list' key={idx}>
+                      <span className='title'>{item.university}</span>
+                      <span>
+                        <b className='position'>{item.major}</b> - <em className='skills'>{item.skills.join(', ')}</em>
+                      </span>
+                      <span className='dates'>{item.date}</span>
+                      <span className='description' dangerouslySetInnerHTML={{ __html: item.description }}></span>
+                    </div>
+                  )
+                })}
+              </article>
+            </GameCard>
+          </div>
         </div>
         <div className='row g-0'>
           <div className='col-md-12 dashed-border--top p-4'>

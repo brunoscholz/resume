@@ -2,7 +2,25 @@ import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHo
 import { BiCake } from 'react-icons/bi'
 import { EDItems, XPItems } from '../../data'
 
-import { Container, ContactEmail, Contact, NormalText, List, XPCompany, XPDates, XPSkills, XPTitle, AboutSection, Heading, Name, ContactIcons, AboutInfo, Avatar, Card } from '../../theme/theme'
+import {
+  Container,
+  ContactEmail,
+  Contact,
+  NormalText,
+  List,
+  XPCompany,
+  XPDates,
+  XPSkills,
+  XPTitle,
+  AboutSection,
+  Heading,
+  Name,
+  ContactIcons,
+  AboutInfo,
+  Avatar,
+  Card
+} from '../../theme/theme'
+import Projects from '../Projects/Projects'
 
 const ProfileCorporate = ({ morphs, ...props }) => {
   return (
@@ -10,7 +28,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
       <Container>
         <Heading className='g-0 m-2'>
           <div className='col-lg-6 col-sm-12 col-xs-12'>
-            <Card style={{display: 'flex', alignItems: 'end', paddingBottom: '1rem'}}>
+            <Card style={{ display: 'flex', alignItems: 'end', paddingBottom: '1rem' }}>
               <ContactIcons {...morphs.contact}>
                 <a href='mailto:brunoscholz@yahoo.de'>
                   <AiFillMail color='#e91d63' size={30} />
@@ -46,7 +64,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
               </Avatar>
             </AboutInfo>
           </div>
-          <Name className="col-lg-12" {...morphs.name}>
+          <Name className='col-lg-12' {...morphs.name}>
             <p>Bruno</p>
             <p>Ribeiro</p>
             <p>Scholz</p>
@@ -55,7 +73,6 @@ const ProfileCorporate = ({ morphs, ...props }) => {
 
         <div {...morphs.skills}></div>
         <div {...morphs.interests}></div>
-        <div {...morphs.gallery}></div>
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
@@ -74,6 +91,17 @@ const ProfileCorporate = ({ morphs, ...props }) => {
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
+            <Card color={'primary'} border={true} className='about-gallery h-100' {...morphs.gallery}>
+              <h3>Recent Projects</h3>
+              <article className='content'>
+                <Projects />
+              </article>
+            </Card>
+          </div>
+        </div>
+
+        <div className='row g-0 m-2'>
+          <div className='col-lg-12 col-xs-12'>
             <Card {...morphs.experience}>
               <h3>EXPERIENCE</h3>
               <article>
@@ -81,7 +109,10 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.company}</XPCompany>
-                      <span><XPTitle>{item.title}</XPTitle><XPSkills> - {item.skills.join(', ')}</XPSkills></span>
+                      <span>
+                        <XPTitle>{item.title}</XPTitle>
+                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
+                      </span>
                       <XPDates>{item.date}</XPDates>
                       <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
                     </List>
@@ -101,7 +132,10 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.university}</XPCompany>
-                      <span><XPTitle>{item.major}</XPTitle><XPSkills> - {item.skills.join(', ')}</XPSkills></span>
+                      <span>
+                        <XPTitle>{item.major}</XPTitle>
+                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
+                      </span>
                       <XPDates>{item.date}</XPDates>
                       <NormalText dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
                     </List>
@@ -111,13 +145,10 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             </Card>
           </div>
         </div>
-
       </Container>
 
       <div className='row footer'>
-        <div className='col-md-12 text-center'>
-          based on Google Drive resume template
-        </div>
+        <div className='col-md-12 text-center'>based on Google Drive resume template</div>
       </div>
     </AboutSection>
   )

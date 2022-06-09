@@ -1,5 +1,17 @@
 import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai'
-import { Heading, Card, Name, Logo, AboutInfo, Avatar, Birthday, ContactIcons, Container, AboutSection } from '../../theme/theme'
+import {
+  Heading,
+  Card,
+  Name,
+  Logo,
+  AboutInfo,
+  Avatar,
+  Birthday,
+  ContactIcons,
+  Container,
+  AboutSection
+} from '../../theme/theme'
+import Projects from '../Projects/Projects'
 
 const ProfileBlock = ({ morphs, ...props }) => {
   return (
@@ -7,7 +19,6 @@ const ProfileBlock = ({ morphs, ...props }) => {
       <Container>
         <Heading>
           <div className='col-md-10 col-sm-12 offset-md-1'>
-
             <div className='row g-0 mb-5'>
               <div className='col-lg-12 col-xs-12'>
                 <Logo>Resumè</Logo>
@@ -88,17 +99,15 @@ const ProfileBlock = ({ morphs, ...props }) => {
         </Heading>
 
         <div className='row'>
-
           <div className='col-md-10 col-sm-10 offset-sm-1 col-xs-12'>
-
             <div className='row mt-5'>
               <div className='col-md-12 col-xs-12'>
                 <Card {...morphs.about}>
                   <h3 style={{ marginBottom: '5px' }}>Goals</h3>
                   <article>
-                    My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
-                    client's needs. I like <em>challenging</em> situations that force me to use multiple skills and critical
-                    thinking. <b className='terciary'>Bitcoin</b> enthusiast.
+                    My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill
+                    the client's needs. I like <em>challenging</em> situations that force me to use multiple skills and
+                    critical thinking. <b className='terciary'>Bitcoin</b> enthusiast.
                     <br />
                     Advanced English (native Portuguese), reading as a routine, weekend cook!
                   </article>
@@ -145,6 +154,17 @@ const ProfileBlock = ({ morphs, ...props }) => {
                       <b>top 15%</b> of 163.6k people on linkedin.
                     </div>
                   </div>
+                </Card>
+              </div>
+            </div>
+
+            <div className='row mt-5'>
+              <div className='col-md-12'>
+                <Card color={'primary'} border={true} className='about-gallery h-100' {...morphs.gallery}>
+                  <h3>Recent Projects</h3>
+                  <article className='content'>
+                    <Projects />
+                  </article>
                 </Card>
               </div>
             </div>
@@ -314,7 +334,6 @@ const ProfileBlock = ({ morphs, ...props }) => {
         </div>
 
         <div className='row about-icons' {...morphs.interests}></div>
-        <div className='about-gallery' {...morphs.gallery}></div>
 
         <div className='row footer'>
           <div className='col-md-12 text-center'>

@@ -93,3 +93,44 @@ export const IItems = [
     value: 8
   }
 ]
+
+export const MyProjects = [
+  {
+    name: 'Descentralized Exchange',
+    description: 'Solidity Smart Contracts deployed on Goerli (Ethereum Test Network)',
+    tech: ['React', 'Web3'],
+    image: 'dex.png',
+    link: 'https://dapp-bootcamp1.herokuapp.com/',
+    github: 'https://github.com/brunoscholz/dapp-ethereum-dex'
+  },
+  {
+    name: 'NFT Marketplace',
+    description: 'Mint NFTs and sell! Works on Goerli (Ethereum Test Network)',
+    tech: ['React', 'Web3', 'IPFS'],
+    image: 'nft.png',
+    link: 'https://nftsmarket.herokuapp.com/home',
+    github: 'https://github.com/brunoscholz/nft-poc'
+  },
+  {
+    name: 'Portfolio',
+    description: 'This website',
+    tech: ['React'],
+    image: 'resume.png',
+    link: '',
+    github: 'https://github.com/brunoscholz/resume'
+  },
+  {
+    name: 'Siemens',
+    description: 'Several internal projects at Wunderman Thompson',
+    tech: ['Canvas', 'PHP', 'Angular'],
+    image: 'quiz.png',
+    link: 'https://play.google.com/store/apps/details?id=com.siemens.quizapp'
+  },
+  {
+    name: 'Life Fit',
+    description: 'Long-term project at Wunderman Thompson',
+    tech: ['Drupal'],
+    image: 'fit.png',
+    link: 'https://www.fitnessfirst.de/'
+  }
+]

@@ -191,6 +191,11 @@ em.gray { color: #686868 !important; }
   width: 50%;
 }
 
+.project-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 720px) {
   .no-stretch {
     width: 100%;
