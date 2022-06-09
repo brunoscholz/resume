@@ -15,7 +15,7 @@ import Projects from '../Projects/Projects'
 
 const ProfileBlock = ({ morphs, ...props }) => {
   return (
-    <AboutSection className='section blockchain' {...props} {...morphs.container}>
+    <AboutSection className='section blockchain' {...props}>
       <Container>
         <Heading>
           <div className='col-md-10 col-sm-12 offset-md-1'>
@@ -27,7 +27,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
 
             <div className='row g-0'>
               <div className='col-md-12 col-xs-12'>
-                <Birthday {...morphs.birth}>
+                <Birthday>
                   <span>Created</span>
                   <p>March 2, 1983</p>
                 </Birthday>
@@ -36,17 +36,12 @@ const ProfileBlock = ({ morphs, ...props }) => {
 
             <AboutInfo className='g-0 mb-4'>
               <Avatar className='col-md-12 col-xs-12'>
-                <img
-                  src='assets/photo.png'
-                  className='img-responsive pixelated center-block'
-                  alt='me'
-                  {...morphs.image}
-                />
+                <img src='assets/photo.png' className='img-responsive pixelated center-block' alt='me' />
               </Avatar>
             </AboutInfo>
 
             <div className='row'>
-              <Name className='col-md-12 col-xs-12' {...morphs.name}>
+              <Name className='col-md-12 col-xs-12'>
                 <p>Bruno</p>
                 <p>Ribeiro</p>
                 <p>Scholz</p>
@@ -60,7 +55,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
               <div className='col-md-12 col-xs-12'>
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>Find me</h3>
-                  <ContactIcons className='row list' {...morphs.contact}>
+                  <ContactIcons className='row list'>
                     <div className='col-md-4'>
                       <a href='mailto:brunoscholz@yahoo.de'>
                         <AiFillMail color='#fc00b1' size={30} />
@@ -102,7 +97,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
           <div className='col-md-10 col-sm-10 offset-sm-1 col-xs-12'>
             <div className='row mt-5'>
               <div className='col-md-12 col-xs-12'>
-                <Card {...morphs.about}>
+                <Card>
                   <h3 style={{ marginBottom: '5px' }}>Goals</h3>
                   <article>
                     My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill
@@ -117,7 +112,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
 
             <div className='row mt-5'>
               <div className='col-md-12'>
-                <Card {...morphs.skills}>
+                <Card>
                   <h3 style={{ marginBottom: '5px' }}>Skills</h3>
                   <p style={{ marginTop: '0px' }}>
                     This programmer has <a href='/cryptopunks/search?query=3+Attributes'>6 attributes</a>.
@@ -160,7 +155,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
 
             <div className='row mt-5'>
               <div className='col-md-12'>
-                <Card color={'primary'} border={true} className='about-gallery h-100' {...morphs.gallery}>
+                <Card color={'primary'} border={true} className='about-gallery h-100'>
                   <h3>Recent Projects</h3>
                   <article className='content'>
                     <Projects />
@@ -171,7 +166,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
 
             <div className='row mt-5'>
               <div className='col-md-12'>
-                <Card {...morphs.experience}>
+                <Card>
                   <h3>
                     Market Status <i className='fa fa-spinner fa-pulse fa-fw'></i>
                   </h3>
@@ -285,7 +280,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
 
             <div className='row mt-5'>
               <div className='col-md-12'>
-                <Card {...morphs.education}>
+                <Card>
                   <h3>Education History</h3>
                   <div className='table-responsive'>
                     <table className='table'>
@@ -333,7 +328,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
           </div>
         </div>
 
-        <div className='row about-icons' {...morphs.interests}></div>
+        <div className='row about-icons'></div>
 
         <div className='row footer'>
           <div className='col-md-12 text-center'>

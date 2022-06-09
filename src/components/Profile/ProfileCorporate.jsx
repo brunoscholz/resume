@@ -24,12 +24,12 @@ import Projects from '../Projects/Projects'
 
 const ProfileCorporate = ({ morphs, ...props }) => {
   return (
-    <AboutSection className='section corporate' {...props} {...morphs.container}>
+    <AboutSection className='section corporate' {...props}>
       <Container>
         <Heading className='g-0 m-2'>
           <div className='col-lg-6 col-sm-12 col-xs-12'>
             <Card style={{ display: 'flex', alignItems: 'end', paddingBottom: '1rem' }}>
-              <ContactIcons {...morphs.contact}>
+              <ContactIcons>
                 <a href='mailto:brunoscholz@yahoo.de'>
                   <AiFillMail color='#e91d63' size={30} />
                   <ContactEmail className='ps-2'>brunoscholz@yahoo.de</ContactEmail>
@@ -50,7 +50,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                   <AiFillHome color='#e91d63' size={30} />
                   <ContactEmail className=' ps-2'>Pelotas / RS - Brazil</ContactEmail>
                 </a>
-                <a href='/' {...morphs.birth}>
+                <a href='/'>
                   <BiCake color='#e91d63' size={30} />
                   <Contact className='ps-2'>March 2, 1983</Contact>
                 </a>
@@ -60,23 +60,23 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           <div className='col-lg-6 col-sm-12 col-xs-12'>
             <AboutInfo>
               <Avatar>
-                <img src='assets/photo.jpeg' width='234' height='312' title='me' alt='me' {...morphs.image} />
+                <img src='assets/photo.jpeg' width='234' height='312' title='me' alt='me' />
               </Avatar>
             </AboutInfo>
           </div>
-          <Name className='col-lg-12' {...morphs.name}>
+          <Name className='col-lg-12'>
             <p>Bruno</p>
             <p>Ribeiro</p>
             <p>Scholz</p>
           </Name>
         </Heading>
 
-        <div {...morphs.skills}></div>
-        <div {...morphs.interests}></div>
+        <div></div>
+        <div></div>
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
-            <Card {...morphs.about}>
+            <Card>
               <h3>GOALS AND SKILLS</h3>
               <article>
                 My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
@@ -91,7 +91,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
-            <Card color={'primary'} border={true} className='about-gallery h-100' {...morphs.gallery}>
+            <Card color={'primary'} border={true} className='about-gallery h-100'>
               <h3>Recent Projects</h3>
               <article className='content'>
                 <Projects />
@@ -102,7 +102,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
-            <Card {...morphs.experience}>
+            <Card>
               <h3>EXPERIENCE</h3>
               <article>
                 {XPItems.map((item, idx) => {
@@ -125,7 +125,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
-            <Card {...morphs.education}>
+            <Card>
               <h3>EDUCATION</h3>
               <article>
                 {EDItems.map((item, idx) => {

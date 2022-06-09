@@ -9,6 +9,8 @@ import './Toggle.css'
 const Toggle = ({theme, onChange}) => {
   const [ inputProps ] = useRadioButtons('choose_theme', onChange)
 
+  // todo: better visuals for theme selector
+
   return (
     <div className='wrapper'>
       <input id='corporate' value='corporate' checked={theme === 'corporate'} {...inputProps} />

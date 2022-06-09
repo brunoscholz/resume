@@ -18,20 +18,20 @@ import './Chart.css'
 
 const ProfileGaming = ({ morphs, ...props }) => {
   return (
-    <AboutSection className='section gaming' {...props} {...morphs.container}>
+    <AboutSection className='section gaming' {...props}>
       <Container>
         <Heading className='mb-4 dashed-border--bottom'>
           <div className='col-md-6 col no-stretch'>
             <AboutInfo>
               <Avatar border={true} className='col-md-3 col'>
                 <span className='badge'>+</span>
-                <img src='assets/headshot.png' title='me' alt='me' {...morphs.image} />
-                <Birthday {...morphs.birth}>
+                <img src='assets/headshot.png' title='me' alt='me' />
+                <Birthday>
                   <span>born</span>
                   <p>March 2, 1983</p>
                 </Birthday>
               </Avatar>
-              <Name className='col-md-9 col ps-md-4' {...morphs.name}>
+              <Name className='col-md-9 col ps-md-4'>
                 <p>Bruno</p>
                 <p>Ribeiro</p>
                 <p>Scholz</p>
@@ -46,7 +46,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
               </span>
               <span className='badge gray badge--bottom-left'>+</span>
 
-              <ContactIcons {...morphs.contact}>
+              <ContactIcons>
                 <a href='mailto:brunoscholz@yahoo.de'>
                   <AiFillMail color='#d0ff01' size={50} />
                   <span className='ps-3'>brunoscholz@yahoo.de</span>
@@ -74,7 +74,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
 
         <div className='row d-flex g-0 mb-4'>
           <div className='col-md-12 col'>
-            <GameCard color={'secondary'} border={true} {...morphs.about}>
+            <GameCard color={'secondary'} border={true}>
               <span className='badge'>
                 + <em>About Me</em>
               </span>
@@ -91,7 +91,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
 
         <div className='row flex g-0 mb-4'>
           <div className='col-md-12 col'>
-            <GameCard color={'terciary'} border={true} className='about-skills h-100' {...morphs.skills}>
+            <GameCard color={'terciary'} border={true} className='about-skills h-100'>
               <span className='badge'>
                 + <em>Skills</em>
               </span>
@@ -234,13 +234,13 @@ const ProfileGaming = ({ morphs, ...props }) => {
 
         <div className='row flex g-0'>
           <div className='col-md-12 col'>
-            <div className='about-interests' {...morphs.interests}></div>
+            <div className='about-interests'></div>
           </div>
         </div>
 
         <div className='row flex g-0'>
           <div className='col-md-12 col mb-4'>
-            <GameCard color={'primary'} border={true} className='about-gallery h-100' {...morphs.gallery}>
+            <GameCard color={'primary'} border={true} className='about-gallery h-100'>
               <span className='badge'>
                 + <em>Recent Projects</em>
               </span>
@@ -253,7 +253,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
 
         <div className='row flex g-0'>
           <div className='col-lg-6 col-md-6 col pe-md-2-5 mb-4'>
-            <GameCard color={'color5'} border={true} className='about-experience h-100' {...morphs.experience}>
+            <GameCard color={'color5'} border={true} className='about-experience h-100'>
               <span className='badge'>
                 + <em>Employment</em>
               </span>
@@ -275,7 +275,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
           </div>
 
           <div className='col-lg-6 col-md-6 col-sm-12 ps-md-2-5 mb-4'>
-            <GameCard color={'color4'} border={true} className='about-education h-100' {...morphs.education}>
+            <GameCard color={'color4'} border={true} className='about-education h-100'>
               <span className='badge'>
                 + <em>Education</em>
               </span>
