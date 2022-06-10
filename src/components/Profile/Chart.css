@@ -23,7 +23,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-[class*=bar] {
+[class*=bar]:not(.progress-bar) {
   border-radius: 5px 5px 0 0;
   transition: all 0.6s ease;
   /* background-color: #ff4136; */
@@ -35,23 +35,23 @@
   justify-content: center;
 }
 
-[class*=bar] .block, [class*=bar] .top .chart-subtitles .block, .chart-subtitles .top {
+[class*=bar]:not(.progress-bar) .block, [class*=bar]:not(.progress-bar) .top .chart-subtitles .block, .chart-subtitles .top {
   width: 50px;
 }
 
-[class*=bar] .block, .chart-subtitles .block {
+[class*=bar]:not(.progress-bar) .block, .chart-subtitles .block {
   background-color: #686868;
 }
 
-[class*=bar] .block.skill, .chart-subtitles .block.skill {
+[class*=bar]:not(.progress-bar) .block.skill, .chart-subtitles .block.skill {
   background-color: #0095f7;
 }
 
-[class*=bar] .block.using, .chart-subtitles .block.using {
+[class*=bar]:not(.progress-bar) .block.using, .chart-subtitles .block.using {
   background-color: #fec017;
 }
 
-[class*=bar] .top, .chart-subtitles .top {
+[class*=bar]:not(.progress-bar) .top, .chart-subtitles .top {
   width: 50px;
   height: 25px;
   border-bottom: solid 25px #686868;
@@ -61,7 +61,7 @@
   transform: translateY(17px);
 }
 
-[class*=bar] .top.using, .chart-subtitles .top.using {
+[class*=bar]:not(.progress-bar) .top.using, .chart-subtitles .top.using {
   border-bottom: solid 25px #fec017;
 }
 
@@ -110,7 +110,7 @@
     width: 25px;
   }
 
-  [class*=bar] .top {
+  [class*=bar]:not(.progress-bar) .top {
     transform: translateY(-26px);
   }
 }

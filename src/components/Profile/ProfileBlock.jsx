@@ -1,5 +1,6 @@
+import React from 'react'
 import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai'
-import { AboutData } from '../../data'
+import { AboutData, InterestData, SkillData } from '../../data'
 import {
   Heading,
   Card,
@@ -99,50 +100,86 @@ const ProfileBlock = ({ morphs, ...props }) => {
             <div className='row mt-5'>
               <div className='col-md-12 col-xs-12'>
                 <Card>
-                  <h3 style={{ marginBottom: '5px' }}>Goals</h3>
+                  <h3 style={{ marginBottom: '5px' }}>About Me</h3>
                   <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
                 </Card>
               </div>
             </div>
 
             <div className='row mt-5'>
-              <div className='col-md-12'>
+              <div className='col-md-6'>
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>Skills</h3>
                   <p style={{ marginTop: '0px' }}>
-                    This programmer has <a href='/cryptopunks/search?query=3+Attributes'>6 attributes</a>.
+                    This programmer has <em>{SkillData.length} attributes</em>.
                   </p>
                   <div className='row list'>
-                    <div className='col-md-4 col-xs-6'>
-                      <em>C#</em>
-                      <br />
-                      N/A.
-                    </div>
-                    <div className='col-md-4 col-xs-6'>
-                      <em>PHP</em>
-                      <br />
-                      N/A.
-                    </div>
-                    <div className='col-md-4 col-xs-6'>
-                      <em>React</em>
-                      <br />
-                      <b>top 15%</b> of 642.7k people on linkedin.
-                    </div>
-                    <div className='col-md-4 col-xs-6'>
-                      <em>Drupal</em>
-                      <br />
-                      N/A.
-                    </div>
-                    <div className='col-md-4 col-xs-6'>
-                      <em>Solidity</em>
-                      <br />
-                      N/A.
-                    </div>
-                    <div className='col-md-4 col-xs-6'>
-                      <em>Angular</em>
-                      <br />
-                      <b>top 15%</b> of 163.6k people on linkedin.
-                    </div>
+                    {SkillData.map((item, idx) => {
+                      return (
+                        <div className='col-md-12 col-xs-12 p-2' key={idx}>
+                          <em>{item.trait}</em>
+                          <div className='progress'>
+                            <div
+                              className='progress-bar'
+                              role='progressbar'
+                              style={{width: `${item.value}%`}}
+                              aria-valuenow={item.value}
+                              aria-valuemin='0'
+                              aria-valuemax='100'
+                            >
+                              {/* {`${item.value}%`} */}
+                            </div>
+                            {item.current && (
+                              <div className="progress-bar highlight"
+                                role="progressbar"
+                                style={{width: `10%`}}
+                                aria-valuenow="10"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )
+                    })}
+                    {/* <b>top 15%</b> of 642.7k people on linkedin. */}
+                    {/* <b>top 15%</b> of 163.6k people on linkedin. */}
+                  </div>
+                </Card>
+              </div>
+              <div className='col-md-6'>
+                <Card>
+                  <h3 style={{ marginBottom: '5px' }}>Interests</h3>
+                  <p style={{ marginTop: '0px' }}>
+                    Hobbies and the like.
+                  </p>
+                  <div className='row list interests'>
+                    {InterestData.map((item, idx) => {
+                      return (
+                        <React.Fragment key={idx}>
+                          {item.value > 0 && <div className='col-md-6 col-xs-6'></div>}
+                          <div className={`col-md-6 col-xs-6 p-2 ${item.value < 0 ? 'negative' : ''}`}>
+                            <em>{item.trait}</em>
+                            <div className={`progress ${item.value < 0 ? 'justify-content-end negative' : ''}`}>
+                              <div
+                                className='progress-bar'
+                                role='progressbar'
+                                style={{width: `${item.value < 0 ? item.value * -1 : item.value}%`}}
+                                aria-valuenow={item.value < 0 ? item.value * -1 : item.value}
+                                aria-valuemin='0'
+                                aria-valuemax='100'
+                                >
+                                {/* {`${item.value}%`} */}
+                              </div>
+                            </div>
+                          </div>
+                          {item.value < 0 && <div className='col-md-6 col-xs-6'></div>}
+                        </React.Fragment>
+                      )
+                    })}
+                    {/* <b>top 15%</b> of 642.7k people on linkedin. */}
+                    {/* <b>top 15%</b> of 163.6k people on linkedin. */}
                   </div>
                 </Card>
               </div>
@@ -288,6 +325,15 @@ const ProfileBlock = ({ morphs, ...props }) => {
                           <th>Txn</th>
                         </tr>
                         <tr className='punk-history-row-claim'>
+                          <td>UDEMY.COM</td>
+                          <td>Solidity Ethereum Developer: Build Blockchain DApps in 2021</td>
+                          <td>Javascript, Solidity, Truffle, Web3</td>
+                          <td>certificate</td>
+                          <td>
+                            <em>2017 (2021)</em>
+                          </td>
+                        </tr>
+                        <tr className='punk-history-row-sold'>
                           <td>UNIVERSIDADE POSITIVO</td>
                           <td>Digital Games</td>
                           <td>Unity3D, 3DSMax, C#, Javascript</td>
@@ -305,7 +351,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
                             <em>2011 - 2013</em>
                           </td>
                         </tr>
-                        <tr className='punk-history-row-claim'>
+                        <tr className='punk-history-row-sold'>
                           <td>UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ</td>
                           <td>Electrical Engineering</td>
                           <td>C, C++</td>
@@ -322,8 +368,6 @@ const ProfileBlock = ({ morphs, ...props }) => {
             </div>
           </div>
         </div>
-
-        <div className='row about-icons'></div>
 
         <div className='row footer'>
           <div className='col-md-12 text-center'>

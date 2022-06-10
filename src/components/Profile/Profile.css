@@ -28,15 +28,6 @@
 .color-5 { color: #00ffa7; }
 .gray { color: #686868; }
 
-/*
-.dashed-border {
-  border: dashed 4px #000;
-  border-image-source: url("../../../public/assets/border-gray-5.png");
-  border-image-slice: 2;
-  border-image-repeat: round;
-}
-*/
-
 .dashed-border--top {
   border-top: dashed 4px #000;
   border-image-source: url("../../../public/assets/border-gray-5.png");
@@ -65,24 +56,6 @@
   border-image-repeat: round;
 }
 
-/* .badge {
-  left: -6px;
-  top: -13px;
-  position: absolute;
-  text-align: center;
-  border-radius: 0;
-  color: #d0ff01;
-  padding: 0;
-  font-size: 30px;
-}
-
-.badge em {
-  font-family: 'Press Start 2P', cursive;
-  font-style: normal;
-  color: #686868;
-  font-size: 18px;
-} */
-
 .badge.primary { color: #d0ff01 !important; }
 .badge.secondary { color: #0095f7 !important; }
 .badge.terciary { color: #fec017 !important; }
@@ -97,22 +70,6 @@ em.color-4 { color: #fe2c2c !important; }
 em.color-5 { color: #00ffa7 !important; }
 em.gray { color: #686868 !important; }
 
-
-
-.section.corporate .about-icons a {
-  display: flex;
-  text-decoration: none;
-  color: #666666;
-  align-items: flex-start;
-}
-
-.section.corporate .about-icons span {
-  font-size: 12px;
-  font-family: 'Roboto Condensed';
-}
-
-
-
 .section.blockchain a, .section.blockchain em {
   color: #ff04b4;
   text-decoration: none;
@@ -121,16 +78,12 @@ em.gray { color: #686868 !important; }
   font-style: normal;
 }
 
-.section.blockchain .detail-row {
-  margin-top: 40px;
+.section.blockchain .row.list.interests > div:nth-child(odd), .section.corporate .row.list.interests > div:nth-child(odd) {
+  border-right: 1px solid #141414;
 }
 
-.section.blockchain .detail-row .list div {
-  margin-bottom: 0.5rem;
-}
-
-.section.blockchain .detail-row .current-skill {
-  border: 1px solid #00ffa7;
+.section.blockchain .row.list.interests div.negative, .section.corporate .row.list.interests div.negative {
+  text-align: end;
 }
 
 .section.blockchain h1 {

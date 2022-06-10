@@ -346,6 +346,29 @@ export const Card = styled.div`
     }
   `}
 
+  .progress {
+    margin-left: -0.5rem;
+    border-radius: 0;
+    .progress-bar {
+      background-color: ${props => props.theme.colors.primary};
+      &.secondary {
+        background-color: ${props => props.theme.colors.secondary};
+      }
+      &.highlight {
+        background-color: #fec017;
+      }
+    }
+
+    &.negative {
+      margin-right: -0.5rem;
+      margin-left: 0;
+      .progress-bar {
+        background-color: ${props => props.theme.colors.secondary};
+        // color: ${props => props.theme.colors.primary};
+      }
+    }
+  }
+
   ${media.md`
     ${props => props.theme.name === 'corporate' && 'justify-content: flex-start;'}
   `}
@@ -663,7 +686,7 @@ export const Image = styled.div`
   position: relative;
   margin-bottom: 15px;
   background-size: cover;
-  min-height: 300px;
+  min-height: 420px;
   border-radius: 5px;
 
   .techs {
@@ -673,13 +696,13 @@ export const Image = styled.div`
     flex-direction: row-reverse;
 
     left: auto;
-    top: auto;
+    top: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
 
     background-color: #00000033;
     padding: 7px;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px 5px 0 0;
 
     .tech {
       border-radius: 5px;

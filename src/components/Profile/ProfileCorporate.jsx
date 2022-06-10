@@ -1,6 +1,7 @@
+import React from 'react'
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
 import { BiCake } from 'react-icons/bi'
-import { EducationData, ExperienceData, AboutData } from '../../data'
+import { EducationData, ExperienceData, AboutData, SkillData, InterestData } from '../../data'
 
 import {
   Container,
@@ -71,13 +72,10 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           </Name>
         </Heading>
 
-        <div></div>
-        <div></div>
-
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
             <Card>
-              <h3>GOALS AND SKILLS</h3>
+              <h3>ABOUT ME</h3>
               <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
             </Card>
           </div>
@@ -136,6 +134,74 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                   )
                 })}
               </article>
+            </Card>
+          </div>
+        </div>
+
+        <div className='row m-2'>
+          <div className='col-md-6'>
+            <Card>
+              <h3>SKILLS</h3>
+              <div className='row list pe-2'>
+                {SkillData.map((item, idx) => {
+                  return (
+                    <div className='col-md-12 col-xs-12 p-2' key={idx}>
+                      <em>{item.trait}</em>
+                      <div className='progress'>
+                        <div
+                          className='progress-bar'
+                          role='progressbar'
+                          style={{width: `${item.value}%`}}
+                          aria-valuenow={item.value}
+                          aria-valuemin='0'
+                          aria-valuemax='100'
+                        >
+                        </div>
+                        {item.current && (
+                          <div className="progress-bar highlight"
+                            role="progressbar"
+                            style={{width: `10%`}}
+                            aria-valuenow="10"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          >
+
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </Card>
+          </div>
+          <div className='col-md-6'>
+            <Card>
+              <h3>INTERESTS</h3>
+              <div className='row list interests ps-2'>
+                {InterestData.map((item, idx) => {
+                  return (
+                    <React.Fragment key={idx}>
+                      {item.value > 0 && <div className='col-md-6 col-xs-6'></div>}
+                      <div className={`col-md-6 col-xs-6 p-2 ${item.value < 0 ? 'negative' : ''}`}>
+                        <em>{item.trait}</em>
+                        <div className={`progress ${item.value < 0 ? 'justify-content-end negative' : ''}`}>
+                          <div
+                            className='progress-bar'
+                            role='progressbar'
+                            style={{width: `${item.value < 0 ? item.value * -1 : item.value}%`}}
+                            aria-valuenow={item.value < 0 ? item.value * -1 : item.value}
+                            aria-valuemin='0'
+                            aria-valuemax='100'
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      {item.value < 0 && <div className='col-md-6 col-xs-6'></div>}
+                    </React.Fragment>
+                  )
+                })}
+              </div>
             </Card>
           </div>
         </div>

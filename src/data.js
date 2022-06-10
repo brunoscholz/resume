@@ -1,9 +1,9 @@
 export const AboutData = `
-My <em>goal</em> is always to create value by generating intelligent <em>solutions</em> that fulfill the
-client's needs. I like <em>challenging</em> situations that force me to use multiple skills and critical
-thinking. <b className='terciary'>Bitcoin</b> enthusiast.
-<br />
-Advanced English (native Portuguese), reading as a routine, weekend cook!
+Developer with 15+ years of experience in diverse fields and an entrepreneurial view, my goal is <em>always</em>
+to create value by generating intelligent solutions that fulfill client's needs. I like <emchallenging</em> situations
+that require the use of multiple skills and critical thinking.
+As a skilled life-long student, I'm now diving into the <em>blockchain</em> rabbit-hole while deepening my knowledge
+in <em>fullstack</em> tools.
 `
 
 export const ExperienceData = [
@@ -13,7 +13,7 @@ export const ExperienceData = [
     title: 'Frontend Engineer',
     date: 'January 2021 - Current',
     description:
-      'Migrating to fullstack in <em>Drupal</em>. Held a few client technical meetings. Several projects for clients like <em>Siemens</em>, <em>DWS</em> and <em>SporTV</em>.',
+      'Becoming fullstack <em>Drupal</em>. Held a few client technical meetings and some solo projects. Several projects for clients like <em>Siemens</em>, <em>DWS</em> and <em>SporTV</em>.',
     skills: ['Angular', 'React', 'Drupal'],
     image: ''
   },
@@ -31,7 +31,7 @@ export const ExperienceData = [
     company: 'Banco do Brasil',
     local: 'Curitiba / Manaus',
     title: '',
-    date: 'May 2006 - Fevereiro 2014',
+    date: 'May 2006 - February 2014',
     description:
       'Worked together with <em>engineering</em> and <em>logistics</em> management in Manaus (AM) in the development of a dashboard for cost control in building and renovation projects.',
     skills: ['PHP', 'MySql', 'VBA'],
@@ -52,6 +52,15 @@ export const ExperienceData = [
 export const EducationData = [
   {
     id: 1,
+    university: 'UDEMY.COM',
+    skills: ['Javascript', 'Solidity', 'Truffle', 'Web3'],
+    date: '2017, 2021',
+    major: 'Solidity Ethereum Developer: Build Blockchain DApps',
+    description: '',
+    image: ''
+  },
+  {
+    id: 2,
     university: 'UNIVERSIDADE POSITIVO, Curitiba',
     skills: ['Unity3D', '3DSMax', 'C#', 'Javascript'],
     date: '2013 - 2015 (incomplete)',
@@ -60,7 +69,7 @@ export const EducationData = [
     image: ''
   },
   {
-    id: 2,
+    id: 3,
     university: 'UNIVERSIDADE FEDERAL DO AMAZONAS, Manaus',
     skills: ['Haskell', 'Python'],
     date: '2011 - 2013 (incomplete)',
@@ -69,7 +78,7 @@ export const EducationData = [
     image: ''
   },
   {
-    id: 3,
+    id: 4,
     university: 'UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, Curitiba',
     skills: ['C', 'C++'],
     date: '2003 - 2006 (incomplete)',
@@ -79,65 +88,123 @@ export const EducationData = [
   }
 ]
 
+export const SkillData = [
+  {
+    trait_type: '',
+    trait: 'English (native Portuguese)',
+    value: 90,
+    current: false
+  },
+  {
+    trait_type: '',
+    trait: 'PHP',
+    value: 70,
+    current: false
+  },
+  {
+    trait_type: '',
+    trait: 'react',
+    value: 70,
+    current: true,
+    label: ''
+  },
+  {
+    trait_type: '',
+    trait: 'drupal',
+    value: 50,
+    current: true,
+  },
+  {
+    trait_type: '',
+    trait: 'solidity',
+    value: 60,
+    current: true
+  },
+  {
+    trait_type: '',
+    trait: 'angular',
+    value: 90,
+    current: false,
+    label: ''
+  }
+]
+
 export const InterestData = [
   {
     trait_type: '',
     trait: 'coffee',
-    value: 8
-  },
-  {
-    trait_type: '',
-    trait: 'free markets',
-    value: 10
-  },
-  {
-    trait_type: '',
-    trait: 'bitcoin',
-    value: 10
+    value: 90
   },
   {
     trait_type: '',
     trait: 'craft beers',
-    value: 8
+    value: 80
+  },
+  {
+    trait_type: '',
+    trait: 'soccer',
+    value: -40
+  },
+  {
+    trait_type: '',
+    trait: 'bitcoin',
+    value: 100
+  },
+  {
+    trait_type: '',
+    trait: 'bread making',
+    value: 90
+  },
+  {
+    trait_type: '',
+    trait: 'mushroom growing',
+    value: 30
   }
 ]
 
 export const ProjectData = [
   {
     name: 'Descentralized Exchange',
-    description: 'Solidity Smart Contracts deployed on Goerli (Ethereum Test Network)',
-    tech: ['React', 'Web3'],
+    description: 'A descentralized app (dApp) with smart contracts that functions as broker for Ethereum and the generic token created for it.',
+    tech: ['#react', '#web3'],
     image: 'dex.png',
     link: 'https://dapp-bootcamp1.herokuapp.com/',
     github: 'https://github.com/brunoscholz/dapp-ethereum-dex'
   },
   {
     name: 'NFT Marketplace',
-    description: 'Mint NFTs and sell! Works on Goerli (Ethereum Test Network)',
-    tech: ['React', 'Web3', 'IPFS'],
+    description: 'A marketplace where any user can mint and sell their own non-fungible tokens. NFTs can be applied to physical products as in suplly chains and car documents, leaving a transparent trail of transfer and ownership',
+    tech: ['#react', '#web3', '#ipfs'],
     image: 'nft.png',
     link: 'https://nftsmarket.herokuapp.com/home',
     github: 'https://github.com/brunoscholz/nft-poc'
   },
   {
     name: 'Portfolio',
-    description: 'This website',
-    tech: ['React'],
+    description: 'This website. Using theme switching and different layouts shows the range of skills in design and frontend development',
+    tech: ['#react'],
     image: 'resume.png',
     link: '',
     github: 'https://github.com/brunoscholz/resume'
   },
   {
+    name: 'Doe Gols',
+    description: 'Project at Wunderman Thompson for a major sports channel in Brazil (Sportv). Worked in the game which is not yet deployed (pic)',
+    tech: ['#react', '#createjs'],
+    image: 'game.png',
+    link: 'https://doegols.globo.com/',
+  },
+  {
     name: 'Siemens',
-    description: 'Several internal projects at Wunderman Thompson',
-    tech: ['Canvas', 'PHP', 'Angular'],
+    description: 'Several internal projects at Wunderman Thompson. Worked with mobile accessibility, themes, dynamic content loaded into a page.',
+    tech: ['#canvas', '#php', '#angular'],
     image: 'quiz.png',
     link: 'https://play.google.com/store/apps/details?id=com.siemens.quizapp'
   },
   {
     name: 'Life Fit',
-    description: 'Long-term project at Wunderman Thompson',
-    tech: ['Drupal'],
+    description: 'Long-term project at Wunderman Thompson. Big project with several separated gyms. It includes gym attendance, blog posts and contract leads.',
+    tech: ['#drupal'],
     image: 'fit.png',
     link: 'https://www.fitnessfirst.de/'
   }
