@@ -164,8 +164,8 @@ export const InterestData = [
 
 export const ProjectData = [
   {
-    name: 'Descentralized Exchange',
-    description: 'A descentralized app (dApp) with smart contracts that functions as broker for Ethereum and the generic token created for it.',
+    name: 'Decentralized Exchange',
+    description: 'A decentralized app (dApp) with smart contracts that functions as broker for Ethereum and the generic token created for it.',
     tech: ['#react', '#web3'],
     image: 'dex.png',
     link: 'https://dapp-bootcamp1.herokuapp.com/',

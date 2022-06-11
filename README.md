@@ -6,10 +6,10 @@
 ## To run the project
 
 ```bash
-yarn
+$ yarn
 ```
 ```bash
-yarn start
+$ yarn start
 ```
 
 ## Skills
