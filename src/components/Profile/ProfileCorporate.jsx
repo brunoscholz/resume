@@ -81,63 +81,6 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           </div>
         </div>
 
-        <div className='row g-0 m-2'>
-          <div className='col-lg-12 col-xs-12'>
-            <Card color={'primary'} border={true} className='about-gallery h-100'>
-              <h3>Recent Projects</h3>
-              <article className='content'>
-                <Projects />
-              </article>
-            </Card>
-          </div>
-        </div>
-
-        <div className='row g-0 m-2'>
-          <div className='col-lg-12 col-xs-12'>
-            <Card>
-              <h3>EXPERIENCE</h3>
-              <article>
-                {ExperienceData.map((item, idx) => {
-                  return (
-                    <List key={idx}>
-                      <XPCompany>{item.company}</XPCompany>
-                      <span>
-                        <XPTitle>{item.title}</XPTitle>
-                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
-                      </span>
-                      <XPDates>{item.date}</XPDates>
-                      <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
-                    </List>
-                  )
-                })}
-              </article>
-            </Card>
-          </div>
-        </div>
-
-        <div className='row g-0 m-2'>
-          <div className='col-lg-12 col-xs-12'>
-            <Card>
-              <h3>EDUCATION</h3>
-              <article>
-                {EducationData.map((item, idx) => {
-                  return (
-                    <List key={idx}>
-                      <XPCompany>{item.university}</XPCompany>
-                      <span>
-                        <XPTitle>{item.major}</XPTitle>
-                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
-                      </span>
-                      <XPDates>{item.date}</XPDates>
-                      <NormalText dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
-                    </List>
-                  )
-                })}
-              </article>
-            </Card>
-          </div>
-        </div>
-
         <div className='row m-2'>
           <div className='col-md-6'>
             <Card>
@@ -202,6 +145,63 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                   )
                 })}
               </div>
+            </Card>
+          </div>
+        </div>
+
+        <div className='row g-0 m-2'>
+          <div className='col-lg-12 col-xs-12'>
+            <Card color={'primary'} border={true} className='about-gallery h-100'>
+              <h3>Recent Projects</h3>
+              <article className='content'>
+                <Projects />
+              </article>
+            </Card>
+          </div>
+        </div>
+
+        <div className='row g-0 m-2'>
+          <div className='col-lg-12 col-xs-12'>
+            <Card>
+              <h3>EXPERIENCE</h3>
+              <article>
+                {ExperienceData.map((item, idx) => {
+                  return (
+                    <List key={idx}>
+                      <XPCompany>{item.company}</XPCompany>
+                      <span>
+                        <XPTitle>{item.title}</XPTitle>
+                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
+                      </span>
+                      <XPDates>{item.date}</XPDates>
+                      <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
+                    </List>
+                  )
+                })}
+              </article>
+            </Card>
+          </div>
+        </div>
+
+        <div className='row g-0 m-2'>
+          <div className='col-lg-12 col-xs-12'>
+            <Card>
+              <h3>EDUCATION</h3>
+              <article>
+                {EducationData.map((item, idx) => {
+                  return (
+                    <List key={idx}>
+                      <XPCompany>{item.university}</XPCompany>
+                      <span>
+                        <XPTitle>{item.major}</XPTitle>
+                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
+                      </span>
+                      <XPDates>{item.date}</XPDates>
+                      <NormalText dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
+                    </List>
+                  )
+                })}
+              </article>
             </Card>
           </div>
         </div>
