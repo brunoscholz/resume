@@ -93,18 +93,18 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 <div className='col-lg-4 col-md-4 col'>
                   <div className='chart'>
                     <div className='bar-1'>
-                      <div className='top'></div>
+                      <div className='top using'></div>
                       <div className='block'></div>
-                      <div className='block'></div>
-                      <div className='block'></div>
-                      <div className='block'></div>
+                      <div className='block using'></div>
+                      <div className='block skill'></div>
+                      <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                     </div>
                     <div className='bar-1'>
-                      <div className='top'></div>
+                      <div className='top using'></div>
                       <div className='block'></div>
                       <div className='block'></div>
                       <div className='block using'></div>
@@ -172,16 +172,16 @@ const ProfileGaming = ({ morphs, ...props }) => {
                       <div className='top using'></div>
                       <div className='block'></div>
                       <div className='block'></div>
-                      <div className='block'></div>
                       <div className='block using'></div>
+                      <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                     </div>
                     <div className='bar-1'>
-                      <div className='top'></div>
-                      <div className='block skill'></div>
+                      <div className='top using'></div>
+                      <div className='block using'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>

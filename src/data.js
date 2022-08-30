@@ -164,6 +164,14 @@ export const InterestData = [
 
 export const ProjectData = [
   {
+    name: 'A Gift From Hermes',
+    description:
+      '7 years after its inception, this beta version was made to update my unity and C# skills. Looking forward for some integration of web3 and unity!',
+    tech: ['#unity3d', '#c#', '#game'],
+    image: 'hermes.png',
+    link: 'https://play.unity.com/mg/other/a-gift-from-hermes-v2-1-0'
+  },
+  {
     name: '"Epic Game"',
     description:
       'Buildspace weekend project: A NFT Turn based game that allows the user create a character from 3 templates and attack a big boss. But beware! The boss has a lot of hp and also attacks. The idea is you need friends to defeat the boss.',
