@@ -1,5 +1,5 @@
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
-import { EducationData, ExperienceData, AboutData } from '../../data'
+import { EducationData, ExperienceData, AboutData, SkillData } from '../../data'
 
 import {
   AboutSection,
@@ -17,6 +17,77 @@ import Projects from '../Projects/Projects'
 import './Chart.css'
 
 const ProfileGaming = ({ morphs, ...props }) => {
+
+  const createBar = (item) => {
+    const value = Math.round((item.value / 100) * 9)
+
+    return (
+      <>
+        <div className={`top${item.current ? ' using' : ''}`}></div>
+        <div className={`block${value > 7 ? (value === 8 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 6 ? (value === 7 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 5 ? (value === 6 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 4 ? (value === 5 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 3 ? (value === 4 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 2 ? (value === 3 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 1 ? (value === 2 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 0 ? (value === 1 ? ' using' : ' skill') : '' }`}></div>
+      </>
+    )
+  }
+
+  const pad = (text) => {
+    var content =  `|&nbsp;&nbsp;${text}&nbsp;&nbsp;|`
+    if (text.length > 4) content = `|&nbsp;${text}&nbsp;|`
+
+    var num = text.length === 3 ? text.length + 4 : (text.length > 3 ? text.length + 2 : 6)
+    var line = '-'.repeat(num)
+
+    return (
+      <>
+        <span>+{`${line}`}+</span>
+        <span dangerouslySetInnerHTML={{ __html: content }}></span>
+        <span>+{`${line}`}+</span>
+      </>
+    )
+  }
+
+  const listSkills = () => {
+    const filteredSkills = SkillData.filter(k => k.profiles.indexOf('gaming') >= 0)
+    const render = []
+    const data =[{"name":"test1"},{"name":"test2"}];
+    const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
+
+    console.log(listItems)
+    for (let i = 0; i < filteredSkills.length; i+=2) {
+      const item1 = filteredSkills[i]
+      const item2 = filteredSkills[i+1]
+
+      render.push (
+
+        <div className='col-lg-4 col-md-4 col'>
+          <div className='chart'>
+            <div className='bar-1'>
+              { createBar(item1) }
+            </div>
+            <div className='bar-1'>
+              { createBar(item2) }
+            </div>
+          </div>
+          <div className='chart-x'>
+            <div className='ascii'>
+              { pad(item1.trait) }
+            </div>
+            <div className='ascii'>
+              { pad(item2.trait) }
+            </div>
+          </div>
+        </div>
+      )
+    }
+    return render
+  }
+
   return (
     <AboutSection className='section gaming' {...props}>
       <Container>
@@ -90,120 +161,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 + <em>Skills</em>
               </span>
               <article className='d-flex flex-wrap'>
-                <div className='col-lg-4 col-md-4 col'>
-                  <div className='chart'>
-                    <div className='bar-1'>
-                      <div className='top'></div>
-                      <div className='block'></div>
-                      <div className='block'></div>
-                      <div className='block using'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                    </div>
-                    <div className='bar-1'>
-                      <div className='top using'></div>
-                      <div className='block'></div>
-                      <div className='block using'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                    </div>
-                  </div>
-                  <div className='chart-x'>
-                    <div className='ascii'>
-                      <span>+------+</span>
-                      <span>|&nbsp;&nbsp;C#&nbsp;&nbsp;|</span>
-                      <span>+------+</span>
-                    </div>
-                    <div className='ascii'>
-                      <span>+-------+</span>
-                      <span>|&nbsp;&nbsp;PHP&nbsp;&nbsp;|</span>
-                      <span>+-------+</span>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-lg-4 col-md-4 col'>
-                  <div className='chart'>
-                    <div className='bar-1'>
-                      <div className='top using'></div>
-                      <div className='block'></div>
-                      <div className='block using'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                    </div>
-                    <div className='bar-1'>
-                      <div className='top using'></div>
-                      <div className='block using'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                    </div>
-                  </div>
-                  <div className='chart-x'>
-                    <div className='ascii'>
-                      <span>+-------+</span>
-                      <span>|&nbsp;react&nbsp;|</span>
-                      <span>+-------+</span>
-                    </div>
-                    <div className='ascii'>
-                      <span>+--------+</span>
-                      <span>|&nbsp;drupal&nbsp;|</span>
-                      <span>+--------+</span>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-lg-4 col-md-4 col'>
-                  <div className='chart'>
-                    <div className='bar-1'>
-                      <div className='top'></div>
-                      <div className='block'></div>
-                      <div className='block'></div>
-                      <div className='block using'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                    </div>
-                    <div className='bar-1'>
-                      <div className='top'></div>
-                      <div className='block using'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                      <div className='block skill'></div>
-                    </div>
-                  </div>
-                  <div className='chart-x'>
-                    <div className='ascii'>
-                      <span>+----------+</span>
-                      <span>|&nbsp;python&nbsp;|</span>
-                      <span>+----------+</span>
-                    </div>
-                    <div className='ascii'>
-                      <span>+---------+</span>
-                      <span>|&nbsp;angular&nbsp;|</span>
-                      <span>+---------+</span>
-                    </div>
-                  </div>
-                </div>
+                { listSkills() }
 
                 <div className='col-lg-12 col-md-12'>
                   <div className='chart-subtitles'>

@@ -86,7 +86,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>SKILLS</h3>
               <div className='row list pe-2'>
-                {SkillData.map((item, idx) => {
+                {SkillData.filter(k => k.profiles.indexOf('corporate') >= 0).map((item, idx) => {
                   return (
                     <div className='col-md-12 col-xs-12 p-2' key={idx}>
                       <em>{item.trait}</em>

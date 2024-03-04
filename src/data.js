@@ -100,41 +100,59 @@ export const SkillData = [
   {
     trait_type: '',
     trait: 'English (native Portuguese)',
-    value: 90,
-    current: false
+    value: 91,
+    current: false,
+    active: true,
+    profiles: ['corporate', 'blockchain']
   },
   {
     trait_type: '',
-    trait: 'PHP',
+    trait: 'C#',
     value: 80,
-    current: false
+    current: false,
+    active: true,
+    profiles: ['gaming', 'corporate', 'blockchain']
+  },
+  {
+    trait_type: '',
+    trait: 'python',
+    value: 60,
+    current: false,
+    active: true,
+    profiles: ['gaming', 'corporate', 'blockchain']
+  },
+  {
+    trait_type: '',
+    trait: 'angular',
+    value: 80,
+    current: false,
+    active: true,
+    profiles: ['gaming', 'corporate', 'blockchain']
   },
   {
     trait_type: '',
     trait: 'react',
     value: 70,
     current: true,
-    label: ''
+    active: true,
+    profiles: ['gaming', 'corporate', 'blockchain']
+  },
+  {
+    trait_type: '',
+    trait: 'PHP',
+    value: 80,
+    current: true,
+    active: true,
+    profiles: ['gaming', 'corporate', 'blockchain']
   },
   {
     trait_type: '',
     trait: 'drupal',
-    value: 90,
-    current: true
+    value: 80,
+    current: true,
+    active: true,
+    profiles: ['gaming', 'corporate', 'blockchain']
   },
-  {
-    trait_type: '',
-    trait: 'python',
-    value: 60,
-    current: false
-  },
-  {
-    trait_type: '',
-    trait: 'angular',
-    value: 90,
-    current: false,
-    label: ''
-  }
 ]
 
 export const InterestData = [

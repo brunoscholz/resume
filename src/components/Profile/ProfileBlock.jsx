@@ -114,7 +114,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
                     This programmer has <em>{SkillData.length} attributes</em>.
                   </p>
                   <div className='row list'>
-                    {SkillData.map((item, idx) => {
+                    {SkillData.filter(k => k.profiles.indexOf('blockchain') >= 0).map((item, idx) => {
                       return (
                         <div className='col-md-12 col-xs-12 p-2' key={idx}>
                           <em>{item.trait}</em>
