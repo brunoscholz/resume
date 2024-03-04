@@ -26,7 +26,7 @@ $ yarn start
 ![](https://img.shields.io/badge/Tools-Docker-informational?style=flat&logo=docker&logoColor=white&color=6aa6f8)
 
 ## Contact
-- [https://resume-bruno.herokuapp.com/](https://resume-bruno.herokuapp.com/)
+- [https://brunoscholz.vercel.app](https://brunoscholz.vercel.app/)
 - [@brunoskolz](https://twitter.com/brunoskolz) on Twitter
 - [https://linkedin.com/in/brunoscholz/](https://linkedin.com/in/brunoscholz/)
 
