@@ -1,19 +1,27 @@
 export const AboutData = `
-Developer with 15+ years of experience in diverse fields and an entrepreneurial view, my goal is <em>always</em>
-to create value by generating intelligent solutions that fulfill client's needs. I like <emchallenging</em> situations
-that require the use of multiple skills and critical thinking.
-As a skilled life-long student, I'm now diving into the <em>blockchain</em> rabbit-hole while deepening my knowledge
-in <em>fullstack</em> tools.
+Skilled life-long student and developer with 15+ years of experience in diverse fields and an entrepreneurial view,
+my goal is <em>always</em> to create value by generating intelligent solutions that fulfill client's needs. I like
+<emchallenging</em> situations that require the use of multiple skills and critical thinking.
 `
 
 export const ExperienceData = [
+  {
+    company: 'WUNDERMAN THOMPSON TECH / VML',
+    local: 'Pelotas',
+    title: 'Backend Engineer',
+    date: 'January 2023 - Current',
+    description:
+      'Fullstack <em>Drupal</em> / Backend Engineer. Working in big drupal projects like <em>FitnessFirst</em> and <em>AB-INBEV</em>.',
+    skills: ['Drupal', 'PHP', 'Vue'],
+    image: ''
+  },
   {
     company: 'POSSIBLE / WUNDERMAN THOMPSON TECH',
     local: 'Pelotas',
     title: 'Frontend Engineer',
     date: 'January 2021 - Current',
     description:
-      'Becoming fullstack <em>Drupal</em>. Held a few client technical meetings and some solo projects. Several projects for clients like <em>Siemens</em>, <em>DWS</em> and <em>SporTV</em>.',
+      'Held a few client technical meetings and some solo projects. Several projects for clients like <em>Siemens</em>, <em>DWS</em> and <em>SporTV</em>.',
     skills: ['Angular', 'React', 'Drupal'],
     image: ''
   },
@@ -52,10 +60,10 @@ export const ExperienceData = [
 export const EducationData = [
   {
     id: 1,
-    university: 'UDEMY.COM',
-    skills: ['Javascript', 'Solidity', 'Truffle', 'Web3'],
-    date: '2017, 2021',
-    major: 'Solidity Ethereum Developer: Build Blockchain DApps',
+    university: 'ACQUIA CERTIFICATION',
+    skills: ['Drupal', 'PHP', 'Javascript'],
+    date: '2024',
+    major: 'DRUPAL 10 Developer Certification',
     description: '',
     image: ''
   },
@@ -98,7 +106,7 @@ export const SkillData = [
   {
     trait_type: '',
     trait: 'PHP',
-    value: 70,
+    value: 80,
     current: false
   },
   {
@@ -111,14 +119,14 @@ export const SkillData = [
   {
     trait_type: '',
     trait: 'drupal',
-    value: 50,
+    value: 90,
     current: true
   },
   {
     trait_type: '',
-    trait: 'solidity',
+    trait: 'python',
     value: 60,
-    current: true
+    current: false
   },
   {
     trait_type: '',

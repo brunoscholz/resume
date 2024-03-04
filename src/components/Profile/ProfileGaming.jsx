@@ -93,10 +93,10 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 <div className='col-lg-4 col-md-4 col'>
                   <div className='chart'>
                     <div className='bar-1'>
-                      <div className='top using'></div>
+                      <div className='top'></div>
+                      <div className='block'></div>
                       <div className='block'></div>
                       <div className='block using'></div>
-                      <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
@@ -106,8 +106,8 @@ const ProfileGaming = ({ morphs, ...props }) => {
                     <div className='bar-1'>
                       <div className='top using'></div>
                       <div className='block'></div>
-                      <div className='block'></div>
                       <div className='block using'></div>
+                      <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
@@ -143,9 +143,9 @@ const ProfileGaming = ({ morphs, ...props }) => {
                     </div>
                     <div className='bar-1'>
                       <div className='top using'></div>
-                      <div className='block'></div>
-                      <div className='block'></div>
                       <div className='block using'></div>
+                      <div className='block skill'></div>
+                      <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
@@ -169,7 +169,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 <div className='col-lg-4 col-md-4 col'>
                   <div className='chart'>
                     <div className='bar-1'>
-                      <div className='top using'></div>
+                      <div className='top'></div>
                       <div className='block'></div>
                       <div className='block'></div>
                       <div className='block using'></div>
@@ -180,7 +180,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                       <div className='block skill'></div>
                     </div>
                     <div className='bar-1'>
-                      <div className='top using'></div>
+                      <div className='top'></div>
                       <div className='block using'></div>
                       <div className='block skill'></div>
                       <div className='block skill'></div>
@@ -194,7 +194,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                   <div className='chart-x'>
                     <div className='ascii'>
                       <span>+----------+</span>
-                      <span>|&nbsp;solidity&nbsp;|</span>
+                      <span>|&nbsp;python&nbsp;|</span>
                       <span>+----------+</span>
                     </div>
                     <div className='ascii'>

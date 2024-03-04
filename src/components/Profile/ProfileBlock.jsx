@@ -214,6 +214,13 @@ const ProfileBlock = ({ morphs, ...props }) => {
                         </tr>
                         <tr className='punk-history-row-sold'>
                           <td>Working</td>
+                          <td>Backend Engineer</td>
+                          <td>Wunderman Thompsom Tech / VML</td>
+                          <td>Drupal, PHP, Vue</td>
+                          <td></td>
+                        </tr>
+                        <tr className='punk-history-row-sold'>
+                          <td>Work</td>
                           <td>Frontend Engineer</td>
                           <td>Wunderman Thompsom Tech</td>
                           <td>Angular, React, Drupal</td>
@@ -325,12 +332,12 @@ const ProfileBlock = ({ morphs, ...props }) => {
                           <th>Txn</th>
                         </tr>
                         <tr className='punk-history-row-claim'>
-                          <td>UDEMY.COM</td>
-                          <td>Solidity Ethereum Developer: Build Blockchain DApps in 2021</td>
-                          <td>Javascript, Solidity, Truffle, Web3</td>
+                          <td>ACQUIA CERTIFICATION</td>
+                          <td>DRUPAL 10 Developer</td>
+                          <td>Drupal, PHP, Javascript</td>
                           <td>certificate</td>
                           <td>
-                            <em>2017 (2021)</em>
+                            <em>2024</em>
                           </td>
                         </tr>
                         <tr className='punk-history-row-sold'>
