@@ -15,11 +15,13 @@ import {
 } from '../../theme/theme'
 import Projects from '../Projects/Projects'
 import ExperienceBlock from '../ExperienceBlock'
+import EducationBlock from '../EducationBlock'
 
 const ProfileBlock = ({ data, ...props }) => {
   const [aboutData, setAboutData] = useState([])
   const [interestData, setInterestData] = useState([])
   const [experienceData, setExperienceData] = useState([])
+  const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
 
   useEffect(() => {
@@ -27,11 +29,12 @@ const ProfileBlock = ({ data, ...props }) => {
     handleData(data)
   }, [data])
 
-  const handleData = (data) => {
+  const handleData = data => {
     setAboutData(data.AboutData)
     setInterestData(data.InterestData)
     setExperienceData(data.ExperienceData)
     setSkillData(data.SkillData)
+    setEducationData(data.EducationData)
   }
 
   return (
@@ -225,76 +228,7 @@ const ProfileBlock = ({ data, ...props }) => {
 
           <div className='row mt-5'>
             <div className='col-md-12'>
-              <Card>
-                <h3>Education History</h3>
-                <div className='table-responsive'>
-                  <table className='table'>
-                    <tbody>
-                      <tr>
-                        <th>University</th>
-                        <th>Course</th>
-                        <th>Skills</th>
-                        <th>status</th>
-                        <th>Txn</th>
-                      </tr>
-                      {/* <tr className='punk-history-row-claim'>
-                        <td>ACQUIA CERTIFICATION</td>
-                        <td>DRUPAL 10 Backend Specialist</td>
-                        <td>Drupal, PHP, Javascript</td>
-                        <td>certificate</td>
-                        <td>
-                          <em>2024</em>
-                        </td>
-                      </tr> */}
-                      <tr className='punk-history-row-claim'>
-                        <td>ACQUIA CERTIFICATION</td>
-                        <td>DRUPAL 10 Frontend Specialist</td>
-                        <td>Drupal, PHP, Javascript</td>
-                        <td>certificate</td>
-                        <td>
-                          <em>2024</em>
-                        </td>
-                      </tr>
-                      <tr className='punk-history-row-claim'>
-                        <td>ACQUIA CERTIFICATION</td>
-                        <td>DRUPAL 10 Developer</td>
-                        <td>Drupal, PHP, Javascript</td>
-                        <td>certificate</td>
-                        <td>
-                          <em>2024</em>
-                        </td>
-                      </tr>
-                      <tr className='punk-history-row-sold'>
-                        <td>UNIVERSIDADE POSITIVO</td>
-                        <td>Digital Games</td>
-                        <td>Unity3D, 3DSMax, C#, Javascript</td>
-                        <td>incomplete</td>
-                        <td>
-                          <em>2013 - 2015</em>
-                        </td>
-                      </tr>
-                      <tr className='punk-history-row-sold'>
-                        <td>UNIVERSIDADE FEDERAL DO AMAZONAS</td>
-                        <td>Computer Science</td>
-                        <td>Haskell, Python</td>
-                        <td>incomplete</td>
-                        <td>
-                          <em>2011 - 2013</em>
-                        </td>
-                      </tr>
-                      <tr className='punk-history-row-sold'>
-                        <td>UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ</td>
-                        <td>Electrical Engineering</td>
-                        <td>C, C++</td>
-                        <td>incomplete</td>
-                        <td>
-                          <em>2003 - 2006</em>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </Card>
+              <EducationBlock data={educationData} />
             </div>
           </div>
         </div>

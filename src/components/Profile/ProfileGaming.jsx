@@ -1,5 +1,4 @@
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
-import { EducationData, ExperienceData, AboutData, SkillData } from '../../data'
 
 import {
   AboutSection,
@@ -15,8 +14,28 @@ import {
 import Projects from '../Projects/Projects'
 
 import './Chart.css'
+import { useEffect, useState } from 'react'
 
-const ProfileGaming = ({ morphs, ...props }) => {
+const ProfileGaming = ({ data, ...props }) => {
+  const [aboutData, setAboutData] = useState([])
+  // const [interestData, setInterestData] = useState([])
+  const [experienceData, setExperienceData] = useState([])
+  const [educationData, setEducationData] = useState([])
+  const [skillData, setSkillData] = useState([])
+
+  useEffect(() => {
+    console.log('handleData', data)
+    handleData(data)
+  }, [data])
+
+  const handleData = data => {
+    setAboutData(data.AboutData)
+    // setInterestData(data.InterestData)
+    setExperienceData(data.ExperienceData)
+    setSkillData(data.SkillData)
+    setEducationData(data.EducationData)
+  }
+
   const createBar = item => {
     const value = Math.round((item.value / 100) * 9)
 
@@ -52,7 +71,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
   }
 
   const listSkills = () => {
-    const filteredSkills = SkillData.filter(k => k.profiles.indexOf('gaming') >= 0)
+    const filteredSkills = skillData.filter(k => k.profiles.indexOf('gaming') >= 0)
     const render = []
     // const data =[{"name":"test1"},{"name":"test2"}];
     // const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
@@ -138,7 +157,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
               <span className='badge'>
                 + <em>About Me</em>
               </span>
-              <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
+              <article dangerouslySetInnerHTML={{ __html: aboutData }}></article>
             </GameCard>
           </div>
         </div>
@@ -199,7 +218,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 + <em>Employment</em>
               </span>
               <article className='content'>
-                {ExperienceData.map((item, idx) => {
+                {experienceData.map((item, idx) => {
                   return (
                     <div className='d-flex flex-column item-list' key={idx}>
                       <span className='title'>{item.company}</span>
@@ -229,7 +248,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 + <em>Education</em>
               </span>
               <article className='content'>
-                {EducationData.map((item, idx) => {
+                {educationData.map((item, idx) => {
                   return (
                     <div className='d-flex flex-column item-list' key={idx}>
                       <span className='title'>{item.university}</span>

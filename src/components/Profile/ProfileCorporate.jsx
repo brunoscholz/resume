@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
 import { BiCake } from 'react-icons/bi'
-import { EducationData, ExperienceData, AboutData, SkillData, InterestData } from '../../data'
 
 import {
   Container,
@@ -23,7 +22,26 @@ import {
 } from '../../theme/theme'
 import Projects from '../Projects/Projects'
 
-const ProfileCorporate = ({ morphs, ...props }) => {
+const ProfileCorporate = ({ data, ...props }) => {
+  const [aboutData, setAboutData] = useState([])
+  const [interestData, setInterestData] = useState([])
+  const [experienceData, setExperienceData] = useState([])
+  const [educationData, setEducationData] = useState([])
+  const [skillData, setSkillData] = useState([])
+
+  useEffect(() => {
+    console.log('handleData', data)
+    handleData(data)
+  }, [data])
+
+  const handleData = data => {
+    setAboutData(data.AboutData)
+    setInterestData(data.InterestData)
+    setExperienceData(data.ExperienceData)
+    setSkillData(data.SkillData)
+    setEducationData(data.EducationData)
+  }
+
   return (
     <AboutSection className='section corporate' {...props}>
       <Container>
@@ -76,7 +94,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
           <div className='col-lg-12 col-xs-12'>
             <Card>
               <h3>ABOUT ME</h3>
-              <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
+              <article dangerouslySetInnerHTML={{ __html: aboutData }}></article>
             </Card>
           </div>
         </div>
@@ -86,7 +104,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>SKILLS</h3>
               <div className='row list pe-2'>
-                {SkillData.filter(k => k.profiles.indexOf('corporate') >= 0).map((item, idx) => {
+                {skillData.filter(k => k.profiles.indexOf('corporate') >= 0).map((item, idx) => {
                   return (
                     <div className='col-md-12 col-xs-12 p-2' key={idx}>
                       <em>{item.trait}</em>
@@ -120,7 +138,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>INTERESTS</h3>
               <div className='row list interests ps-2'>
-                {InterestData.map((item, idx) => {
+                {interestData.map((item, idx) => {
                   return (
                     <React.Fragment key={idx}>
                       {item.value > 0 && <div className='col-md-6 col-xs-6'></div>}
@@ -162,7 +180,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>EXPERIENCE</h3>
               <article>
-                {ExperienceData.map((item, idx) => {
+                {experienceData.map((item, idx) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.company}</XPCompany>
@@ -193,7 +211,7 @@ const ProfileCorporate = ({ morphs, ...props }) => {
             <Card>
               <h3>EDUCATION</h3>
               <article>
-                {EducationData.map((item, idx) => {
+                {educationData.map((item, idx) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.university}</XPCompany>

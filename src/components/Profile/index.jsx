@@ -21,9 +21,9 @@ const Profile = ({ theme }) => {
   const renderProfile = () => {
     return (
       <>
-        {theme === 'corporate' && <ProfileCorporate />}
+        {theme === 'corporate' && <ProfileCorporate data={data} />}
         {theme === 'blockchain' && <ProfileBlock data={data} />}
-        {theme === 'gaming' && <ProfileGaming />}
+        {theme === 'gaming' && <ProfileGaming data={data} />}
       </>
     )
   }

@@ -90,7 +90,7 @@
       "date": "march 2024",
       "major": "DRUPAL 10 Frontend Specialist Certification",
       "description": "",
-      "image": ""
+      "status": "certification"
     },
     {
       "id": 3,
@@ -99,34 +99,34 @@
       "date": "march 2024",
       "major": "DRUPAL 10 Developer Certification",
       "description": "",
-      "image": ""
+      "status": "certification"
     },
     {
       "id": 4,
       "university": "UNIVERSIDADE POSITIVO, Curitiba",
       "skills": ["Unity3D", "3DSMax", "C#", "Javascript"],
-      "date": "2013 - 2015 (incomplete)",
+      "date": "2013 - 2015",
       "major": "Digital Games",
       "description": "",
-      "image": ""
+      "status": "(incomplete)"
     },
     {
       "id": 5,
       "university": "UNIVERSIDADE FEDERAL DO AMAZONAS, Manaus",
       "skills": ["Haskell", "Python"],
-      "date": "2011 - 2013 (incomplete)",
+      "date": "2011 - 2013",
       "major": "Computer Science",
       "description": "",
-      "image": ""
+      "status": "(incomplete)"
     },
     {
       "id": 6,
       "university": "UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, Curitiba",
       "skills": ["C", "C++"],
-      "date": "2003 - 2006 (incomplete)",
+      "date": "2003 - 2006",
       "major": "Electrical Engineering - Electronics and Telecommunication",
       "description": "",
-      "image": ""
+      "status": "(incomplete)"
     }
   ],
   "SkillData": [

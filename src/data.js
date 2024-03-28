@@ -1,6 +1,6 @@
 export async function getData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/brunoscholz/resume/master/src/data.js')
+    const response = await fetch('https://raw.githubusercontent.com/brunoscholz/resume/master/public/data.json')
     return await response.json()
   } catch(e) {
     return e
@@ -107,7 +107,7 @@ export const EducationData = [
   //   date: 'april 2024',
   //   major: 'DRUPAL 10 Backend Specialist Certification',
   //   description: '',
-  //   image: ''
+  //   status: 'certificate'
   // },
   {
     id: 2,
@@ -116,7 +116,7 @@ export const EducationData = [
     date: 'march 2024',
     major: 'DRUPAL 10 Frontend Specialist Certification',
     description: '',
-    image: ''
+    status: 'certificate'
   },
   {
     id: 3,
@@ -125,34 +125,34 @@ export const EducationData = [
     date: 'march 2024',
     major: 'DRUPAL 10 Developer Certification',
     description: '',
-    image: ''
+    status: 'certificate'
   },
   {
     id: 4,
     university: 'UNIVERSIDADE POSITIVO, Curitiba',
     skills: ['Unity3D', '3DSMax', 'C#', 'Javascript'],
-    date: '2013 - 2015 (incomplete)',
+    date: '2013 - 2015',
     major: 'Digital Games',
     description: '',
-    image: ''
+    status: '(incomplete)'
   },
   {
     id: 5,
     university: 'UNIVERSIDADE FEDERAL DO AMAZONAS, Manaus',
     skills: ['Haskell', 'Python'],
-    date: '2011 - 2013 (incomplete)',
+    date: '2011 - 2013',
     major: 'Computer Science',
     description: '',
-    image: ''
+    status: '(incomplete)'
   },
   {
     id: 6,
     university: 'UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, Curitiba',
     skills: ['C', 'C++'],
-    date: '2003 - 2006 (incomplete)',
+    date: '2003 - 2006',
     major: 'Electrical Engineering - Electronics and Telecommunication',
     description: '',
-    image: ''
+    status: '(incomplete)'
   }
 ]
 
