@@ -226,7 +226,8 @@
         "7 years after its inception, this beta version was made to update my unity and C# skills. Looking forward for some integration of web3 and unity!",
       "tech": ["#unity3d", "#c#", "#game"],
       "image": "hermes.png",
-      "link": "https://play.unity.com/mg/other/a-gift-from-hermes-v2-1-0"
+      "link": "https://play.unity.com/mg/other/a-gift-from-hermes-v2-1-0",
+      "order": [3, 6, 0]
     },
     {
       "name": "Epic Game",
@@ -235,7 +236,8 @@
       "tech": ["#react", "#web3", "#hardhat", "#game"],
       "image": "epic.png",
       "link": "https://capitol-defenders.herokuapp.com/",
-      "github": "https://github.com/brunoscholz/buildspace-nft-game"
+      "github": "https://github.com/brunoscholz/buildspace-nft-game",
+      "order": [10, 5, 2]
     },
     {
       "name": "Cryptozombies",
@@ -243,7 +245,8 @@
       "tech": ["#react", "#web3", "#hardhat"],
       "image": "zombie.png",
       "link": "",
-      "github": "https://github.com/brunoscholz/cryptozombies"
+      "github": "https://github.com/brunoscholz/cryptozombies",
+      "order": [9, 3, 1]
     },
     {
       "name": "DNS/ENS",
@@ -251,7 +254,8 @@
       "tech": ["#react", "#web3", "#hardhat", "#polygon"],
       "image": "ens.png",
       "link": "https://ens-clone.vercel.app/",
-      "github": "https://github.com/brunoscholz/ens-clone"
+      "github": "https://github.com/brunoscholz/ens-clone",
+      "order": [8, 4, 10]
     },
     {
       "name": "NFT Marketplace",
@@ -260,7 +264,8 @@
       "tech": ["#react", "#web3", "#ipfs", "#truffle"],
       "image": "nft.png",
       "link": "https://nftsmarket.herokuapp.com/home",
-      "github": "https://github.com/brunoscholz/nft-poc"
+      "github": "https://github.com/brunoscholz/nft-poc",
+      "order": [6, 2, 7]
     },
     {
       "name": "Decentralized Exchange",
@@ -269,7 +274,8 @@
       "tech": ["#react", "#web3", "#truffle"],
       "image": "dex.png",
       "link": "https://dapp-bootcamp1.herokuapp.com/",
-      "github": "https://github.com/brunoscholz/dapp-ethereum-dex"
+      "github": "https://github.com/brunoscholz/dapp-ethereum-dex",
+      "order": [5, 0, 8]
     },
     {
       "name": "DAO",
@@ -278,7 +284,8 @@
       "tech": ["#react", "#web3", "#thrid-web"],
       "image": "dao.png",
       "link": "https://condo-dao.vercel.app/",
-      "github": "https://github.com/brunoscholz/buildspace-dao"
+      "github": "https://github.com/brunoscholz/buildspace-dao",
+      "order": [7, 1, 9]
     },
     {
       "name": "Portfolio",
@@ -287,7 +294,8 @@
       "tech": ["#react"],
       "image": "resume.png",
       "link": "",
-      "github": "https://github.com/brunoscholz/resume"
+      "github": "https://github.com/brunoscholz/resume",
+      "order": [4, 7, 5]
     },
     {
       "name": "Life Fit",
@@ -295,7 +303,8 @@
         "Long-term project at Wunderman Thompson. Big project with several separated gyms. It includes gym attendance, blog posts and contract leads.",
       "tech": ["#drupal"],
       "image": "fit.png",
-      "link": "https://www.fitnessfirst.de/"
+      "link": "https://www.fitnessfirst.de/",
+      "order": [0, 8, 6]
     },
     {
       "name": "Doe Gols",
@@ -303,7 +312,8 @@
         "Project at Wunderman Thompson for a major sports channel in Brazil (Sportv). Worked in the game which is not yet deployed (pic)",
       "tech": ["#react", "#createjs"],
       "image": "game.png",
-      "link": "https://doegols.globo.com/"
+      "link": "https://doegols.globo.com/",
+      "order": [1, 9, 3]
     },
     {
       "name": "Siemens",
@@ -311,7 +321,8 @@
         "Several internal projects at Wunderman Thompson. Worked with mobile accessibility, themes, dynamic content loaded into a page.",
       "tech": ["#canvas", "#php", "#angular"],
       "image": "quiz.png",
-      "link": "https://play.google.com/store/apps/details?id=com.siemens.quizapp"
+      "link": "https://play.google.com/store/apps/details?id=com.siemens.quizapp",
+      "order": [2, 10, 4]
     }
   ],
   "SocialData": [{
@@ -343,6 +354,12 @@
       "value": "Pelotas / RS - Brazil",
       "url": "/",
       "icon": "AiFillHome"
+    },
+    {
+      "name": "birthday",
+      "value": "March 2, 1983",
+      "url": "/",
+      "icon": "BiCake"
     }
   ]
 }

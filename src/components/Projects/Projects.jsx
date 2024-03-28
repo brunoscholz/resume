@@ -1,12 +1,19 @@
+import { useEffect, useState } from 'react'
 import Carousel from 'better-react-carousel'
 import { AiFillGithub } from 'react-icons/ai'
-import { ProjectData } from '../../data'
 import { Wrapper, Item, Image, Details, Button } from '../../theme/theme'
 
-const Projects = () => {
+const Projects = (data, idx) => {
+  const [projectData, setProjectData] = useState([])
+
+  useEffect(() => {
+    // const _data = data.sort((a,b) => a.order[idx] - b.order[idx])
+    setProjectData(data)
+  }, [data, idx])
+
   return (
     <Carousel cols={2} rows={1} gap={25} loop scrollSnap={true}>
-      {ProjectData.map((item, idx) => {
+      {projectData.map((item, idx) => {
         return (
           <Carousel.Item key={idx}>
             <Wrapper>

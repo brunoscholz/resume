@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail } from 'react-icons/ai'
-import { FaSquareXTwitter } from 'react-icons/fa6'
 
 import {
   Heading,
@@ -17,13 +15,16 @@ import {
 import Projects from '../Projects/Projects'
 import ExperienceBlock from '../ExperienceBlock'
 import EducationBlock from '../EducationBlock'
+import { renderSocialIcon } from '../../helper'
 
 const ProfileBlock = ({ data, ...props }) => {
   const [aboutData, setAboutData] = useState([])
   const [interestData, setInterestData] = useState([])
+  const [socialData, setSocialData] = useState([])
   const [experienceData, setExperienceData] = useState([])
   const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
+  const [projectData, setProjectData] = useState([])
 
   useEffect(() => {
     handleData(data)
@@ -32,9 +33,25 @@ const ProfileBlock = ({ data, ...props }) => {
   const handleData = data => {
     setAboutData(data.AboutData)
     setInterestData(data.InterestData)
+    setSocialData(data.SocialData)
     setExperienceData(data.ExperienceData)
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
+    setProjectData(data.ProjectData)
+    console.log(data.ProjectData)
+    console.log(data.ProjectData.sort((a,b) => a.order[1] - b.order[1]))
+  }
+
+  const renderSocialLink = (item, idx) => {
+    if (idx > 4) return null
+    return (
+      <div className='col-md-4' key={idx}>
+        <a href={item.url}>
+          {renderSocialIcon(item.icon, '#fc00b1', 30)}
+          <span className='ps-3'>{item.value}</span>
+        </a>
+      </div>
+    )
   }
 
   return (
@@ -79,36 +96,9 @@ const ProfileBlock = ({ data, ...props }) => {
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>Find me</h3>
                   <ContactIcons className='row list'>
-                    <div className='col-md-4'>
-                      <a href='mailto:brunoscholz@yahoo.de'>
-                        <AiFillMail color='#fc00b1' size={30} />
-                        <span className='ps-3'>brunoscholz@yahoo.de</span>
-                      </a>
-                    </div>
-                    <div className='col-md-4'>
-                      <a href='https://twitter.com/brunoskolz'>
-                        <FaSquareXTwitter color='#fc00b1' size={30} />
-                        <span className='ps-3'>@brunoskolz</span>
-                      </a>
-                    </div>
-                    <div className='col-md-4'>
-                      <a href='https://github.com/brunoscholz'>
-                        <AiFillGithub color='#fc00b1' size={30} />
-                        <span className='ps-3'>/brunoscholz</span>
-                      </a>
-                    </div>
-                    <div className='col-md-4'>
-                      <a href='https://linkedin.com/in/brunoscholz'>
-                        <AiFillLinkedin color='#fc00b1' size={30} />
-                        <span className='ps-3'>/in/brunoscholz</span>
-                      </a>
-                    </div>
-                    <div className='col-md-4'>
-                      <em>
-                        <AiFillHome color='#fc00b1' size={30} />
-                        <span className='ps-3'>Pelotas / RS - Brazil</span>
-                      </em>
-                    </div>
+                    {socialData.map((item, idx) => {
+                      return renderSocialLink(item, idx)
+                    })}
                   </ContactIcons>
                 </Card>
               </div>
@@ -209,7 +199,7 @@ const ProfileBlock = ({ data, ...props }) => {
                 <Card color={'primary'} border={true} className='about-gallery h-100'>
                   <h3>Recent Projects</h3>
                   <article className='content'>
-                    <Projects />
+                    <Projects data={projectData} idx={1} />
                   </article>
                 </Card>
               </div>

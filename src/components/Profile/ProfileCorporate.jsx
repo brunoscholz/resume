@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
-import { FaSquareXTwitter } from 'react-icons/fa6'
-import { BiCake } from 'react-icons/bi'
 
 import {
   Container,
@@ -22,13 +19,16 @@ import {
   Card
 } from '../../theme/theme'
 import Projects from '../Projects/Projects'
+import { renderSocialIcon } from '../../helper'
 
 const ProfileCorporate = ({ data, ...props }) => {
   const [aboutData, setAboutData] = useState([])
   const [interestData, setInterestData] = useState([])
+  const [socialData, setSocialData] = useState([])
   const [experienceData, setExperienceData] = useState([])
   const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
+  const [projectData, setProjectData] = useState([])
 
   useEffect(() => {
     handleData(data)
@@ -37,9 +37,24 @@ const ProfileCorporate = ({ data, ...props }) => {
   const handleData = data => {
     setAboutData(data.AboutData)
     setInterestData(data.InterestData)
+    setSocialData(data.SocialData)
     setExperienceData(data.ExperienceData)
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
+    setProjectData(data.ProjectData)
+  }
+
+  const renderSocialLink = (item, idx) => {
+    return (
+      <a href={item.url} key={idx}>
+        {renderSocialIcon(item.icon, '#e91d63', 30)}
+        {item.name === 'address' || item.name === 'email' ? (
+          <ContactEmail className='ps-2'>{item.value}</ContactEmail>
+        ) : (
+          <Contact className='ps-2'>{item.value}</Contact>
+        )}
+      </a>
+    )
   }
 
   return (
@@ -49,30 +64,9 @@ const ProfileCorporate = ({ data, ...props }) => {
           <div className='col-lg-6 col-sm-12 col-xs-12'>
             <Card style={{ display: 'flex', alignItems: 'end', paddingBottom: '1rem' }}>
               <ContactIcons>
-                <a href='mailto:brunoscholz@yahoo.de'>
-                  <AiFillMail color='#e91d63' size={30} />
-                  <ContactEmail className='ps-2'>brunoscholz@yahoo.de</ContactEmail>
-                </a>
-                <a href='https://twitter.com/brunoskolz'>
-                  <FaSquareXTwitter color='#e91d63' size={30} />
-                  <Contact className='ps-2'>@brunoskolz</Contact>
-                </a>
-                <a href='https://github.com/brunoscholz'>
-                  <AiFillGithub color='#e91d63' size={30} />
-                  <Contact className='ps-2'>/brunoscholz</Contact>
-                </a>
-                <a href='https://linkedin.com/in/brunoscholz'>
-                  <AiFillLinkedin color='#e91d63' size={30} />
-                  <Contact className='ps-2'>/in/brunoscholz</Contact>
-                </a>
-                <a href='/'>
-                  <AiFillHome color='#e91d63' size={30} />
-                  <ContactEmail className=' ps-2'>Pelotas / RS - Brazil</ContactEmail>
-                </a>
-                <a href='/'>
-                  <BiCake color='#e91d63' size={30} />
-                  <Contact className='ps-2'>March 2, 1983</Contact>
-                </a>
+                {socialData.map((item, idx) => {
+                  return renderSocialLink(item, idx)
+                })}
               </ContactIcons>
             </Card>
           </div>
@@ -104,33 +98,35 @@ const ProfileCorporate = ({ data, ...props }) => {
             <Card>
               <h3>SKILLS</h3>
               <div className='row list pe-2'>
-                {skillData.filter(k => k.profiles.indexOf('corporate') >= 0).map((item, idx) => {
-                  return (
-                    <div className='col-md-12 col-xs-12 p-2' key={idx}>
-                      <em>{item.trait}</em>
-                      <div className='progress'>
-                        <div
-                          className='progress-bar'
-                          role='progressbar'
-                          style={{ width: `${item.value}%` }}
-                          aria-valuenow={item.value}
-                          aria-valuemin='0'
-                          aria-valuemax='100'
-                        ></div>
-                        {item.current && (
+                {skillData
+                  .filter(k => k.profiles.indexOf('corporate') >= 0)
+                  .map((item, idx) => {
+                    return (
+                      <div className='col-md-12 col-xs-12 p-2' key={idx}>
+                        <em>{item.trait}</em>
+                        <div className='progress'>
                           <div
-                            className='progress-bar highlight'
+                            className='progress-bar'
                             role='progressbar'
-                            style={{ width: `10%` }}
-                            aria-valuenow='10'
+                            style={{ width: `${item.value}%` }}
+                            aria-valuenow={item.value}
                             aria-valuemin='0'
                             aria-valuemax='100'
                           ></div>
-                        )}
+                          {item.current && (
+                            <div
+                              className='progress-bar highlight'
+                              role='progressbar'
+                              style={{ width: `10%` }}
+                              aria-valuenow='10'
+                              aria-valuemin='0'
+                              aria-valuemax='100'
+                            ></div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  )
-                })}
+                    )
+                  })}
               </div>
             </Card>
           </div>
@@ -169,7 +165,7 @@ const ProfileCorporate = ({ data, ...props }) => {
             <Card color={'primary'} border={true} className='about-gallery h-100'>
               <h3>Recent Projects</h3>
               <article className='content'>
-                <Projects />
+                <Projects data={projectData} idx={0} />
               </article>
             </Card>
           </div>
@@ -219,7 +215,9 @@ const ProfileCorporate = ({ data, ...props }) => {
                         <XPTitle>{item.major}</XPTitle>
                         <XPSkills> - {item.skills.join(', ')}</XPSkills>
                       </span>
-                      <XPDates>{item.date} {item.status !== 'certification' ? item.status : ''}</XPDates>
+                      <XPDates>
+                        {item.date} {item.status !== 'certification' ? item.status : ''}
+                      </XPDates>
                     </List>
                   )
                 })}

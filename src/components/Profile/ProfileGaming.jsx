@@ -1,6 +1,4 @@
-import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
-import { FaSquareXTwitter } from 'react-icons/fa6'
-
+import { useEffect, useState } from 'react'
 import {
   AboutSection,
   Container,
@@ -15,7 +13,6 @@ import {
 import Projects from '../Projects/Projects'
 
 import './Chart.css'
-import { useEffect, useState } from 'react'
 import { renderSocialIcon } from '../../helper'
 
 const ProfileGaming = ({ data, ...props }) => {
@@ -25,6 +22,7 @@ const ProfileGaming = ({ data, ...props }) => {
   const [experienceData, setExperienceData] = useState([])
   const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
+  const [projectData, setProjectData] = useState([])
 
   useEffect(() => {
     handleData(data)
@@ -37,6 +35,7 @@ const ProfileGaming = ({ data, ...props }) => {
     setExperienceData(data.ExperienceData)
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
+    setProjectData(data.ProjectData)
   }
 
   const createBar = item => {
@@ -100,6 +99,7 @@ const ProfileGaming = ({ data, ...props }) => {
   }
 
   const renderSocialLink = (item, idx) => {
+    if (idx > 4) return null
     return (
       <a href={item.url} key={idx}>
         {renderSocialIcon(item.icon, '#d0ff01', 50)}
@@ -141,26 +141,6 @@ const ProfileGaming = ({ data, ...props }) => {
                 {socialData.map((item, idx) => {
                   return renderSocialLink(item, idx)
                 })}
-                <a href='mailto:brunoscholz@yahoo.de'>
-                  <AiFillMail color='#d0ff01' size={50} />
-                  <span className='ps-3'>brunoscholz@yahoo.de</span>
-                </a>
-                <a href='https://twitter.com/brunoskolz'>
-                  <FaSquareXTwitter color='#d0ff01' size={50} />
-                  <span className='ps-3'>@brunoskolz</span>
-                </a>
-                <a href='https://github.com/brunoscholz'>
-                  <AiFillGithub color='#d0ff01' size={50} />
-                  <span className='ps-3'>/brunoscholz</span>
-                </a>
-                <a href='https://linkedin.com/in/brunoscholz'>
-                  <AiFillLinkedin color='#d0ff01' size={50} />
-                  <span className='ps-3'>/in/brunoscholz</span>
-                </a>
-                <a href='/'>
-                  <AiFillHome color='#d0ff01' size={50} />
-                  <span className='ps-3'>Pelotas / RS - Brazil</span>
-                </a>
               </ContactIcons>
             </GameCard>
           </div>
@@ -220,7 +200,7 @@ const ProfileGaming = ({ data, ...props }) => {
                 + <em>Recent Projects</em>
               </span>
               <article className='content'>
-                <Projects />
+                <Projects data={projectData} idx={2} />
               </article>
             </GameCard>
           </div>
@@ -270,7 +250,9 @@ const ProfileGaming = ({ data, ...props }) => {
                       <span>
                         <b className='position'>{item.major}</b> - <em className='skills'>{item.skills.join(', ')}</em>
                       </span>
-                      <span className='dates'>{item.date} {item.status !== 'certification' ? item.status : ''}</span>
+                      <span className='dates'>
+                        {item.date} {item.status !== 'certification' ? item.status : ''}
+                      </span>
                     </div>
                   )
                 })}
