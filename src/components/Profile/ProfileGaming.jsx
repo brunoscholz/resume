@@ -24,7 +24,6 @@ const ProfileGaming = ({ data, ...props }) => {
   const [skillData, setSkillData] = useState([])
 
   useEffect(() => {
-    console.log('handleData', data)
     handleData(data)
   }, [data])
 
@@ -255,8 +254,7 @@ const ProfileGaming = ({ data, ...props }) => {
                       <span>
                         <b className='position'>{item.major}</b> - <em className='skills'>{item.skills.join(', ')}</em>
                       </span>
-                      <span className='dates'>{item.date}</span>
-                      <span className='description' dangerouslySetInnerHTML={{ __html: item.description }}></span>
+                      <span className='dates'>{item.date} {item.status !== 'certification' ? item.status : ''}</span>
                     </div>
                   )
                 })}

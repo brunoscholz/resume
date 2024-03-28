@@ -25,7 +25,6 @@ const ProfileBlock = ({ data, ...props }) => {
   const [skillData, setSkillData] = useState([])
 
   useEffect(() => {
-    console.log('handleData', data)
     handleData(data)
   }, [data])
 

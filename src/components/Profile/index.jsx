@@ -11,7 +11,6 @@ const Profile = ({ theme }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    console.log('getData')
     getData().then(data => {
       setData(data)
       setLoading(false)

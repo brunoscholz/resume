@@ -7,20 +7,32 @@ const EducationBlock = ({ data }) => {
   const [eduData, setEduData] = useState([])
 
   useEffect(() => {
-    setEduData(data)
+    const _data = []
+    data.map(item => {
+      let status = item.status.replace('(', '').replace(')', '')
+      _data.push({
+        status: status,
+        university: item.university.split(',')[0],
+        major: item.major,
+        skills: item.skills.join(', '),
+        date: item.date
+      })
+      return item
+    })
+    setEduData(_data)
   }, [data])
 
   const formatLine = (row, idx) => {
     const mapClass = {
       incomplete: 'punk-history-row-sold',
-      certificate: 'punk-history-row-claim'
+      certification: 'punk-history-row-claim'
     }
     return (
       <Fragment key={`edu-row-${idx}`}>
-        <tr className={mapClass[row.status.replace('(', '').replace(')')]}>
+        <tr className={mapClass[row.status]}>
           <td>{row.university}</td>
           <td>{row.major}</td>
-          <td>{row.skills.join(', ')}</td>
+          <td>{row.skills}</td>
           <td>{row.status}</td>
           <td>
             <em>{row.date}</em>

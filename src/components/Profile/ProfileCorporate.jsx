@@ -30,7 +30,6 @@ const ProfileCorporate = ({ data, ...props }) => {
   const [skillData, setSkillData] = useState([])
 
   useEffect(() => {
-    console.log('handleData', data)
     handleData(data)
   }, [data])
 
@@ -219,8 +218,7 @@ const ProfileCorporate = ({ data, ...props }) => {
                         <XPTitle>{item.major}</XPTitle>
                         <XPSkills> - {item.skills.join(', ')}</XPSkills>
                       </span>
-                      <XPDates>{item.date}</XPDates>
-                      <NormalText dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
+                      <XPDates>{item.date} {item.status !== 'certification' ? item.status : ''}</XPDates>
                     </List>
                   )
                 })}
