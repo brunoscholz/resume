@@ -237,7 +237,7 @@
       "image": "epic.png",
       "link": "https://capitol-defenders.herokuapp.com/",
       "github": "https://github.com/brunoscholz/buildspace-nft-game",
-      "order": [10, 5, 2]
+      "order": [10, 5, 4]
     },
     {
       "name": "Cryptozombies",
@@ -313,7 +313,7 @@
       "tech": ["#react", "#createjs"],
       "image": "game.png",
       "link": "https://doegols.globo.com/",
-      "order": [1, 9, 3]
+      "order": [1, 9, 2]
     },
     {
       "name": "Siemens",
@@ -322,7 +322,7 @@
       "tech": ["#canvas", "#php", "#angular"],
       "image": "quiz.png",
       "link": "https://play.google.com/store/apps/details?id=com.siemens.quizapp",
-      "order": [2, 10, 4]
+      "order": [2, 10, 3]
     }
   ],
   "SocialData": [{

@@ -83,7 +83,7 @@ const ProfileGaming = ({ data, ...props }) => {
       const item2 = filteredSkills[i + 1]
 
       render.push(
-        <div className='col-lg-4 col-md-4 col'>
+        <div className='col-lg-4 col-md-4 col' key={`skill-${i}`}>
           <div className='chart'>
             <div className='bar-1'>{createBar(item1)}</div>
             <div className='bar-1'>{createBar(item2)}</div>
@@ -160,12 +160,11 @@ const ProfileGaming = ({ data, ...props }) => {
         <div className='row flex g-0 mb-4'>
           <div className='col-md-12 col'>
             <GameCard color={'terciary'} border={true} className='about-skills h-100'>
-              <span className='badge'>
+              <span className='badge' key={'skill01'}>
                 + <em>Skills</em>
               </span>
-              <article className='d-flex flex-wrap'>
+              <article className='d-flex flex-wrap' key={'skill02'}>
                 {listSkills()}
-
                 <div className='col-lg-12 col-md-12'>
                   <div className='chart-subtitles'>
                     <div className='legend'>
