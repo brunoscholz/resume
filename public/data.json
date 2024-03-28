@@ -313,5 +313,36 @@
       "image": "quiz.png",
       "link": "https://play.google.com/store/apps/details?id=com.siemens.quizapp"
     }
+  ],
+  "SocialData": [{
+      "name": "email",
+      "value": "brunoscholz@yahoo.de",
+      "url": "mailto:brunoscholz@yahoo.de",
+      "icon": "AiFillMail"
+    },
+    {
+      "name": "x",
+      "value": "@brunoskolz",
+      "url": "https://x.com/brunoskolz",
+      "icon": "FaSquareXTwitter"
+    },
+    {
+      "name": "github",
+      "value": "/brunoscholz",
+      "url": "https://github.com/brunoscholz",
+      "icon": "AiFillGithub"
+    },
+    {
+      "name": "linkedin",
+      "value": "/in/brunoscholz",
+      "url": "https://linkedin.com/in/brunoscholz",
+      "icon": "AiFillLinkedin"
+    },
+    {
+      "name": "address",
+      "value": "Pelotas / RS - Brazil",
+      "url": "/",
+      "icon": "AiFillHome"
+    }
   ]
 }

@@ -1,4 +1,5 @@
-import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 
 import {
   AboutSection,
@@ -15,10 +16,12 @@ import Projects from '../Projects/Projects'
 
 import './Chart.css'
 import { useEffect, useState } from 'react'
+import { renderSocialIcon } from '../../helper'
 
 const ProfileGaming = ({ data, ...props }) => {
   const [aboutData, setAboutData] = useState([])
   // const [interestData, setInterestData] = useState([])
+  const [socialData, setSocialData] = useState([])
   const [experienceData, setExperienceData] = useState([])
   const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
@@ -30,6 +33,7 @@ const ProfileGaming = ({ data, ...props }) => {
   const handleData = data => {
     setAboutData(data.AboutData)
     // setInterestData(data.InterestData)
+    setSocialData(data.SocialData)
     setExperienceData(data.ExperienceData)
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
@@ -95,6 +99,15 @@ const ProfileGaming = ({ data, ...props }) => {
     return render
   }
 
+  const renderSocialLink = (item, idx) => {
+    return (
+      <a href={item.url} key={idx}>
+        {renderSocialIcon(item.icon, '#d0ff01', 50)}
+        <span className='ps-3'>{item.value}</span>
+      </a>
+    )
+  }
+
   return (
     <AboutSection className='section gaming' {...props}>
       <Container>
@@ -125,12 +138,15 @@ const ProfileGaming = ({ data, ...props }) => {
               <span className='badge gray badge--bottom-left'>+</span>
 
               <ContactIcons>
+                {socialData.map((item, idx) => {
+                  return renderSocialLink(item, idx)
+                })}
                 <a href='mailto:brunoscholz@yahoo.de'>
                   <AiFillMail color='#d0ff01' size={50} />
                   <span className='ps-3'>brunoscholz@yahoo.de</span>
                 </a>
                 <a href='https://twitter.com/brunoskolz'>
-                  <AiFillTwitterCircle color='#d0ff01' size={50} />
+                  <FaSquareXTwitter color='#d0ff01' size={50} />
                   <span className='ps-3'>@brunoskolz</span>
                 </a>
                 <a href='https://github.com/brunoscholz'>

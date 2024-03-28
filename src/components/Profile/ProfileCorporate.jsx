@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillMail, AiFillHome } from 'react-icons/ai'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 import { BiCake } from 'react-icons/bi'
 
 import {
@@ -53,7 +54,7 @@ const ProfileCorporate = ({ data, ...props }) => {
                   <ContactEmail className='ps-2'>brunoscholz@yahoo.de</ContactEmail>
                 </a>
                 <a href='https://twitter.com/brunoskolz'>
-                  <AiFillTwitterCircle color='#e91d63' size={30} />
+                  <FaSquareXTwitter color='#e91d63' size={30} />
                   <Contact className='ps-2'>@brunoskolz</Contact>
                 </a>
                 <a href='https://github.com/brunoscholz'>

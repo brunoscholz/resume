@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai'
+import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail } from 'react-icons/ai'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 
 import {
   Heading,
@@ -86,7 +87,7 @@ const ProfileBlock = ({ data, ...props }) => {
                     </div>
                     <div className='col-md-4'>
                       <a href='https://twitter.com/brunoskolz'>
-                        <AiFillTwitterCircle color='#fc00b1' size={30} />
+                        <FaSquareXTwitter color='#fc00b1' size={30} />
                         <span className='ps-3'>@brunoskolz</span>
                       </a>
                     </div>
