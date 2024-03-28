@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiFillGithub, AiFillHome, AiFillLinkedin, AiFillMail, AiFillTwitterCircle } from 'react-icons/ai'
-import { AboutData, InterestData, SkillData } from '../../data'
+
 import {
   Heading,
   Card,
@@ -14,8 +14,26 @@ import {
   AboutSection
 } from '../../theme/theme'
 import Projects from '../Projects/Projects'
+import ExperienceBlock from '../ExperienceBlock'
 
-const ProfileBlock = ({ morphs, ...props }) => {
+const ProfileBlock = ({ data, ...props }) => {
+  const [aboutData, setAboutData] = useState([])
+  const [interestData, setInterestData] = useState([])
+  const [experienceData, setExperienceData] = useState([])
+  const [skillData, setSkillData] = useState([])
+
+  useEffect(() => {
+    console.log('handleData', data)
+    handleData(data)
+  }, [data])
+
+  const handleData = (data) => {
+    setAboutData(data.AboutData)
+    setInterestData(data.InterestData)
+    setExperienceData(data.ExperienceData)
+    setSkillData(data.SkillData)
+  }
+
   return (
     <AboutSection className='section blockchain' {...props}>
       <Container>
@@ -101,7 +119,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
               <div className='col-md-12 col-xs-12'>
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>About Me</h3>
-                  <article dangerouslySetInnerHTML={{ __html: AboutData }}></article>
+                  <article dangerouslySetInnerHTML={{ __html: aboutData }}></article>
                 </Card>
               </div>
             </div>
@@ -111,10 +129,10 @@ const ProfileBlock = ({ morphs, ...props }) => {
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>Skills</h3>
                   <p style={{ marginTop: '0px' }}>
-                    This programmer has <em>{SkillData.length} attributes</em>.
+                    This programmer has <em>{skillData.length} attributes</em>.
                   </p>
                   <div className='row list'>
-                    {SkillData.filter(k => k.profiles.indexOf('blockchain') >= 0).map((item, idx) => {
+                    {skillData.filter(k => k.profiles.indexOf('blockchain') >= 0).map((item, idx) => {
                       return (
                         <div className='col-md-12 col-xs-12 p-2' key={idx}>
                           <em>{item.trait}</em>
@@ -122,7 +140,7 @@ const ProfileBlock = ({ morphs, ...props }) => {
                             <div
                               className='progress-bar'
                               role='progressbar'
-                              style={{width: `${item.value}%`}}
+                              style={{ width: `${item.value}%` }}
                               aria-valuenow={item.value}
                               aria-valuemin='0'
                               aria-valuemax='100'
@@ -130,14 +148,14 @@ const ProfileBlock = ({ morphs, ...props }) => {
                               {/* {`${item.value}%`} */}
                             </div>
                             {item.current && (
-                              <div className="progress-bar highlight"
-                                role="progressbar"
-                                style={{width: `10%`}}
-                                aria-valuenow="10"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              >
-                              </div>
+                              <div
+                                className='progress-bar highlight'
+                                role='progressbar'
+                                style={{ width: `10%` }}
+                                aria-valuenow='10'
+                                aria-valuemin='0'
+                                aria-valuemax='100'
+                              ></div>
                             )}
                           </div>
                         </div>
@@ -151,11 +169,9 @@ const ProfileBlock = ({ morphs, ...props }) => {
               <div className='col-md-6'>
                 <Card>
                   <h3 style={{ marginBottom: '5px' }}>Interests</h3>
-                  <p style={{ marginTop: '0px' }}>
-                    Hobbies and the like.
-                  </p>
+                  <p style={{ marginTop: '0px' }}>Hobbies and the like.</p>
                   <div className='row list interests'>
-                    {InterestData.map((item, idx) => {
+                    {interestData.map((item, idx) => {
                       return (
                         <React.Fragment key={idx}>
                           {item.value > 0 && <div className='col-md-6 col-xs-6'></div>}
@@ -165,11 +181,11 @@ const ProfileBlock = ({ morphs, ...props }) => {
                               <div
                                 className='progress-bar'
                                 role='progressbar'
-                                style={{width: `${item.value < 0 ? item.value * -1 : item.value}%`}}
+                                style={{ width: `${item.value < 0 ? item.value * -1 : item.value}%` }}
                                 aria-valuenow={item.value < 0 ? item.value * -1 : item.value}
                                 aria-valuemin='0'
                                 aria-valuemax='100'
-                                >
+                              >
                                 {/* {`${item.value}%`} */}
                               </div>
                             </div>
@@ -195,187 +211,96 @@ const ProfileBlock = ({ morphs, ...props }) => {
                 </Card>
               </div>
             </div>
+          </div>
+        </div>
+      </Container>
 
-            <div className='row mt-5'>
-              <div className='col-md-12'>
-                <Card>
-                  <h3>
-                    Market Status <i className='fa fa-spinner fa-pulse fa-fw'></i>
-                  </h3>
-                  <div className='table-responsive'>
-                    <table className='table'>
-                      <tbody>
-                        <tr>
-                          <th>Status</th>
-                          <th>As</th>
-                          <th>At</th>
-                          <th>Skills</th>
-                          <th>Txn</th>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>Working</td>
-                          <td>Backend Engineer</td>
-                          <td>Wunderman Thompsom Tech / VML</td>
-                          <td>Drupal, PHP, Vue</td>
-                          <td></td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>Work</td>
-                          <td>Frontend Engineer</td>
-                          <td>Wunderman Thompsom Tech</td>
-                          <td>Angular, React, Drupal</td>
-                          <td></td>
-                        </tr>
-                        <tr className='punk-history-row-claim'>
-                          <td>Hired</td>
-                          <td></td>
-                          <td>Wunderman Thompsom Tech</td>
-                          <td></td>
-                          <td>
-                            <em>January 2021</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-offer'>
-                          <td>Left</td>
-                          <td></td>
-                          <td>Oction</td>
-                          <td></td>
-                          <td>
-                            <em>August 2016</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>Work</td>
-                          <td>Developer</td>
-                          <td>Oction</td>
-                          <td>Unity3D(C#), Angular, Python, PHP, Mysql</td>
-                          <td></td>
-                        </tr>
-                        <tr className='punk-history-row-claim'>
-                          <td>Founded</td>
-                          <td></td>
-                          <td>Oction</td>
-                          <td></td>
-                          <td>
-                            <em>February 2014</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-offer'>
-                          <td>Left</td>
-                          <td></td>
-                          <td>Banco do Brasil</td>
-                          <td></td>
-                          <td>
-                            <em>February 2014</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>Work</td>
-                          <td></td>
-                          <td>Banco do Brasil</td>
-                          <td>PHP, MySql, VBA</td>
-                          <td></td>
-                        </tr>
-                        <tr className='punk-history-row-claim'>
-                          <td>Hired</td>
-                          <td></td>
-                          <td>Banco do Brasil</td>
-                          <td></td>
-                          <td>
-                            <em>May 2006</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-offer'>
-                          <td>Left</td>
-                          <td></td>
-                          <td>Abbra</td>
-                          <td></td>
-                          <td>
-                            <em>May 2006</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>Work</td>
-                          <td>Developer</td>
-                          <td>Abbra</td>
-                          <td>PHP, MySql, Javascript</td>
-                          <td></td>
-                        </tr>
-                        <tr className='punk-history-row-claim'>
-                          <td>Hired</td>
-                          <td></td>
-                          <td>Abbra</td>
-                          <td></td>
-                          <td>
-                            <em>April 2004</em>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </Card>
-              </div>
+      <div className='mx-3'>
+        <div>
+          <div className='row mt-5'>
+            <div className='col-md-12'>
+              <ExperienceBlock data={experienceData} />
             </div>
+          </div>
 
-            <div className='row mt-5'>
-              <div className='col-md-12'>
-                <Card>
-                  <h3>Education History</h3>
-                  <div className='table-responsive'>
-                    <table className='table'>
-                      <tbody>
-                        <tr>
-                          <th>University</th>
-                          <th>Course</th>
-                          <th>Skills</th>
-                          <th>status</th>
-                          <th>Txn</th>
-                        </tr>
-                        <tr className='punk-history-row-claim'>
-                          <td>ACQUIA CERTIFICATION</td>
-                          <td>DRUPAL 10 Developer</td>
-                          <td>Drupal, PHP, Javascript</td>
-                          <td>certificate</td>
-                          <td>
-                            <em>2024</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>UNIVERSIDADE POSITIVO</td>
-                          <td>Digital Games</td>
-                          <td>Unity3D, 3DSMax, C#, Javascript</td>
-                          <td>incomplete</td>
-                          <td>
-                            <em>2013 - 2015</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>UNIVERSIDADE FEDERAL DO AMAZONAS</td>
-                          <td>Computer Science</td>
-                          <td>Haskell, Python</td>
-                          <td>incomplete</td>
-                          <td>
-                            <em>2011 - 2013</em>
-                          </td>
-                        </tr>
-                        <tr className='punk-history-row-sold'>
-                          <td>UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ</td>
-                          <td>Electrical Engineering</td>
-                          <td>C, C++</td>
-                          <td>incomplete</td>
-                          <td>
-                            <em>2003 - 2006</em>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </Card>
-              </div>
+          <div className='row mt-5'>
+            <div className='col-md-12'>
+              <Card>
+                <h3>Education History</h3>
+                <div className='table-responsive'>
+                  <table className='table'>
+                    <tbody>
+                      <tr>
+                        <th>University</th>
+                        <th>Course</th>
+                        <th>Skills</th>
+                        <th>status</th>
+                        <th>Txn</th>
+                      </tr>
+                      {/* <tr className='punk-history-row-claim'>
+                        <td>ACQUIA CERTIFICATION</td>
+                        <td>DRUPAL 10 Backend Specialist</td>
+                        <td>Drupal, PHP, Javascript</td>
+                        <td>certificate</td>
+                        <td>
+                          <em>2024</em>
+                        </td>
+                      </tr> */}
+                      <tr className='punk-history-row-claim'>
+                        <td>ACQUIA CERTIFICATION</td>
+                        <td>DRUPAL 10 Frontend Specialist</td>
+                        <td>Drupal, PHP, Javascript</td>
+                        <td>certificate</td>
+                        <td>
+                          <em>2024</em>
+                        </td>
+                      </tr>
+                      <tr className='punk-history-row-claim'>
+                        <td>ACQUIA CERTIFICATION</td>
+                        <td>DRUPAL 10 Developer</td>
+                        <td>Drupal, PHP, Javascript</td>
+                        <td>certificate</td>
+                        <td>
+                          <em>2024</em>
+                        </td>
+                      </tr>
+                      <tr className='punk-history-row-sold'>
+                        <td>UNIVERSIDADE POSITIVO</td>
+                        <td>Digital Games</td>
+                        <td>Unity3D, 3DSMax, C#, Javascript</td>
+                        <td>incomplete</td>
+                        <td>
+                          <em>2013 - 2015</em>
+                        </td>
+                      </tr>
+                      <tr className='punk-history-row-sold'>
+                        <td>UNIVERSIDADE FEDERAL DO AMAZONAS</td>
+                        <td>Computer Science</td>
+                        <td>Haskell, Python</td>
+                        <td>incomplete</td>
+                        <td>
+                          <em>2011 - 2013</em>
+                        </td>
+                      </tr>
+                      <tr className='punk-history-row-sold'>
+                        <td>UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ</td>
+                        <td>Electrical Engineering</td>
+                        <td>C, C++</td>
+                        <td>incomplete</td>
+                        <td>
+                          <em>2003 - 2006</em>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
+      </div>
 
+      <Container>
         <div className='row footer'>
           <div className='col-md-12 text-center'>
             based on <a href='https://cryptopunks.app/'>CryptoPunks</a> - NFT Marketplace - design

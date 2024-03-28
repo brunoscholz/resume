@@ -9,16 +9,16 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${({theme}) => theme.colors.body};
-    color: ${({theme}) => theme.colors.text};
+    background: ${({ theme }) => theme.colors.body};
+    color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.typography[0]};
     transition: all 0.50s linear;
   }
 
   .menu {
-    background: ${({theme}) => theme.colors.menu};
+    background: ${({ theme }) => theme.colors.menu};
     h2 {
-      color: ${({theme}) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `
@@ -152,7 +152,7 @@ export const gamingTheme = {
 //   }};
 // `
 
-const corporateName = css `
+const corporateName = css`
   font-size: calc(48.0006px);
   font-weight: 700;
   line-height: 1.2em;
@@ -166,7 +166,7 @@ const corporateName = css `
   }
 `
 
-const blockchainName = css `
+const blockchainName = css`
   font-size: 34px;
   font-weight: 700;
   line-height: 1.2em;
@@ -177,7 +177,7 @@ const blockchainName = css `
   }
 `
 
-const gamingName = css `
+const gamingName = css`
   flex-direction: column;
   width: 1%;
   margin-left: 0.7rem;
@@ -231,7 +231,7 @@ const getBorders = props => {
 
 const dashedBorders = css`
   border: dashed 4px #000;
-  border-image-source: url("/assets/border-gray-5.png");
+  border-image-source: url('/assets/border-gray-5.png');
   border-image-slice: 2;
   border-image-repeat: round;
 `
@@ -242,7 +242,7 @@ const badgeStyles = css`
   border-radius: 0;
   font-size: 30px;
   background-color: ${props => props.theme.colors.body};
-  color: ${props => props.color ? props.theme.colors[props.color] : props.theme.colors.grayText1};
+  color: ${props => (props.color ? props.theme.colors[props.color] : props.theme.colors.grayText1)};
   padding: 0 1.2rem 0 0;
   left: -10px;
   top: -15px;
@@ -306,7 +306,9 @@ export const Heading = styled.div`
   ${props => props.theme.name === 'gaming' && 'flex-direction: column;'}
   ${props => props.theme.name === 'corporate' && 'flex-direction: column-reverse;'}
 
-  ${props => props.theme.name === 'blockchain' && `
+  ${props =>
+    props.theme.name === 'blockchain' &&
+    `
     display: inline-block;
     position: relative;
     width: 100%;
@@ -325,7 +327,9 @@ export const Card = styled.div`
   color: ${props => props.theme.colors.text};
   // letter-spacing: 0.2rem;
 
-  ${props => props.theme.name === 'corporate' && `
+  ${props =>
+    props.theme.name === 'corporate' &&
+    `
     justify-content: center;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -376,14 +380,15 @@ export const Card = styled.div`
 
 export const GameCard = styled(Card)`
   padding: 2rem 1.4rem 1.4rem;
-  ${props => getBorders(props) }
+  ${props => getBorders(props)}
 
   .badge {
     ${badgeStyles}
   }
 
-  article em, div em {
-    color: ${props => props.color ? props.theme.colors[props.color] : props.theme.colors.primary};
+  article em,
+  div em {
+    color: ${props => (props.color ? props.theme.colors[props.color] : props.theme.colors.primary)};
     font-style: normal;
     font-weight: 800;
   }
@@ -417,31 +422,37 @@ export const GameCard = styled(Card)`
 `
 
 export const AboutInfo = styled.div`
-  position:relative;
+  position: relative;
   display: flex;
   ${props => props.theme.name === 'gaming' && 'flex-direction: column;'}
-  ${props => props.theme.name === 'blockchain' && `
+  ${props =>
+    props.theme.name === 'blockchain' &&
+    `
     margin-left: 0;
     margin-right: 0;
     background-color: #638596;
     min-height: 300px;
   `}
 
-  ${props => props.theme.name === 'corporate' && `
+  ${props =>
+    props.theme.name === 'corporate' &&
+    `
     justify-content: center;
   `}
 
   ${media.md`
     flex-direction: row;
-    ${props => props.theme.name === 'corporate' && `
+    ${props =>
+      props.theme.name === 'corporate' &&
+      `
       justify-content: flex-end;
     `}
   `}
 `
 
 export const Avatar = styled.div`
-  position:relative;
-  display:inline-block;
+  position: relative;
+  display: inline-block;
 
   .badge {
     ${badgeStyles}
@@ -452,7 +463,9 @@ export const Avatar = styled.div`
     top: -13px;
   }
 
-  ${props => props.theme.name === 'blockchain' && `
+  ${props =>
+    props.theme.name === 'blockchain' &&
+    `
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -460,13 +473,15 @@ export const Avatar = styled.div`
     width: 100%;
   `}
 
-  ${props => props.theme.name === 'gaming' && `
+  ${props =>
+    props.theme.name === 'gaming' &&
+    `
     display: flex;
     flex-direction: column;
   `}
 
   img {
-    ${props => getBorders(props) }
+    ${props => getBorders(props)}
     ${props => props.theme.name === 'blockchain' && 'max-height: 312px; max-width: 312px; margin-top: 50px;'}
   }
 
@@ -498,17 +513,21 @@ export const ContactIcons = styled.div`
 
   span {
     font-size: 20px;
-    font-family: ${props => props.theme.typography.fonts[0]}
+    font-family: ${props => props.theme.typography.fonts[0]};
   }
 
-  ${props => props.theme.name === 'blockchain' && `
+  ${props =>
+    props.theme.name === 'blockchain' &&
+    `
     span {
       font-size: 16px;
     }
   `}
 
   ${media.md`
-    ${props => props.theme.name === 'gaming' && `
+    ${props =>
+      props.theme.name === 'gaming' &&
+      `
       span {
         font-size: 35px;
       }
@@ -526,7 +545,9 @@ export const Birthday = styled.div`
     color: ${props => props.theme.colors.primary};
   }
 
-  ${props => props.theme.name === 'blockchain' && `
+  ${props =>
+    props.theme.name === 'blockchain' &&
+    `
     padding: 8px 15px;
     background-color: #f5f5f5;
     margin: 0;
@@ -542,16 +563,19 @@ export const Birthday = styled.div`
     }
   `}
 
-
   ${media.md`
-    ${props => props.theme.name === 'gaming' && `
+    ${props =>
+      props.theme.name === 'gaming' &&
+      `
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     `}
 
-    ${props => props.theme.name === 'blockchain' && `
+    ${props =>
+      props.theme.name === 'blockchain' &&
+      `
       display: flex;
       flex-direction: row;
     `}
@@ -559,9 +583,9 @@ export const Birthday = styled.div`
 `
 
 export const Logo = styled.div`
-  font-family: 'Press Start 2P',cursive;
+  font-family: 'Press Start 2P', cursive;
   font-size: 50px;
-  color: ${props => props.theme.colors.primary}
+  color: ${props => props.theme.colors.primary};
 `
 
 export const Contact = styled.p`
@@ -751,7 +775,7 @@ export const normalBorders = css`
   border: 2px solid ${props => props.theme.colors.primary};
 `
 export const Button = styled.a`
-  ${props => props.theme.name === 'gaming' ? dashedBorders : normalBorders}
+  ${props => (props.theme.name === 'gaming' ? dashedBorders : normalBorders)}
 
   color: ${props => props.theme.colors.primary};
   padding: 0.375rem 1.5rem;

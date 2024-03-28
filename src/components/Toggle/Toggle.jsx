@@ -6,14 +6,14 @@ import './Toggle.css'
  *
  *
  */
-const Toggle = ({theme, onChange}) => {
-  const [ inputProps ] = useRadioButtons('choose_theme', onChange)
+const Toggle = ({ theme, onChange }) => {
+  const [inputProps] = useRadioButtons('choose_theme', onChange)
 
   // todo: better visuals for theme selector
 
   return (
     <div className='menu'>
-      <h2 className="menu-header-title">Theme</h2>
+      <h2 className='menu-header-title'>Theme</h2>
       <div className='wrapper'>
         <div className='theme-switcher'>
           <input id='corporate' value='corporate' checked={theme === 'corporate'} {...inputProps} />
@@ -33,7 +33,9 @@ const Toggle = ({theme, onChange}) => {
 
           <div className={`toggle start-${theme}`}></div>
         </div>
-        <a className='btn w-button download' target='_blank' href='assets/cv-brunoscholz.pdf' alt='Download CV'>Download CV</a>
+        <a className='btn w-button download' target='_blank' href='assets/cv-brunoscholz.pdf' alt='Download CV'>
+          Download CV
+        </a>
       </div>
     </div>
   )

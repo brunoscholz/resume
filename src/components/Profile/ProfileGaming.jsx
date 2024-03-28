@@ -17,30 +17,29 @@ import Projects from '../Projects/Projects'
 import './Chart.css'
 
 const ProfileGaming = ({ morphs, ...props }) => {
-
-  const createBar = (item) => {
+  const createBar = item => {
     const value = Math.round((item.value / 100) * 9)
 
     return (
       <>
         <div className={`top${item.current ? ' using' : ''}`}></div>
-        <div className={`block${value > 7 ? (value === 8 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 6 ? (value === 7 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 5 ? (value === 6 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 4 ? (value === 5 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 3 ? (value === 4 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 2 ? (value === 3 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 1 ? (value === 2 ? ' using' : ' skill') : '' }`}></div>
-        <div className={`block${value > 0 ? (value === 1 ? ' using' : ' skill') : '' }`}></div>
+        <div className={`block${value > 7 ? (value === 8 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 6 ? (value === 7 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 5 ? (value === 6 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 4 ? (value === 5 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 3 ? (value === 4 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 2 ? (value === 3 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 1 ? (value === 2 ? ' using' : ' skill') : ''}`}></div>
+        <div className={`block${value > 0 ? (value === 1 ? ' using' : ' skill') : ''}`}></div>
       </>
     )
   }
 
-  const pad = (text) => {
-    var content =  `|&nbsp;&nbsp;${text}&nbsp;&nbsp;|`
+  const pad = text => {
+    var content = `|&nbsp;&nbsp;${text}&nbsp;&nbsp;|`
     if (text.length > 4) content = `|&nbsp;${text}&nbsp;|`
 
-    var num = text.length === 3 ? text.length + 4 : (text.length > 3 ? text.length + 2 : 6)
+    var num = text.length === 3 ? text.length + 4 : text.length > 3 ? text.length + 2 : 6
     var line = '-'.repeat(num)
 
     return (
@@ -55,32 +54,22 @@ const ProfileGaming = ({ morphs, ...props }) => {
   const listSkills = () => {
     const filteredSkills = SkillData.filter(k => k.profiles.indexOf('gaming') >= 0)
     const render = []
-    const data =[{"name":"test1"},{"name":"test2"}];
-    const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
+    // const data =[{"name":"test1"},{"name":"test2"}];
+    // const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
 
-    console.log(listItems)
-    for (let i = 0; i < filteredSkills.length; i+=2) {
+    for (let i = 0; i < filteredSkills.length; i += 2) {
       const item1 = filteredSkills[i]
-      const item2 = filteredSkills[i+1]
+      const item2 = filteredSkills[i + 1]
 
-      render.push (
-
+      render.push(
         <div className='col-lg-4 col-md-4 col'>
           <div className='chart'>
-            <div className='bar-1'>
-              { createBar(item1) }
-            </div>
-            <div className='bar-1'>
-              { createBar(item2) }
-            </div>
+            <div className='bar-1'>{createBar(item1)}</div>
+            <div className='bar-1'>{createBar(item2)}</div>
           </div>
           <div className='chart-x'>
-            <div className='ascii'>
-              { pad(item1.trait) }
-            </div>
-            <div className='ascii'>
-              { pad(item2.trait) }
-            </div>
+            <div className='ascii'>{pad(item1.trait)}</div>
+            <div className='ascii'>{pad(item2.trait)}</div>
           </div>
         </div>
       )
@@ -161,7 +150,7 @@ const ProfileGaming = ({ morphs, ...props }) => {
                 + <em>Skills</em>
               </span>
               <article className='d-flex flex-wrap'>
-                { listSkills() }
+                {listSkills()}
 
                 <div className='col-lg-12 col-md-12'>
                   <div className='chart-subtitles'>
@@ -217,8 +206,16 @@ const ProfileGaming = ({ morphs, ...props }) => {
                       <span>
                         <b className='position'>{item.title}</b> - <em className='skills'>{item.skills.join(', ')}</em>
                       </span>
-                      <span className='dates'>{item.date}</span>
-                      <span className='ps-4 description' dangerouslySetInnerHTML={{ __html: item.description }}></span>
+                      <span className='dates'>{`${item.begin} ${item.separator} ${item.end}`}</span>
+                      <ul className='simple-list'>
+                        {item.description.map((li, i) => {
+                          return (
+                            <li key={`list-item-${i}`}>
+                              <span className='ps-4 description' dangerouslySetInnerHTML={{ __html: li }}></span>
+                            </li>
+                          )
+                        })}
+                      </ul>
                     </div>
                   )
                 })}

@@ -1,7 +1,19 @@
+export async function getData() {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/brunoscholz/resume/master/src/data.js')
+    return await response.json()
+  } catch(e) {
+    return e
+  }
+}
+
 export const AboutData = `
-Skilled life-long student and developer with 15+ years of experience in diverse fields and an entrepreneurial view,
-my goal is <em>always</em> to create value by generating intelligent solutions that fulfill client's needs. I like
-<emchallenging</em> situations that require the use of multiple skills and critical thinking.
+Fullstack Drupal developer at VML. 15+ years of diverse software engineering experience with specialties in
+frontend development, infrastructure operation, and problem solving.
+<br/><br/>
+Skilled life-long student with an entrepreneurial view, my goal is <em>always</em> to create value
+by generating intelligent solutions that fulfill customer's needs. I like <em>challenging</em> situations that
+require the use of multiple skills and critical thinking. Usually spending time learning new technologies and tools.
 `
 
 export const ExperienceData = [
@@ -9,9 +21,16 @@ export const ExperienceData = [
     company: 'WUNDERMAN THOMPSON TECH / VML',
     local: 'Pelotas',
     title: 'Backend Engineer',
-    date: 'January 2023 - Current',
-    description:
-      'Fullstack <em>Drupal</em> / Backend Engineer. Working in big drupal projects like <em>FitnessFirst</em> and <em>AB-INBEV</em>.',
+    path: ['Working'],
+    begin: 'January 2023',
+    end: 'Current',
+    separator: '-',
+    description: [
+      'Fullstack <em>Drupal</em> / Backend Engineer.',
+      'Worked in big drupal projects like <em>FitnessFirst</em> and <em>AB-INBEV</em>.',
+      'Built <em>Acquia DAM</em> image cropper, a drupal module to help the customer\'s experience curating images and \'translates\' their ideas into DAM\'s queries.',
+      'Lead the development of a multipage webform that functions as the primary source of new subscriptions for the company. It has lots of custom components, custom theme, and integrated external API.',
+    ],
     skills: ['Drupal', 'PHP', 'Vue'],
     image: ''
   },
@@ -19,9 +38,17 @@ export const ExperienceData = [
     company: 'POSSIBLE / WUNDERMAN THOMPSON TECH',
     local: 'Pelotas',
     title: 'Frontend Engineer',
-    date: 'January 2021 - Current',
-    description:
-      'Held a few client technical meetings and some solo projects. Several projects for clients like <em>Siemens</em>, <em>DWS</em> and <em>SporTV</em>.',
+    path: ['Hired', 'Work'],
+    begin: 'January 2021',
+    end: 'Current',
+    separator: '-',
+    description: [
+      'Several projects for clients like <em>Siemens</em> and <em>DWS</em>.',
+      'Implemented a game using CreateJS for <em>SporTV</em>.',
+      'Worked on standalone projects for corporate training using scorm.',
+      'SSO configuration with AzureAD in Symfony 3.',
+      'Built some mobile apps with <em>cordova</em>.',
+    ],
     skills: ['Angular', 'React', 'Drupal'],
     image: ''
   },
@@ -29,9 +56,15 @@ export const ExperienceData = [
     company: 'OCTION',
     local: 'Curitiba',
     title: 'Co-Founder & Game Developer',
-    date: 'February 2014 - August 2016',
-    description:
-      'Creating products directed to corporate <em>training</em>, advergames for business fairs and educational <em>games</em>.',
+    path: ['Founded', 'Work', 'Left'],
+    begin: 'February 2014',
+    end: 'August 2016',
+    separator: '-',
+    description: [
+      'Created products aimed at corporate <em>training</em>, advergames for business fairs and educational games.',
+      'Helped in developing the core teaching paradigm of the company using ideas from Piaget and Popper.',
+      'Worked in a project of niche social media with blockchain. The project, unfortunately was shut down because in 2016 crypto was a very controversial topic.',
+    ],
     skills: ['Unity3D(C#)', 'Angular', 'Python', 'PHP', 'Mysql'],
     image: ''
   },
@@ -39,9 +72,14 @@ export const ExperienceData = [
     company: 'Banco do Brasil',
     local: 'Curitiba / Manaus',
     title: '',
-    date: 'May 2006 - February 2014',
-    description:
+    path: ['Hired', 'Work', 'Left'],
+    begin: 'May 2006',
+    end: 'February 2014',
+    separator: '-',
+    description: [
       'Worked together with <em>engineering</em> and <em>logistics</em> management in Manaus (AM) in the development of a dashboard for cost control in building and renovation projects.',
+      'Built several VBA mainframe scrappers for data collecting and filtering for reports and issue identification.'
+    ],
     skills: ['PHP', 'MySql', 'VBA'],
     image: ''
   },
@@ -49,26 +87,48 @@ export const ExperienceData = [
     company: 'ABBRA',
     local: 'Curitiba',
     title: 'Developer',
-    date: 'April 2004 - May 2006',
-    description:
-      'Development of <em>dynamic processes</em>, from contract to complete legal process with customer leads, batch research and verification in court <em>databases</em> for more than one million potential clients.',
-    skills: ['PHP', 'MySql'],
+    path: ['Hired', 'Work', 'Left'],
+    begin: 'April 2004',
+    end: 'May 2006',
+    separator: '-',
+    description: [
+      'Developed a system that took care of the entire process, from lead and first contact to signed legal contract. Batch research and verification in court <em>databases</em> for more than one million potential clients.',
+    ],
+    skills: ['PHP', 'MySql', 'Javascript'],
     image: ''
   }
 ]
 
 export const EducationData = [
+  // {
+  //   id: 1,
+  //   university: 'ACQUIA CERTIFICATION',
+  //   skills: ['Drupal', 'PHP', 'Javascript'],
+  //   date: 'april 2024',
+  //   major: 'DRUPAL 10 Backend Specialist Certification',
+  //   description: '',
+  //   image: ''
+  // },
   {
-    id: 1,
+    id: 2,
     university: 'ACQUIA CERTIFICATION',
     skills: ['Drupal', 'PHP', 'Javascript'],
-    date: '2024',
+    date: 'march 2024',
+    major: 'DRUPAL 10 Frontend Specialist Certification',
+    description: '',
+    image: ''
+  },
+  {
+    id: 3,
+    university: 'ACQUIA CERTIFICATION',
+    skills: ['Drupal', 'PHP', 'Javascript'],
+    date: 'march 2024',
     major: 'DRUPAL 10 Developer Certification',
     description: '',
     image: ''
   },
   {
-    id: 2,
+    id: 4,
     university: 'UNIVERSIDADE POSITIVO, Curitiba',
     skills: ['Unity3D', '3DSMax', 'C#', 'Javascript'],
     date: '2013 - 2015 (incomplete)',
@@ -77,7 +137,7 @@ export const EducationData = [
     image: ''
   },
   {
-    id: 3,
+    id: 5,
     university: 'UNIVERSIDADE FEDERAL DO AMAZONAS, Manaus',
     skills: ['Haskell', 'Python'],
     date: '2011 - 2013 (incomplete)',
@@ -86,7 +146,7 @@ export const EducationData = [
     image: ''
   },
   {
-    id: 4,
+    id: 6,
     university: 'UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, Curitiba',
     skills: ['C', 'C++'],
     date: '2003 - 2006 (incomplete)',

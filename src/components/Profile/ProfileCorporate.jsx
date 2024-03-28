@@ -94,22 +94,20 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                         <div
                           className='progress-bar'
                           role='progressbar'
-                          style={{width: `${item.value}%`}}
+                          style={{ width: `${item.value}%` }}
                           aria-valuenow={item.value}
                           aria-valuemin='0'
                           aria-valuemax='100'
-                        >
-                        </div>
+                        ></div>
                         {item.current && (
-                          <div className="progress-bar highlight"
-                            role="progressbar"
-                            style={{width: `10%`}}
-                            aria-valuenow="10"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-
-                          </div>
+                          <div
+                            className='progress-bar highlight'
+                            role='progressbar'
+                            style={{ width: `10%` }}
+                            aria-valuenow='10'
+                            aria-valuemin='0'
+                            aria-valuemax='100'
+                          ></div>
                         )}
                       </div>
                     </div>
@@ -132,12 +130,11 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                           <div
                             className='progress-bar'
                             role='progressbar'
-                            style={{width: `${item.value < 0 ? item.value * -1 : item.value}%`}}
+                            style={{ width: `${item.value < 0 ? item.value * -1 : item.value}%` }}
                             aria-valuenow={item.value < 0 ? item.value * -1 : item.value}
                             aria-valuemin='0'
                             aria-valuemax='100'
-                            >
-                          </div>
+                          ></div>
                         </div>
                       </div>
                       {item.value < 0 && <div className='col-md-6 col-xs-6'></div>}
@@ -173,8 +170,16 @@ const ProfileCorporate = ({ morphs, ...props }) => {
                         <XPTitle>{item.title}</XPTitle>
                         <XPSkills> - {item.skills.join(', ')}</XPSkills>
                       </span>
-                      <XPDates>{item.date}</XPDates>
-                      <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: item.description }}></NormalText>
+                      <XPDates>{`${item.begin} ${item.separator} ${item.end}`}</XPDates>
+                      <ul className='simple-list'>
+                        {item.description.map((li, i) => {
+                          return (
+                            <li key={i}>
+                              <NormalText className='ps-4' dangerouslySetInnerHTML={{ __html: li }}></NormalText>
+                            </li>
+                          )
+                        })}
+                      </ul>
                     </List>
                   )
                 })}

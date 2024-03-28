@@ -21,6 +21,14 @@
   }
 }
 
+.simple-list {
+  list-style-type: none;
+}
+
+table tr.collapse td {
+  padding-right: 24px !important;
+}
+
 .primary { color: #d0ff01; }
 .secondary { color: #0095f7; }
 .terciary { color: #fec017; }
