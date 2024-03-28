@@ -409,7 +409,7 @@ export const GameCard = styled(Card)`
     .dates {
       color: #9b9b9b;
       font-size: 14px;
-      margin: 0.5rem 0;
+      margin: 0 0 0.5rem 0;
     }
     .description {
       font-size: 14px;
@@ -633,7 +633,7 @@ export const XPTitle = styled(ListItem)`
 `
 
 export const XPDates = styled.span`
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem 0;
   font-size: 11px;
   font-family: 'Source Code Pro';
   color: #666666;

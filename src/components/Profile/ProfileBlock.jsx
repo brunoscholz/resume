@@ -217,8 +217,8 @@ const ProfileBlock = ({ data, ...props }) => {
         </div>
       </Container>
 
-      <div className='mx-3'>
-        <div>
+      <div className='block-tables mx-3'>
+        <div className='wrapper'>
           <div className='row mt-5'>
             <div className='col-md-12'>
               <ExperienceBlock data={experienceData} />

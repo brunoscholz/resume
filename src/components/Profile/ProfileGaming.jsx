@@ -225,7 +225,7 @@ const ProfileGaming = ({ data, ...props }) => {
                         <b className='position'>{item.title}</b> - <em className='skills'>{item.skills.join(', ')}</em>
                       </span>
                       <span className='dates'>{`${item.begin} ${item.separator} ${item.end}`}</span>
-                      <ul className='simple-list'>
+                      <ul className='simple-list gaming'>
                         {item.description.map((li, i) => {
                           return (
                             <li key={`list-item-${i}`}>

@@ -113,7 +113,7 @@ const ExperienceBlock = ({ data }) => {
             <em>{row.txn}</em>
           </td>
         </tr>
-        {renderDetails(row, `${mapClass[row.status]}`)}
+        {renderDetails(row, `${mapClass[row.status]} details`)}
       </Fragment>
     )
   }
