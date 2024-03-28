@@ -38,8 +38,6 @@ const ProfileBlock = ({ data, ...props }) => {
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
     setProjectData(data.ProjectData)
-    console.log(data.ProjectData)
-    console.log(data.ProjectData.sort((a,b) => a.order[1] - b.order[1]))
   }
 
   const renderSocialLink = (item, idx) => {

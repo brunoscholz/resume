@@ -3,13 +3,17 @@ import Carousel from 'better-react-carousel'
 import { AiFillGithub } from 'react-icons/ai'
 import { Wrapper, Item, Image, Details, Button } from '../../theme/theme'
 
-const Projects = (data, idx) => {
+const Projects = (props) => {
   const [projectData, setProjectData] = useState([])
 
   useEffect(() => {
-    // const _data = data.sort((a,b) => a.order[idx] - b.order[idx])
-    setProjectData(data)
-  }, [data, idx])
+    if (props.data) {
+      const _data = props.data.sort((a,b) => {
+        return a.order[props.idx] - b.order[props.idx]
+      })
+      setProjectData(_data)
+    }
+  }, [props])
 
   return (
     <Carousel cols={2} rows={1} gap={25} loop scrollSnap={true}>
