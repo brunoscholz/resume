@@ -1,5 +1,5 @@
 {
-  "AboutData": "Fullstack Drupal developer at VML. 15+ years of diverse software engineering experience with specialties in frontend development, infrastructure operation, and problem solving.<br/><br/>Skilled life-long student with an entrepreneurial view, my goal is <em>always</em> to create value by generating intelligent solutions that fulfill customer's needs. I like <em>challenging</em> situations that require the use of multiple skills and critical thinking. Usually spending time learning new technologies and tools.",
+  "AboutData": "Accomplished Fullstack Drupal Developer at VML with over 15 years of extensive experience in <em>software engineering</em>, specializing in frontend development and infrastructure operation. Recognized for exceptional <em>problem-solving</em> abilities and a lifelong commitment to learning, I bring an entrepreneurial mindset to every project.<br/><br/>My passion lies in crafting intelligent <em>solutions</em> that not only meet but exceed customer expectations. I thrive in challenging environments that demand a diverse skill set and sharp critical thinking.<br/><br/>Continuously dedicated to staying ahead of the curve I invest time in <em>mastering</em> new technologies and tools to ensure optimal performance and innovation. With a proven track record of continuous improvement, recent peer reviews highlight excellent <em>communication</em> skills and collaborative teamwork.",
   "ExperienceData": [
     {
       "company": "WUNDERMAN THOMPSON TECH / VML",
@@ -10,10 +10,9 @@
       "end": "Current",
       "separator": "-",
       "description": [
-        "Fullstack <em>Drupal</em> / Backend Engineer.",
-        "Worked in big drupal projects like <em>FitnessFirst</em> and <em>AB-INBEV</em>.",
-        "Built <em>Acquia DAM</em> image cropper, a drupal module to help the customer's experience curating images and 'translates' their ideas into DAM's queries.",
-        "Lead the development of a multipage webform that functions as the primary source of new subscriptions for the company. It has lots of custom components, custom theme, and integrated external API."
+        "Spearheaded full-stack development efforts on high-profile <em>Drupal</em> projects for clients such as <em>FitnessFirst</em> and <em>AB-INBEV</em>.",
+        "Engineered a custom <em>Acquia DAM</em> image cropper module, enhancing customer experience by streamlining image curation workflows.",
+        "Led the development of a sophisticated multi-page <em>webform</em>, serving as the primary subscription source, with custom components, themes, and integrated external API."
       ],
       "skills": ["Drupal", "PHP", "Vue"],
       "image": ""
@@ -27,11 +26,10 @@
       "end": "Current",
       "separator": "-",
       "description": [
-        "Several projects for clients like <em>Siemens</em> and <em>DWS</em>.",
-        "Implemented a game using CreateJS for <em>SporTV</em>.",
-        "Worked on standalone projects for corporate training using scorm.",
-        "SSO configuration with AzureAD in Symfony 3.",
-        "Built some mobile apps with <em>cordova</em>."
+        "Contributed to diverse client projects including <em>Siemens</em> and <em>DWS Bank</em>, delivering robust frontend solutions.",
+        "Developed an interactive game using CreateJS for <em>SporTV</em>, showcasing creativity and innovation in gaming.",
+        "Implemented single sign-on (SSO) integration with AzureAD in Symfony 3, enhancing security and user experience.",
+        "Crafted <em>mobile</em> applications with Cordova, extending client reach to mobile platforms."
       ],
       "skills": ["Angular", "React", "Drupal"],
       "image": ""
@@ -45,9 +43,9 @@
       "end": "August 2016",
       "separator": "-",
       "description": [
-        "Created products aimed at corporate <em>training</em>, advergames for business fairs and educational games.",
-        "Helped in developing the core teaching paradigm of the company using ideas from Piaget and Popper.",
-        "Worked in a project of niche social media with blockchain. The project, unfortunately was shut down because in 2016 crypto was a very controversial topic."
+        "Conceptualized and developed corporate training products, advergames for business expos, and educational games, demonstrating versatility and creativity in <em>game development</em>.",
+        "Contributed to the design of the company's core teaching methodology, incorporating principles from Piaget and Popper, fostering engaging and effective <em>learning</em> experiences.",
+        "Engaged in a niche social media project involving <em>blockchain</em> technology, exploring innovative solutions despite the challenging landscape of cryptocurrency in 2016."
       ],
       "skills": ["Unity3D(C#)", "Angular", "Python", "PHP", "Mysql"],
       "image": ""
@@ -61,8 +59,8 @@
       "end": "February 2014",
       "separator": "-",
       "description": [
-        "Worked together with <em>engineering</em> and <em>logistics</em> management in Manaus (AM) in the development of a dashboard for cost control in building and renovation projects.",
-        "Built several VBA mainframe scrappers for data collecting and filtering for reports and issue identification."
+        "Collaborated with <em>engineering</em> and <em>logistics</em> management in Manaus (AM) to develop a dashboard for cost control in building and renovation projects, optimizing project management processes.",
+        "Designed and implemented VBA <em>mainframe</em> scrapers for data collection and analysis, enabling streamlined reporting and issue identification."
       ],
       "skills": ["PHP", "MySql", "VBA"],
       "image": ""
@@ -76,7 +74,8 @@
       "end": "May 2006",
       "separator": "-",
       "description": [
-        "Developed a system that took care of the entire process, from lead and first contact to signed legal contract. Batch research and verification in court <em>databases</em> for more than one million potential clients."
+        "Engineered a comprehensive <em>system</em> managing the entire legal process lifecycle, from lead generation to contract signing, enhancing operational efficiency and client management.",
+        "Developed batch research and verification processes utilizing court databases, enabling <em>efficient</em> analysis of over one million potential clients."
       ],
       "skills": ["PHP", "MySql", "Javascript"],
       "image": ""
@@ -90,7 +89,8 @@
       "date": "march 2024",
       "major": "DRUPAL 10 Frontend Specialist Certification",
       "description": "",
-      "status": "certification"
+      "status": "certification",
+      "type": "certification"
     },
     {
       "id": 3,
@@ -99,7 +99,8 @@
       "date": "march 2024",
       "major": "DRUPAL 10 Developer Certification",
       "description": "",
-      "status": "certification"
+      "status": "certification",
+      "type": "certification"
     },
     {
       "id": 4,
@@ -108,7 +109,8 @@
       "date": "2013 - 2015",
       "major": "Digital Games",
       "description": "",
-      "status": "(incomplete)"
+      "status": "(incomplete)",
+      "type": "education"
     },
     {
       "id": 5,
@@ -117,7 +119,8 @@
       "date": "2011 - 2013",
       "major": "Computer Science",
       "description": "",
-      "status": "(incomplete)"
+      "status": "(incomplete)",
+      "type": "education"
     },
     {
       "id": 6,
@@ -126,13 +129,14 @@
       "date": "2003 - 2006",
       "major": "Electrical Engineering - Electronics and Telecommunication",
       "description": "",
-      "status": "(incomplete)"
+      "status": "(incomplete)",
+      "type": "education"
     }
   ],
   "SkillData": [
     {
       "trait_type": "",
-      "trait": "English (native Portuguese)",
+      "trait": "Advanced English (native Portuguese)",
       "value": 91,
       "current": false,
       "active": true,
@@ -223,7 +227,7 @@
     {
       "name": "A Gift From Hermes",
       "description":
-        "7 years after its inception, this beta version was made to update my unity and C# skills. Looking forward for some integration of web3 and unity!",
+        "Created this prototype to update my Unity3D and C# skills, with plans for future integration of web3 technology. The game showcases innovative gameplay mechanics, providing users with an engaging gaming experience.",
       "tech": ["#unity3d", "#c#", "#game"],
       "image": "hermes.png",
       "link": "https://play.unity.com/mg/other/a-gift-from-hermes-v2-1-0",
@@ -232,7 +236,7 @@
     {
       "name": "Epic Game",
       "description":
-        "Buildspace weekend project: A NFT Turn based game that allows the user create a character from 3 templates and attack a big boss. But beware! The boss has a lot of hp and also attacks. The idea is you need friends to defeat the boss.",
+        "Created a turn-based NFT game prototype where users can create characters from templates and attack a boss. The game features strategic gameplay mechanics, providing players with an immersive and challenging gaming experience.",
       "tech": ["#react", "#web3", "#hardhat", "#game"],
       "image": "epic.png",
       "link": "https://capitol-defenders.herokuapp.com/",
@@ -241,7 +245,7 @@
     },
     {
       "name": "Cryptozombies",
-      "description": "Work in Progress - Based on cryptosombies.io tutorial. You mint your NFT Zombie with a dna based on the chosen name. To increase your zombie army, you feed them CrytoKitties! haha. It uses interface to other contracts on the blockchain!",
+      "description": "Working on a game prototype based on the cryptosombies.io tutorial, allowing users to mint their own NFT zombie cards with DNA based on chosen names. The game combines elements of blockchain technology with interactive gameplay mechanics.",
       "tech": ["#react", "#web3", "#hardhat"],
       "image": "zombie.png",
       "link": "",
@@ -250,7 +254,7 @@
     },
     {
       "name": "DNS/ENS",
-      "description": "Buildspace weekend project that creates a NFT name service on the Polygon (layer 2) network.",
+      "description": "Developed a prototype for a NFT name service on the Polygon network. The project aims to provide a decentralized solution for mapping human-readable names to blockchain addresses, enhancing accessibility and usability in the blockchain ecosystem.",
       "tech": ["#react", "#web3", "#hardhat", "#polygon"],
       "image": "ens.png",
       "link": "https://ens-clone.vercel.app/",
@@ -260,7 +264,7 @@
     {
       "name": "NFT Marketplace",
       "description":
-        "A marketplace where any user can mint and sell their own non-fungible tokens. NFTs can be applied to physical products as in suplly chains and car documents, leaving a transparent trail of transfer and ownership",
+        "Created a marketplace prototype where users can mint and sell their own NFTs, exploring applications in supply chains and identification. The platform provides a transparent and efficient way for users to tokenize assets and facilitate peer-to-peer transactions.",
       "tech": ["#react", "#web3", "#ipfs", "#truffle"],
       "image": "nft.png",
       "link": "https://nftsmarket.herokuapp.com/home",
@@ -270,7 +274,7 @@
     {
       "name": "Decentralized Exchange",
       "description":
-        "A decentralized app (dApp) with smart contracts that functions as broker for Ethereum and the generic token created for it.",
+        "Developed a decentralized app (dApp) prototype with smart contracts acting as a broker for Ethereum and a generic token. Utilized Truffle, Web3, and React technologies to create a secure and efficient platform for cryptocurrency trading and exchange.",
       "tech": ["#react", "#web3", "#truffle"],
       "image": "dex.png",
       "link": "https://dapp-bootcamp1.herokuapp.com/",
@@ -280,7 +284,7 @@
     {
       "name": "DAO",
       "description":
-        "Buildspace weekend project building a DAO - decentralized autonomous organization with voting system and treasury.",
+        "Weekend project to build a Decentralized Autonomous Organization (DAO) with a voting system and treasury. Leveraged skills Web3 and React to create a decentralized governance model that empowers community members to make collective decisions.",
       "tech": ["#react", "#web3", "#thrid-web"],
       "image": "dao.png",
       "link": "https://condo-dao.vercel.app/",
@@ -290,7 +294,7 @@
     {
       "name": "Portfolio",
       "description":
-        "This website. Using theme switching and different layouts shows the range of skills in design and frontend development",
+        "Designed and developed a portfolio website showcasing theme switching and different layouts to demonstrate proficiency in design and frontend development. Utilized React to create a visually appealing and responsive website that highlights various projects and skills.",
       "tech": ["#react"],
       "image": "resume.png",
       "link": "",
@@ -300,7 +304,7 @@
     {
       "name": "Life Fit",
       "description":
-        "Long-term project at Wunderman Thompson. Big project with several separated gyms. It includes gym attendance, blog posts and contract leads.",
+        "Developed and managed a large-scale Drupal project for multiple gyms, implementing features such as gym attendance tracking, blog post management, and contract lead generation. Seamless user experience and efficient backend functionality.",
       "tech": ["#drupal"],
       "image": "fit.png",
       "link": "https://www.fitnessfirst.de/",
@@ -309,7 +313,7 @@
     {
       "name": "Doe Gols",
       "description":
-        "Project at Wunderman Thompson for a major sports channel in Brazil (Sportv). Worked in the game which is not yet deployed (pic)",
+        "Contributed to a project for a major sports channel in Brazil (Sportv), developing an interactive game using CreateJS. The game, aimed at engaging users, offers an immersive experience with dynamic visuals and engaging gameplay mechanics.",
       "tech": ["#react", "#createjs"],
       "image": "game.png",
       "link": "https://doegols.globo.com/",
@@ -318,7 +322,7 @@
     {
       "name": "Siemens",
       "description":
-        "Several internal projects at Wunderman Thompson. Worked with mobile accessibility, themes, dynamic content loaded into a page.",
+        "Enhanced mobile accessibility, implemented themes, and dynamically loaded content into pages for Siemens projects. Leveraged Angular and PHP technologies to ensure optimal performance and user experience across various devices and platforms.",
       "tech": ["#canvas", "#php", "#angular"],
       "image": "quiz.png",
       "link": "https://play.google.com/store/apps/details?id=com.siemens.quizapp",

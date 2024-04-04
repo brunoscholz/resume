@@ -216,7 +216,13 @@ const ProfileBlock = ({ data, ...props }) => {
 
           <div className='row mt-5'>
             <div className='col-md-12'>
-              <EducationBlock data={educationData} />
+              <EducationBlock title="Certification History" data={educationData.filter(x => x.type === 'certification')} />
+            </div>
+          </div>
+
+          <div className='row mt-5'>
+            <div className='col-md-12'>
+              <EducationBlock title="Education History" data={educationData.filter(x => x.type === 'education')} />
             </div>
           </div>
         </div>

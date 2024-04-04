@@ -205,9 +205,33 @@ const ProfileCorporate = ({ data, ...props }) => {
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
             <Card>
+              <h3>CERTIFICATIONS</h3>
+              <article>
+                {educationData.filter(x => x.type === 'certification').map((item, idx) => {
+                  return (
+                    <List key={idx}>
+                      <XPCompany>{item.university}</XPCompany>
+                      <span>
+                        <XPTitle>{item.major}</XPTitle>
+                        <XPSkills> - {item.skills.join(', ')}</XPSkills>
+                      </span>
+                      <XPDates>
+                        {item.date} {item.status !== 'certification' ? item.status : ''}
+                      </XPDates>
+                    </List>
+                  )
+                })}
+              </article>
+            </Card>
+          </div>
+        </div>
+
+        <div className='row g-0 m-2'>
+          <div className='col-lg-12 col-xs-12'>
+            <Card>
               <h3>EDUCATION</h3>
               <article>
-                {educationData.map((item, idx) => {
+                {educationData.filter(x => x.type === 'education').map((item, idx) => {
                   return (
                     <List key={idx}>
                       <XPCompany>{item.university}</XPCompany>

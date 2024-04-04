@@ -1,6 +1,7 @@
 export async function getData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/brunoscholz/resume/master/public/data.json')
+    // const response = await fetch('https://raw.githubusercontent.com/brunoscholz/resume/master/public/data.json')
+    const response = await fetch('/data.json')
     return await response.json()
   } catch(e) {
     return e
@@ -8,12 +9,11 @@ export async function getData() {
 }
 
 export const AboutData = `
-Fullstack Drupal developer at VML. 15+ years of diverse software engineering experience with specialties in
-frontend development, infrastructure operation, and problem solving.
+Seasoned Fullstack Drupal Developer at VML with over 15 years of extensive experience in <em>software engineering</em>, particularly excelling in frontend development and infrastructure operation.
+Renowned for adept <em>problem-solving</em> abilities and a lifelong commitment to learning, I bring an entrepreneurial mindset to every project.
 <br/><br/>
-Skilled life-long student with an entrepreneurial view, my goal is <em>always</em> to create value
-by generating intelligent solutions that fulfill customer's needs. I like <em>challenging</em> situations that
-require the use of multiple skills and critical thinking. Usually spending time learning new technologies and tools.
+My passion lies in crafting intelligent <em>solutions</em> that not only meet but exceed customer expectations, thriving in challenging environments that demand a diverse skill set and
+sharp critical thinking. Continuously dedicated to staying ahead of the curve, I invest time in <em>mastering</em> new technologies and tools to ensure optimal performance and innovation.
 `
 
 export const ExperienceData = [
@@ -22,14 +22,13 @@ export const ExperienceData = [
     local: 'Pelotas',
     title: 'Backend Engineer',
     path: ['Working'],
-    begin: 'January 2023',
+    begin: 'January 2022',
     end: 'Current',
     separator: '-',
     description: [
-      'Fullstack <em>Drupal</em> / Backend Engineer.',
-      'Worked in big drupal projects like <em>FitnessFirst</em> and <em>AB-INBEV</em>.',
-      'Built <em>Acquia DAM</em> image cropper, a drupal module to help the customer\'s experience curating images and \'translates\' their ideas into DAM\'s queries.',
-      'Lead the development of a multipage webform that functions as the primary source of new subscriptions for the company. It has lots of custom components, custom theme, and integrated external API.',
+      'Spearheaded full-stack development efforts on high-profile <em>Drupal</em> projects for clients such as <em>FitnessFirst</em> and <em>AB-INBEV</em>.',
+      'Engineered a custom <em>Acquia DAM</em> image cropper module, enhancing customer experience by streamlining image curation workflows.',
+      'Led the development of a sophisticated multi-page <em>webform</em>, serving as the primary subscription source, with custom components, themes, and integrated external API.',
     ],
     skills: ['Drupal', 'PHP', 'Vue'],
     image: ''
@@ -43,11 +42,10 @@ export const ExperienceData = [
     end: 'Current',
     separator: '-',
     description: [
-      'Several projects for clients like <em>Siemens</em> and <em>DWS</em>.',
-      'Implemented a game using CreateJS for <em>SporTV</em>.',
-      'Worked on standalone projects for corporate training using scorm.',
-      'SSO configuration with AzureAD in Symfony 3.',
-      'Built some mobile apps with <em>cordova</em>.',
+      'Contributed to diverse client projects including <em>Siemens</em> and <em>DWS Bank</em>, delivering robust frontend solutions.',
+      'Developed an interactive game using CreateJS for <em>SporTV</em>, showcasing creativity and innovation in gaming.',
+      'Implemented single sign-on (SSO) integration with AzureAD in Symfony 3, enhancing security and user experience.',
+      'Crafted <em>mobile</em> applications with Cordova, extending client reach to mobile platforms.',
     ],
     skills: ['Angular', 'React', 'Drupal'],
     image: ''
@@ -61,9 +59,9 @@ export const ExperienceData = [
     end: 'August 2016',
     separator: '-',
     description: [
-      'Created products aimed at corporate <em>training</em>, advergames for business fairs and educational games.',
-      'Helped in developing the core teaching paradigm of the company using ideas from Piaget and Popper.',
-      'Worked in a project of niche social media with blockchain. The project, unfortunately was shut down because in 2016 crypto was a very controversial topic.',
+      'Conceptualized and developed corporate training products, advergames for business expos, and educational games, demonstrating versatility and creativity in <em>game development</em>.',
+      'Contributed to the design of the company\'s core teaching methodology, incorporating principles from Piaget and Popper, fostering engaging and effective <em>learning</em> experiences.',
+      'Engaged in a niche social media project involving <em>blockchain</em> technology, exploring innovative solutions despite the challenging landscape of cryptocurrency in 2016.',
     ],
     skills: ['Unity3D(C#)', 'Angular', 'Python', 'PHP', 'Mysql'],
     image: ''
@@ -77,8 +75,8 @@ export const ExperienceData = [
     end: 'February 2014',
     separator: '-',
     description: [
-      'Worked together with <em>engineering</em> and <em>logistics</em> management in Manaus (AM) in the development of a dashboard for cost control in building and renovation projects.',
-      'Built several VBA mainframe scrappers for data collecting and filtering for reports and issue identification.'
+      'Collaborated with <em>engineering</em> and <em>logistics</em> management in Manaus (AM) to develop a dashboard for cost control in building and renovation projects, optimizing project management processes.',
+      'Designed and implemented VBA <em>mainframe</em> scrapers for data collection and analysis, enabling streamlined reporting and issue identification.',
     ],
     skills: ['PHP', 'MySql', 'VBA'],
     image: ''
@@ -92,7 +90,8 @@ export const ExperienceData = [
     end: 'May 2006',
     separator: '-',
     description: [
-      'Developed a system that took care of the entire process, from lead and first contact to signed legal contract. Batch research and verification in court <em>databases</em> for more than one million potential clients.',
+      'Engineered a comprehensive system managing the entire legal process lifecycle, from lead generation to contract signing, enhancing operational efficiency and client management.',
+      'Developed batch research and verification processes utilizing court databases, enabling efficient analysis of over one million potential clients.',
     ],
     skills: ['PHP', 'MySql', 'Javascript'],
     image: ''
@@ -159,7 +158,7 @@ export const EducationData = [
 export const SkillData = [
   {
     trait_type: '',
-    trait: 'English (native Portuguese)',
+    trait: 'Advanced English (native Portuguese)',
     value: 91,
     current: false,
     active: true,

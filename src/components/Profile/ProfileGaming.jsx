@@ -153,6 +153,25 @@ const ProfileGaming = ({ data, ...props }) => {
                 + <em>About Me</em>
               </span>
               <article dangerouslySetInnerHTML={{ __html: aboutData }}></article>
+              {/* <article>
+                I learned coding by myself back in 1999, still in high school, with a copy I found online of the classic QBasic <a href="https://en.wikipedia.org/wiki/Gorillas_(video_game)">Gorillas</a>.
+                Then I learned C and made a tetris for my first semester 'computer science' class in the electronics engineering course (2003). By that moment I knew I was going to be a programmer and I wanted to work with games.
+
+                Got my first programming job in 2004 (php & mysql) and left for higher pay at Banco do Brasil which, in retrospect, damaged my
+
+                I learned coding by myself back in 1999, still in high school, and got my first programming job in 2004 (php & mysql). I left that job for Banco do Brasil,
+                where I worked for 8 years and had great experiences traveling and living in different places in Brazil. I've never stopped coding and learning by
+                playing with my own projects and studying new languages.<br/><br/>
+
+                I did leave the bank to open my own game company with some college friends and we did participate in a few fairs and online game development challenges
+                until we were invited by our former teachers to join them in a new project in corporate training. Unfortunately, the partnership ended after 2 years due
+                to management differences. I went on to learn how to be an entrepreneur and together with my wife, we opened a bakery that lasted 2 years until
+                she had the opportunity to manage her father's store and I had the chance to return to the tech market.<br/><br/>
+
+                Since my re-entry in January 2021, I can say it was an awesome ride so far! I could participate in several projects (angular, react, js), and use the
+                full extent of my knowledge, including an advergame! I've been part of different teams, held technical meetings with clients and also was the only person
+                in one of the projects: the only developer in direct contact with the client. But most important, I learned a lot!
+              </article> */}
             </GameCard>
           </div>
         </div>
@@ -160,10 +179,10 @@ const ProfileGaming = ({ data, ...props }) => {
         <div className='row flex g-0 mb-4'>
           <div className='col-md-12 col'>
             <GameCard color={'terciary'} border={true} className='about-skills h-100'>
-              <span className='badge' key={'skill01'}>
+              <span className='badge'>
                 + <em>Skills</em>
               </span>
-              <article className='d-flex flex-wrap' key={'skill02'}>
+              <article className='d-flex flex-wrap'>
                 {listSkills()}
                 <div className='col-lg-12 col-md-12'>
                   <div className='chart-subtitles'>
@@ -237,12 +256,32 @@ const ProfileGaming = ({ data, ...props }) => {
           </div>
 
           <div className='col-lg-6 col-md-6 col-sm-12 ps-md-2-5 mb-4'>
-            <GameCard color={'color4'} border={true} className='about-education h-100'>
+            <GameCard color={'color4'} border={true} className='about-education mb-4'>
+              <span className='badge'>
+                + <em>Certifications</em>
+              </span>
+              <article className='content'>
+                {educationData.filter(x => x.type === 'certification').map((item, idx) => {
+                  return (
+                    <div className='d-flex flex-column item-list' key={idx}>
+                      <span className='title'>{item.university}</span>
+                      <span>
+                        <b className='position'>{item.major}</b> - <em className='skills'>{item.skills.join(', ')}</em>
+                      </span>
+                      <span className='dates'>
+                        {item.date} {item.status !== 'certification' ? item.status : ''}
+                      </span>
+                    </div>
+                  )
+                })}
+              </article>
+            </GameCard>
+            <GameCard color={'color4'} border={true} className='about-education'>
               <span className='badge'>
                 + <em>Education</em>
               </span>
               <article className='content'>
-                {educationData.map((item, idx) => {
+                {educationData.filter(x => x.type === 'education').map((item, idx) => {
                   return (
                     <div className='d-flex flex-column item-list' key={idx}>
                       <span className='title'>{item.university}</span>
