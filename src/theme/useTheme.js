@@ -22,6 +22,8 @@ export const useTheme = () => {
         setMode('corporate')
         break
     }
+
+    window.location.pathname = option === 'corporate' ? '/' : `/${option}`
   }
 
   useEffect(() => {
