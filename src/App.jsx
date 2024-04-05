@@ -31,7 +31,7 @@ const App = () => {
         <>
           <Profile theme={theme} />
         </>
-        <Analytics mode={mode} debug={false} />
+        <Analytics mode={mode} debug={false} route={theme} />
       </>
     </ThemeProvider>
   )
