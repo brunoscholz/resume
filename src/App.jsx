@@ -23,7 +23,6 @@ const App = () => {
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        <Analytics mode={mode} />
         <div style={{ marginBottom: '2rem' }}>
           <Header>
             <Toggle theme={theme} onChange={switchTheme} />
@@ -32,6 +31,7 @@ const App = () => {
         <>
           <Profile theme={theme} />
         </>
+        <Analytics mode={mode} debug={false} />
       </>
     </ThemeProvider>
   )
