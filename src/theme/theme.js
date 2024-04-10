@@ -348,6 +348,16 @@ export const Card = styled.div`
     article {
       text-align: justify;
     }
+
+    article em {
+      color: ${props.color ? props.theme.colors[props.color] : props.theme.colors.primary};
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    article em a {
+      color: ${props.color ? props.theme.colors[props.color] : props.theme.colors.primary};
+    }
   `}
 
   .progress {

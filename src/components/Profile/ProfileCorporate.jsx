@@ -86,7 +86,7 @@ const ProfileCorporate = ({ data, ...props }) => {
 
         <div className='row g-0 m-2'>
           <div className='col-lg-12 col-xs-12'>
-            <Card>
+            <Card color={'text'}>
               <h3>ABOUT ME</h3>
               <article dangerouslySetInnerHTML={{ __html: aboutData }}></article>
             </Card>
