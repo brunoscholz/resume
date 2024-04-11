@@ -16,6 +16,7 @@ import Projects from '../Projects/Projects'
 import ExperienceBlock from '../ExperienceBlock'
 import EducationBlock from '../EducationBlock'
 import { renderSocialIcon } from '../../helper'
+import Testimonials from '../Testimonials/Testimonials'
 
 const ProfileBlock = ({ data, ...props }) => {
   const [aboutData, setAboutData] = useState([])
@@ -25,6 +26,7 @@ const ProfileBlock = ({ data, ...props }) => {
   const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
   const [projectData, setProjectData] = useState([])
+  const [reviewData, setReviewData] = useState([])
 
   useEffect(() => {
     handleData(data)
@@ -38,6 +40,7 @@ const ProfileBlock = ({ data, ...props }) => {
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
     setProjectData(data.ProjectData)
+    setReviewData(data.Testimonials)
   }
 
   const renderSocialLink = (item, idx) => {
@@ -188,6 +191,17 @@ const ProfileBlock = ({ data, ...props }) => {
                     {/* <b>top 15%</b> of 642.7k people on linkedin. */}
                     {/* <b>top 15%</b> of 163.6k people on linkedin. */}
                   </div>
+                </Card>
+              </div>
+            </div>
+
+            <div className='row g-0 m-2'>
+              <div className='col-lg-12 col-xs-12'>
+                <Card color={'primary'} border={true} className='about-gallery h-100'>
+                  <h3>Testimonials</h3>
+                  <article className='content'>
+                    <Testimonials data={reviewData} idx={0} />
+                  </article>
                 </Card>
               </div>
             </div>

@@ -33,7 +33,7 @@ const Toggle = ({ theme, onChange }) => {
 
           <div className={`toggle start-${theme}`}></div>
         </div>
-        <a className='btn w-button download' target='_blank' href='assets/cv-brunoscholz.pdf' alt='Download CV'>
+        <a className='btn w-button download' target='_blank' rel='noreferrer' href='https://raw.githubusercontent.com/brunoscholz/brunoscholz/master/cv-brunoscholz.pdf' alt='Download CV'>
           Download CV
         </a>
       </div>

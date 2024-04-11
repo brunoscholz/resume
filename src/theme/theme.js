@@ -716,6 +716,14 @@ export const Wrapper = styled.div`
 export const Item = styled.div`
   width: 100%;
 `
+
+export const TestimonialItem = styled.div`
+  width: 100%;
+  padding: 20px 24px 0;
+  border-radius: 5px;
+  border: 0;
+`
+
 export const Image = styled.div`
   position: relative;
   margin-bottom: 15px;
@@ -749,6 +757,16 @@ export const Image = styled.div`
     }
   }
 `
+
+export const TestimonialImage = styled.img`
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 15px auto 0;
+  box-shadow: 0 8px 20px -4px #ccc;
+  width: 100px;
+  height: 100px;
+`
+
 export const Details = styled.div`
   display: flex;
   flex-direction: column;
@@ -781,6 +799,43 @@ export const Details = styled.div`
     }
   }
 `
+
+export const TestimonialDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h5 {
+    color: ${props => props.theme.colors.primary};
+    font-size: 21px;
+    line-height: 1.3;
+
+    span {
+      font-size: 18px;
+      color: ${props => props.theme.colors.text};
+    }
+  }
+
+  p.card-text {
+    font-size: 18px;
+    color: ${props => props.theme.colors.text};
+    z-index: 10;
+    position: relative;
+    padding-top: 1rem;
+
+    &::before {
+      content: "“";
+      color: ${props => props.theme.colors.primary};
+      font-family: georgia,serif;
+      font-size: 6em;
+      position: absolute;
+      left: -16px;
+      top: -52px;
+      z-index: -1;
+    }
+  }
+`
+
 export const normalBorders = css`
   border: 2px solid ${props => props.theme.colors.primary};
 `

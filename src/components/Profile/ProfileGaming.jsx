@@ -14,6 +14,7 @@ import Projects from '../Projects/Projects'
 
 import './Chart.css'
 import { renderSocialIcon } from '../../helper'
+import Testimonials from '../Testimonials/Testimonials'
 
 const ProfileGaming = ({ data, ...props }) => {
   const [aboutData, setAboutData] = useState([])
@@ -23,6 +24,7 @@ const ProfileGaming = ({ data, ...props }) => {
   const [educationData, setEducationData] = useState([])
   const [skillData, setSkillData] = useState([])
   const [projectData, setProjectData] = useState([])
+  const [reviewData, setReviewData] = useState([])
 
   useEffect(() => {
     handleData(data)
@@ -36,6 +38,7 @@ const ProfileGaming = ({ data, ...props }) => {
     setSkillData(data.SkillData)
     setEducationData(data.EducationData)
     setProjectData(data.ProjectData)
+    setReviewData(data.Testimonials)
   }
 
   const createBar = item => {
@@ -208,6 +211,19 @@ const ProfileGaming = ({ data, ...props }) => {
         <div className='row flex g-0'>
           <div className='col-md-12 col'>
             <div className='about-interests'></div>
+          </div>
+        </div>
+
+        <div className='row flex g-0'>
+          <div className='col-md-12 col mb-4'>
+            <GameCard color={'primary'} border={true} className='about-gallery h-100'>
+              <span className='badge'>
+                + <em>Testimonials</em>
+              </span>
+              <article className='content'>
+                <Testimonials data={reviewData} idx={0} />
+              </article>
+            </GameCard>
           </div>
         </div>
 

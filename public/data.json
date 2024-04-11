@@ -1,5 +1,111 @@
 {
   "AboutData": "Accomplished Fullstack Drupal Developer (<em><a href=\"https://certification.acquia.com/index.php/user/22426\">Triple Certified Drupal Expert</a></em>) at VML with over 15 years of extensive experience in <em>software engineering</em>, specializing in frontend development and infrastructure operation. Recognized for exceptional <em>problem-solving</em> abilities and a lifelong commitment to learning, I bring an entrepreneurial mindset to every project.<br/><br/>My passion lies in crafting intelligent <em>solutions</em> that not only meet but exceed customer expectations. I thrive in challenging environments that demand a diverse skill set and sharp critical thinking.<br/><br/>Continuously dedicated to staying ahead of the curve I invest time in <em>mastering</em> new technologies and tools to ensure optimal performance and innovation. With a proven track record of continuous improvement, recent peer reviews highlight excellent <em>communication</em> skills and collaborative teamwork.",
+  "Testimonials": [
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Manager",
+      "review": "Bruno had a good evolution in his backend skills, further paving his way to work as a full stack developer. In addition, he continues to deliver quality within established deadlines."
+    },
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "5 stars for everything. He's a reference and needs to be recognized for it."
+    },
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "Bruno is a full-stack professional with excellent technical ability. His in-depth understanding was crucial for delivering on time. His contribution is invaluable to the team's success and the projects he's involved in."
+    },
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "Bruno stands out for his deep knowledge, able to handle tasks classified as difficult or laborious quickly and effectively. With skills in handling both front-end and back-end tickets, he is an excellent professional."
+    },
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "He has enhanced his skills in Drupal issues and configurations, which is a reference within the company. He has autonomy in executing tasks, providing comments and documentation when necessary."
+    },
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "He communicates his message effectively, being concise."
+    },
+    {
+      "tags": [
+        "technical"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "Bruno has become a reference for the client and also within the team. He shows himself more open to sharing when facing a problem, as well as helping colleagues find good solutions for client demands."
+    },
+    {
+      "tags": [
+        "behavioral"
+      ],
+      "rate": 5,
+      "user": "Manager",
+      "review": "Always attentive to discussions and contributes to the conversation, bringing pertinent points to the discussion and managing to predict the consequences of the decisions to be made at that moment."
+    },
+    {
+      "tags": [
+        "behavioral"
+      ],
+      "rate": 5,
+      "user": "Manager",
+      "review": "He has become a more positive person, seeking to face challenges always from the best perspective. Furthermore, he continues to demonstrate that he is always available to help anyone in need."
+    },
+    {
+      "tags": [
+        "behavioral"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "Bruno is ahead of his time. What he sets out to do, he always does very well. He takes initiative in the projects, in addition to providing crucial help in all stages of deliveries."
+    },
+    {
+      "tags": [
+        "behavioral"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "Bruno is a highly versatile professional, excelling in both front-end and back-end. His ability to move between these areas in all the projects we've worked on together is impressive and provides a huge gain for the team."
+    },
+    {
+      "tags": [
+        "behavioral"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "Bruno is an excellent professional, motivated and with a solid understanding of the project, presenting solutions to technical problems with mastery."
+    },
+    {
+      "tags": [
+        "behavioral"
+      ],
+      "rate": 5,
+      "user": "Peer",
+      "review": "In the last year, Bruno has shown great improvement in communication aspects. He has gained prominence and reference with the clients."
+    }
+  ],
   "ExperienceData": [
     {
       "company": "WUNDERMAN THOMPSON TECH / VML",
