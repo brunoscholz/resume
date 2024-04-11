@@ -851,3 +851,29 @@ export const Button = styled.a`
     color: ${props => props.theme.colors.body} !important;
   }
 `
+export const Dot = styled.div`
+  width: 13px;
+  height: 10px;
+  display: inline-block;
+  background: ${props => props.theme.colors.color4};
+  opacity: .6;
+  cursor: pointer;
+  margin: 0 5px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  -webkit-transition: opacity .5s, background-color .5s, width .5s;
+  -o-transition: opacity .5s, background-color .5s, width .5s;
+  transition: opacity .5s, background-color .5s, width .5s;
+  -webkit-transition-delay: .5s, .5s, 0s;
+      -o-transition-delay: .5s, .5s, 0s;
+          transition-delay: .5s, .5s, 0s;
+
+  &.active {
+    opacity: 1;
+    background: ${props => props.theme.colors.primary};
+    width: 100px;
+    -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+`

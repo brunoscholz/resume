@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Carousel from 'better-react-carousel'
-import { Wrapper, TestimonialItem, TestimonialDetails } from '../../theme/theme'
+import { Wrapper, TestimonialItem, TestimonialDetails, Dot } from '../../theme/theme'
 // import { AiFillStar, AiOutlineStar, AiTwotoneStar } from 'react-icons/ai'
 
 const Testimonials = props => {
@@ -35,8 +35,19 @@ const Testimonials = props => {
   //   )
   // }
 
+  const MyDot = ({ isActive }) => {
+    return (
+      <Dot
+        className={`${isActive ? ' active' : ''}`}
+        style={{
+          width: isActive ? '100px' : '13px'
+        }}
+      />
+    )
+  }
+
   return (
-    <Carousel cols={2} rows={1} gap={25} loop scrollSnap={true}>
+    <Carousel cols={2} rows={1} gap={25} loop scrollSnap={true} showDots='true' dot={MyDot}>
       {reviewData.map((item, idx) => {
         return (
           <Carousel.Item key={idx}>
